@@ -3,6 +3,10 @@
 
 {% block title %}Map View - Rescue Map{% endblock %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/light/main.css" />
+{% endblock %}
+
 {% block content %}
 <!-- Main Map Page -->
 <main class="map-page">
@@ -121,9 +125,9 @@
     <div class="map-container">
         <div id="mapView" class="map-container__view">
             <!-- Map will be rendered here -->
-            <div class="map-container__placeholder">
+            <!-- <div class="map-container__placeholder">
                 [ArcGIS Map View - Initialize with script.js]
-            </div>
+            </div> -->
         </div>
 
         <!-- Map Controls -->
@@ -143,7 +147,7 @@
         </div>
 
         <!-- Statistics Bar -->
-        <div class="stats-bar">
+        <!-- <div class="stats-bar">
             <div class="stats-bar__item">
                 <span class="stats-bar__label">Total Requests</span>
                 <span class="stats-bar__value stats-bar__value--total">444</span>
@@ -156,10 +160,16 @@
                 <span class="stats-bar__label">Resolved</span>
                 <span class="stats-bar__value stats-bar__value--resolved">234</span>
             </div>
-        </div>
+        </div> -->
     </div>
 </main>
 {% endblock %}
 <!-- remove footer for this page -->
 {% block footer %}
     {% endblock %}
+
+{% block extra_js %}
+    <script src="https://js.arcgis.com/4.29/"></script>
+    
+    <script src="{% static 'gis_map/js/map.js' %}"></script>
+{% endblock %}
