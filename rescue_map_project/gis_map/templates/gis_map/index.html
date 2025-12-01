@@ -4,13 +4,16 @@
 {% block title %}Map View - Rescue Map{% endblock %}
 
 {% block content %}
+<!-- Main Map Page -->
 <main class="map-page">
+    <!-- Sidebar -->
     <aside class="sidebar">
         <div class="sidebar__header">
             <h2 class="sidebar__title">Filter & Search</h2>
             <button class="sidebar__close">×</button>
         </div>
-        
+
+        <!-- Search Box -->
         <div class="sidebar__section">
             <div class="search-box">
                 <input type="text" class="search-box__input" placeholder="Search location, phone...">
@@ -18,26 +21,142 @@
             </div>
         </div>
 
+        <!-- Status Filter -->
         <div class="sidebar__section">
             <h3 class="sidebar__section-title">Status</h3>
             <div class="filter-group">
-                </div>
+                <label class="filter-group__item">
+                    <input type="checkbox" checked>
+                    <span class="filter-group__badge filter-group__badge--open">Open</span>
+                    <span class="filter-group__count">(142)</span>
+                </label>
+                <label class="filter-group__item">
+                    <input type="checkbox">
+                    <span class="filter-group__badge filter-group__badge--closed">Closed</span>
+                    <span class="filter-group__count">(234)</span>
+                </label>
+            </div>
         </div>
-        
-        </aside>
 
+        <!-- Priority Filter -->
+        <div class="sidebar__section">
+            <h3 class="sidebar__section-title">Priority</h3>
+            <div class="filter-group">
+                <label class="filter-group__item">
+                    <input type="checkbox" checked>
+                    <span class="filter-group__badge filter-group__badge--critical">Critical</span>
+                    <span class="filter-group__count">(45)</span>
+                </label>
+                <label class="filter-group__item">
+                    <input type="checkbox" checked>
+                    <span class="filter-group__badge filter-group__badge--high">High</span>
+                    <span class="filter-group__count">(89)</span>
+                </label>
+                <label class="filter-group__item">
+                    <input type="checkbox" checked>
+                    <span class="filter-group__badge filter-group__badge--medium">Medium</span>
+                    <span class="filter-group__count">(76)</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Time Range -->
+        <div class="sidebar__section">
+            <h3 class="sidebar__section-title">Time Range</h3>
+            <div class="time-filter">
+                <button class="time-filter__btn time-filter__btn--active">Last Hour</button>
+                <button class="time-filter__btn">Last 6h</button>
+                <button class="time-filter__btn">Last 24h</button>
+                <button class="time-filter__btn">Custom</button>
+            </div>
+        </div>
+
+        <!-- Recent Requests List -->
+        <div class="sidebar__section">
+            <h3 class="sidebar__section-title">Recent Requests</h3>
+            <div class="request-list">
+                <div class="request-card">
+                    <div class="request-card__header">
+                        <span class="request-card__id">#10423</span>
+                        <span class="request-card__badge request-card__badge--critical">Critical</span>
+                    </div>
+                    <p class="request-card__message">Nước dâng cao, có 5 người bị kẹt</p>
+                    <div class="request-card__meta">
+                        <span class="request-card__time">⏱ 15 min ago</span>
+                        <span class="request-card__location">📍 District 8</span>
+                    </div>
+                    <button class="request-card__action">View on Map →</button>
+                </div>
+
+                <div class="request-card">
+                    <div class="request-card__header">
+                        <span class="request-card__id">#10422</span>
+                        <span class="request-card__badge request-card__badge--high">High</span>
+                    </div>
+                    <p class="request-card__message">Cần lương thực khẩn cấp</p>
+                    <div class="request-card__meta">
+                        <span class="request-card__time">⏱ 32 min ago</span>
+                        <span class="request-card__location">📍 District 4</span>
+                    </div>
+                    <button class="request-card__action">View on Map →</button>
+                </div>
+
+                <div class="request-card">
+                    <div class="request-card__header">
+                        <span class="request-card__id">#10421</span>
+                        <span class="request-card__badge request-card__badge--medium">Medium</span>
+                    </div>
+                    <p class="request-card__message">Cần thuốc men cơ bản</p>
+                    <div class="request-card__meta">
+                        <span class="request-card__time">⏱ 1h ago</span>
+                        <span class="request-card__location">📍 District 7</span>
+                    </div>
+                    <button class="request-card__action">View on Map →</button>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Map Container -->
     <div class="map-container">
         <div id="mapView" class="map-container__view">
+            <!-- Map will be rendered here -->
             <div class="map-container__placeholder">
                 [ArcGIS Map View - Initialize with script.js]
             </div>
         </div>
-        
-        <div class="map-controls">
-            </div>
 
+        <!-- Map Controls -->
+        <div class="map-controls">
+            <button class="map-controls__btn" title="Toggle Sidebar">
+                <span class="map-controls__icon">☰</span>
+            </button>
+            <button class="map-controls__btn" title="My Location">
+                <span class="map-controls__icon">📍</span>
+            </button>
+            <button class="map-controls__btn" title="Refresh Data">
+                <span class="map-controls__icon">🔄</span>
+            </button>
+            <button class="map-controls__btn" title="Fullscreen">
+                <span class="map-controls__icon">⛶</span>
+            </button>
+        </div>
+
+        <!-- Statistics Bar -->
         <div class="stats-bar">
+            <div class="stats-bar__item">
+                <span class="stats-bar__label">Total Requests</span>
+                <span class="stats-bar__value stats-bar__value--total">444</span>
             </div>
+            <div class="stats-bar__item">
+                <span class="stats-bar__label">Open</span>
+                <span class="stats-bar__value stats-bar__value--open">142</span>
+            </div>
+            <div class="stats-bar__item">
+                <span class="stats-bar__label">Resolved</span>
+                <span class="stats-bar__value stats-bar__value--resolved">234</span>
+            </div>
+        </div>
     </div>
 </main>
 {% endblock %}
