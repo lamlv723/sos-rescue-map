@@ -1,5 +1,5 @@
 """
-ASGI config for rescuemap project.
+ASGI config for rescue_map_project project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rescuemap.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'rescue_map_project.settings')
 
 application = get_asgi_application()
