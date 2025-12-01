@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Map View - Rescue Map{% endblock %}
+
+{% block content %}
+<main class="map-page">
+    <aside class="sidebar">
+        <div class="sidebar__header">
+            <h2 class="sidebar__title">Filter & Search</h2>
+            <button class="sidebar__close">×</button>
+        </div>
+        </aside>
+
+    <div class="map-container">
+        <div id="mapView" class="map-container__view">
+            <div class="map-container__placeholder">
+                [ArcGIS Map View - Initialize with script.js]
+            </div>
+        </div>
+        </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Page specific initialization if needed
+    // The main.js already handles init based on URL, but you might want specific scripts here later
+</script>
+{% endblock %}

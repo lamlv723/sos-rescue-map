@@ -18,8 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('home.urls'), name='home'),  # root page
     path('admin/', admin.site.urls),
-    path('core/', include('core.urls', namespace='core')),
-    path('emergency/', include('emergency.urls', namespace='emergency')),
+
+    # path('', include('home.urls'), name='home'),  # root page
+    # Include app URLs
+    path('', include('gis_map.urls')),          # Root URL -> Map
+    path('analytics/', include('analytics.urls')),
+    path('emergency/', include('submissions.urls')),
+    path('resources/', include('resources.urls')),
+    path('', include('about.urls')),            # Maps /about/
 ]
