@@ -1,0 +1,269 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Submit SOS - Rescue Map{% endblock %}
+
+{% block content %}
+<main class="submit-page">
+    <div class="submit-page__container">
+        <!-- Emergency Banner -->
+        <div class="emergency-banner">
+            <div class="emergency-banner__icon">🚨</div>
+            <div class="emergency-banner__content">
+                <h2 class="emergency-banner__title">Need Immediate Help?</h2>
+                <p class="emergency-banner__text">Call emergency hotline: <strong>113</strong> or <strong>115</strong></p>
+            </div>
+        </div>
+
+        <!-- Form Card -->
+        <div class="form-card">
+            <div class="form-card__header">
+                <h1 class="form-card__title">Submit SOS Request</h1>
+                <p class="form-card__subtitle">Fill in the information below to request assistance</p>
+            </div>
+
+            <form class="sos-form">
+                <!-- Step Indicator -->
+                <div class="form-steps">
+                    <div class="form-steps__item form-steps__item--active">
+                        <span class="form-steps__number">1</span>
+                        <span class="form-steps__label">Location</span>
+                    </div>
+                    <div class="form-steps__item">
+                        <span class="form-steps__number">2</span>
+                        <span class="form-steps__label">Details</span>
+                    </div>
+                    <div class="form-steps__item">
+                        <span class="form-steps__number">3</span>
+                        <span class="form-steps__label">Contact</span>
+                    </div>
+                    <div class="form-steps__item">
+                        <span class="form-steps__number">4</span>
+                        <span class="form-steps__label">Confirm</span>
+                    </div>
+                </div>
+
+                <!-- Step 1: Location -->
+                <div class="form-section form-section--active">
+                    <h2 class="form-section__title">📍 Your Location</h2>
+                    
+                    <div class="form-group">
+                        <button type="button" class="btn-detect-location">
+                            🎯 Detect My Location
+                        </button>
+                        <span class="form-group__hint">Click to auto-detect your current location</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Address</label>
+                        <input type="text" class="form-input" placeholder="Enter your address">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">District</label>
+                            <select class="form-select">
+                                <option>Select district</option>
+                                <option>District 1</option>
+                                <option>District 2</option>
+                                <option>District 3</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Ward</label>
+                            <select class="form-select">
+                                <option>Select ward</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="location-map">
+                        <div class="location-map__placeholder">
+                            [Mini Map Preview - ArcGIS API]
+                            <p>Click on map to adjust location marker</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Details -->
+                <div class="form-section">
+                    <h2 class="form-section__title">⚠️ Emergency Details</h2>
+
+                    <div class="form-group">
+                        <label class="form-label">Priority Level</label>
+                        <div class="priority-selector">
+                            <label class="priority-selector__item">
+                                <input type="radio" name="priority">
+                                <span class="priority-selector__badge priority-selector__badge--critical">🔴 Critical</span>
+                                <small>Life-threatening situation</small>
+                            </label>
+                            <label class="priority-selector__item">
+                                <input type="radio" name="priority">
+                                <span class="priority-selector__badge priority-selector__badge--high">🟠 High</span>
+                                <small>Urgent assistance needed</small>
+                            </label>
+                            <label class="priority-selector__item">
+                                <input type="radio" name="priority">
+                                <span class="priority-selector__badge priority-selector__badge--medium">🟡 Medium</span>
+                                <small>Non-urgent support</small>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Type of Assistance Needed</label>
+                        <div class="checkbox-grid">
+                            <label class="checkbox-grid__item">
+                                <input type="checkbox">
+                                <span>🚑 Medical</span>
+                            </label>
+                            <label class="checkbox-grid__item">
+                                <input type="checkbox">
+                                <span>🍲 Food/Water</span>
+                            </label>
+                            <label class="checkbox-grid__item">
+                                <input type="checkbox">
+                                <span>🏠 Shelter</span>
+                            </label>
+                            <label class="checkbox-grid__item">
+                                <input type="checkbox">
+                                <span>🚤 Evacuation</span>
+                            </label>
+                            <label class="checkbox-grid__item">
+                                <input type="checkbox">
+                                <span>⚡ Power</span>
+                            </label>
+                            <label class="checkbox-grid__item">
+                                <input type="checkbox">
+                                <span>💊 Medicine</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Number of People</label>
+                        <input type="number" class="form-input" placeholder="How many people need help?">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Describe Your Situation</label>
+                        <textarea class="form-textarea" rows="5" placeholder="Please describe your situation in detail..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Upload Photos (Optional)</label>
+                        <div class="file-upload">
+                            <input type="file" multiple accept="image/*">
+                            <div class="file-upload__placeholder">
+                                <span class="file-upload__icon">📷</span>
+                                <span>Click to upload or drag and drop</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Contact -->
+                <div class="form-section">
+                    <h2 class="form-section__title">📱 Contact Information</h2>
+
+                    <div class="form-group">
+                        <label class="form-label">Full Name *</label>
+                        <input type="text" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Phone Number *</label>
+                        <input type="tel" class="form-input" placeholder="+84" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Alternative Contact</label>
+                        <input type="tel" class="form-input" placeholder="+84">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email (Optional)</label>
+                        <input type="email" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox">
+                            <span>Allow rescue teams to contact me via SMS/WhatsApp</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Step 4: Confirmation -->
+                <div class="form-section">
+                    <h2 class="form-section__title">✅ Confirm Your Request</h2>
+
+                    <div class="confirmation-summary">
+                        <div class="confirmation-summary__item">
+                            <strong>Location:</strong>
+                            <span>[Auto-populated from Step 1]</span>
+                        </div>
+                        <div class="confirmation-summary__item">
+                            <strong>Priority:</strong>
+                            <span class="badge badge--critical">[Selected Priority]</span>
+                        </div>
+                        <div class="confirmation-summary__item">
+                            <strong>Assistance Type:</strong>
+                            <span>[Selected Types]</span>
+                        </div>
+                        <div class="confirmation-summary__item">
+                            <strong>Contact:</strong>
+                            <span>[Name] - [Phone]</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" required>
+                            <span>I confirm that the information provided is accurate</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="button" class="form-btn form-btn--secondary">← Previous</button>
+                    <button type="button" class="form-btn form-btn--primary">Next →</button>
+                    <button type="submit" class="form-btn form-btn--emergency" style="display:none;">🆘 Submit Request</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Info Sidebar -->
+        <aside class="info-sidebar">
+            <div class="info-card">
+                <h3 class="info-card__title">💡 Quick Tips</h3>
+                <ul class="info-card__list">
+                    <li>Provide exact location for faster response</li>
+                    <li>Keep your phone charged and accessible</li>
+                    <li>Stay calm and safe while waiting</li>
+                    <li>Update status if situation changes</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3 class="info-card__title">📞 Emergency Contacts</h3>
+                <ul class="info-card__list">
+                    <li><strong>113</strong> - Police</li>
+                    <li><strong>114</strong> - Fire Department</li>
+                    <li><strong>115</strong> - Ambulance</li>
+                    <li><strong>1900 1122</strong> - Disaster Hotline</li>
+                </ul>
+            </div>
+
+            <div class="info-card">
+                <h3 class="info-card__title">⏱ Average Response Time</h3>
+                <div class="response-time">
+                    <div class="response-time__value">25 min</div>
+                    <div class="response-time__label">Based on your area</div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</main>
+{% endblock %}

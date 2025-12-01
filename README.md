@@ -1,5 +1,6 @@
 # sos-map
 
+```
 rescue_map_project/
 ├── manage.py
 ├── rescue_map_project/       # Project configuration (settings.py, urls.py)
@@ -34,3 +35,4 @@ rescue_map_project/
 │           └── submit_sos.html
 │
 └── ... (các app dashboard, resources tương tự)
+```

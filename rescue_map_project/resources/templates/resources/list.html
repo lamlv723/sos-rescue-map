@@ -1,0 +1,260 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Resources - Rescue Map{% endblock %}
+
+{% block content %}
+<main class="resources-page">
+    <div class="resources-page__container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1 class="page-header__title">Emergency Resources</h1>
+            <p class="page-header__subtitle">Find nearby shelters, medical facilities, and supply centers</p>
+        </div>
+
+        <!-- Search & Filter -->
+        <div class="resources-filter">
+            <div class="resources-filter__search">
+                <input type="text" placeholder="Search resources..." class="resources-filter__input">
+                <button class="resources-filter__btn">🔍</button>
+            </div>
+
+            <div class="resources-filter__tabs">
+                <button class="resources-filter__tab resources-filter__tab--active">All</button>
+                <button class="resources-filter__tab">🏥 Medical</button>
+                <button class="resources-filter__tab">🏠 Shelters</button>
+                <button class="resources-filter__tab">🍲 Food</button>
+                <button class="resources-filter__tab">💧 Water</button>
+                <button class="resources-filter__tab">🚑 Rescue Teams</button>
+            </div>
+        </div>
+
+        <!-- Resources Grid -->
+        <div class="resources-grid">
+            <!-- Medical Facilities -->
+            <section class="resource-section">
+                <h2 class="resource-section__title">🏥 Medical Facilities</h2>
+                <div class="resource-cards">
+                    <div class="resource-card">
+                        <div class="resource-card__badge resource-card__badge--available">Available</div>
+                        <h3 class="resource-card__name">Cho Ray Hospital</h3>
+                        <div class="resource-card__meta">
+                            <span class="resource-card__location">📍 District 5, HCMC</span>
+                            <span class="resource-card__distance">2.5 km</span>
+                        </div>
+                        <div class="resource-card__info">
+                            <div class="resource-card__info-item">
+                                <span class="label">Capacity:</span>
+                                <span class="value">1,200 beds</span>
+                            </div>
+                            <div class="resource-card__info-item">
+                                <span class="label">Available:</span>
+                                <span class="value">80 beds</span>
+                            </div>
+                            <div class="resource-card__info-item">
+                                <span class="label">Contact:</span>
+                                <span class="value">(028) 3855 4137</span>
+                            </div>
+                        </div>
+                        <div class="resource-card__actions">
+                            <button class="resource-card__btn resource-card__btn--primary">📞 Call</button>
+                            <button class="resource-card__btn resource-card__btn--secondary">🗺 Directions</button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-card__badge resource-card__badge--limited">Limited</div>
+                        <h3 class="resource-card__name">115 Emergency Center</h3>
+                        <div class="resource-card__meta">
+                            <span class="resource-card__location">📍 District 1, HCMC</span>
+                            <span class="resource-card__distance">3.8 km</span>
+                        </div>
+                        <div class="resource-card__info">
+                            <div class="resource-card__info-item">
+                                <span class="label">Ambulances:</span>
+                                <span class="value">12 available</span>
+                            </div>
+                            <div class="resource-card__info-item">
+                                <span class="label">Response Time:</span>
+                                <span class="value">15-20 min</span>
+                            </div>
+                            <div class="resource-card__info-item">
+                                <span class="label">Hotline:</span>
+                                <span class="value">115</span>
+                            </div>
+                        </div>
+                        <div class="resource-card__actions">
+                            <button class="resource-card__btn resource-card__btn--primary">📞 Call</button>
+                            <button class="resource-card__btn resource-card__btn--secondary">🗺 Directions</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Shelters -->
+            <section class="resource-section">
+                <h2 class="resource-section__title">🏠 Emergency Shelters</h2>
+                <div class="resource-cards">
+                    <div class="resource-card">
+                        <div class="resource-card__badge resource-card__badge--available">Available</div>
+                        <h3 class="resource-card__name">District 8 Community Center</h3>
+                        <div class="resource-card__meta">
+                            <span class="resource-card__location">📍 District 8, HCMC</span>
+                            <span class="resource-card__distance">1.2 km</span>
+                        </div>
+                        <div class="resource-card__info">
+                            <div class="resource-card__info-item">
+                                <span class="label">Capacity:</span>
+                                <span class="value">500 people</span>
+                            </div>
+                            <div class="resource-card__info-item">
+                                <span class="label">Occupied:</span>
+                                <span class="value">320 people</span>
+                            </div>
+                            <div class="resource-card__info-item">
+                                <span class="label">Facilities:</span>
+                                <span class="value">Food, Water, Medical</span>
+                            </div>
+                        </div>
+                        <div class="resource-card__actions">
+                            <button class="resource-card__btn resource-card__btn--primary">📞 Call</button>
+                            <button class="resource-card__btn resource-card__btn--secondary">🗺 Directions</button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-card__badge resource-card__badge--full">Full</div>
+                        <h3 class="resource-card__name">Stadium Shelter</h3>
+                        <div class="resource-card__meta">
+                            <span class="resource-card__location">📍 District 7, HCMC</span>
+                            <span class="resource-card__distance">4.5 km</span>
+                        </div>
+                        <div class="resource-card__info">
+                            <div class="resource-card__info-item">
+                                <span class="label">Capacity:</span>
+                                <span class="value">1,000 people</span>
+                            </div>
+                            <div class="resource-card__info-item">
+                                <span class="label">Status:</span>
+                                <span class="value text-danger">At Capacity</span>
+                            </div>
+                            <div class="resource-card__info-item">
+                                <span class="label">Next Available:</span>
+                                <span class="value">Check updates</span>
+                            </div>
+                        </div>
+                        <div class="resource-card__actions">
+                            <button class="resource-card__btn resource-card__btn--primary">📞 Call</button>
+                            <button class="resource-card__btn resource-card__btn--secondary">🗺 Directions</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Supply Centers -->
+            <section class="resource-section">
+                <h2 class="resource-section__title">🍲 Food & Supply Centers</h2>
+                <div class="resource-cards">
+                    <div class="resource-card">
+                        <div class="resource-card__badge resource-card__badge--available">Available</div>
+                        <h3 class="resource-card__name">Red Cross Distribution Point</h3>
+                        <div class="resource-card__meta">
+                            <span class="resource-card__location">📍 District 4, HCMC</span>
+                            <span class="resource-card__distance">2.8 km</span>
+                        </div>
+                        <div class="resource-card__info">
+                            <div class="resource-card__info-item">
+                                <span class="label">Available:</span>
+                                <span class="value">Food, Water, Medicine</span>
+                            </div>
+                            <div class="resource-card__info-item">
+                                <span class="label">Hours:</span>
+                                <span class="value">24/7 Open</span>
+                            </div>
+                            <div class="resource-card__info-item">
+                                <span class="label">Distribution:</span>
+                                <span class="value">Free for all</span>
+                            </div>
+                        </div>
+                        <div class="resource-card__actions">
+                            <button class="resource-card__btn resource-card__btn--primary">📞 Call</button>
+                            <button class="resource-card__btn resource-card__btn--secondary">🗺 Directions</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rescue Teams -->
+            <section class="resource-section">
+                <h2 class="resource-section__title">🚑 Active Rescue Teams</h2>
+                <div class="resource-cards">
+                    <div class="resource-card">
+                        <div class="resource-card__badge resource-card__badge--active">Active</div>
+                        <h3 class="resource-card__name">Team Alpha - District 8</h3>
+                        <div class="resource-card__meta">
+                            <span class="resource-card__location">📍 Currently: District 8</span>
+                            <span class="resource-card__distance">1.5 km from you</span>
+                        </div>
+                        <div class="resource-card__info">
+                            <div class="resource-card__info-item">
+                                <span class="label">Members:</span>
+                                <span class="value">8 people</span>
+                            </div>
+                            <div class="resource-card__info-item">
+                                <span class="label">Equipment:</span>
+                                <span class="value">Boats, Medical Kit</span>
+                            </div>
+                            <div class="resource-card__info-item">
+                                <span class="label">Status:</span>
+                                <span class="value text-success">Available</span>
+                            </div>
+                        </div>
+                        <div class="resource-card__actions">
+                            <button class="resource-card__btn resource-card__btn--primary">📡 Request Assistance</button>
+                        </div>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-card__badge resource-card__badge--busy">On Mission</div>
+                        <h3 class="resource-card__name">Team Bravo - Helicopter Unit</h3>
+                        <div class="resource-card__meta">
+                            <span class="resource-card__location">📍 Currently: District 2</span>
+                            <span class="resource-card__distance">8.2 km from you</span>
+                        </div>
+                        <div class="resource-card__info">
+                            <div class="resource-card__info-item">
+                                <span class="label">Members:</span>
+                                <span class="value">4 people</span>
+                            </div>
+                            <div class="resource-card__info-item">
+                                <span class="label">Equipment:</span>
+                                <span class="value">Helicopter, Winch</span>
+                            </div>
+                            <div class="resource-card__info-item">
+                                <span class="label">ETA:</span>
+                                <span class="value">45 min</span>
+                            </div>
+                        </div>
+                        <div class="resource-card__actions">
+                            <button class="resource-card__btn resource-card__btn--secondary" disabled>Unavailable</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Map View -->
+        <div class="resources-map">
+            <div class="resources-map__header">
+                <h2 class="resources-map__title">📍 Resources Map View</h2>
+                <button class="resources-map__toggle">Switch to List View</button>
+            </div>
+            <div class="resources-map__container">
+                <div class="resources-map__placeholder">
+                    [Interactive Map showing all resources - ArcGIS API]
+                    <p>Click on markers to view details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

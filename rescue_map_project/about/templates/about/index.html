@@ -1,0 +1,202 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}About - Rescue Map{% endblock %}
+
+{% block content %}
+<main class="about-page">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-section__container">
+            <img src="{% static 'core/images/logo-4k-no-background.png' %}" alt="UT GIS Project" class="hero-section__logo">
+            <h1 class="hero-section__title">UT GIS Project</h1>
+            <h2 class="hero-section__subtitle">Emergency Rescue Mapping System</h2>
+            <p class="hero-section__description">
+                A real-time GIS platform connecting people in need with rescue resources during emergencies
+            </p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="content-section">
+        <div class="content-section__container">
+            <h2 class="content-section__title">Our Mission</h2>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-card__icon">🎯</div>
+                    <h3 class="mission-card__title">Rapid Response</h3>
+                    <p class="mission-card__text">Enable faster emergency response through real-time location mapping and resource coordination</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-card__icon">🤝</div>
+                    <h3 class="mission-card__title">Community Support</h3>
+                    <p class="mission-card__text">Connect affected communities with available rescue teams, shelters, and essential supplies</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-card__icon">📊</div>
+                    <h3 class="mission-card__title">Data-Driven Decisions</h3>
+                    <p class="mission-card__text">Provide actionable insights through visualization and analytics for rescue coordination</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="content-section content-section--gray">
+        <div class="content-section__container">
+            <h2 class="content-section__title">How It Works</h2>
+            <div class="steps-timeline">
+                <div class="step">
+                    <div class="step__number">1</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Submit Request</h3>
+                        <p class="step__text">People in need submit SOS requests with their location and situation details</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__number">2</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Real-Time Mapping</h3>
+                        <p class="step__text">Requests are plotted on an interactive map with priority indicators and clustering</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__number">3</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Resource Allocation</h3>
+                        <p class="step__text">Rescue teams view nearby requests and allocate resources efficiently</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step__number">4</div>
+                    <div class="step__content">
+                        <h3 class="step__title">Track & Update</h3>
+                        <p class="step__text">Status updates in real-time until rescue operations are completed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="content-section">
+        <div class="content-section__container">
+            <h2 class="content-section__title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-card__icon">🗺️</div>
+                    <h3 class="feature-card__title">Interactive GIS Mapping</h3>
+                    <p class="feature-card__text">Powered by ArcGIS with real-time data visualization, clustering, and time-slider</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">⚡</div>
+                    <h3 class="feature-card__title">Real-Time Updates</h3>
+                    <p class="feature-card__text">Live status updates and automatic refresh for the latest emergency information</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">🎨</div>
+                    <h3 class="feature-card__title">Priority Visualization</h3>
+                    <p class="feature-card__text">Color-coded markers for different status levels and emergency priorities</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">📱</div>
+                    <h3 class="feature-card__title">Mobile Responsive</h3>
+                    <p class="feature-card__text">Fully responsive design accessible from any device during emergencies</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">🔍</div>
+                    <h3 class="feature-card__title">Advanced Filtering</h3>
+                    <p class="feature-card__text">Filter requests by status, priority, location, and time range</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card__icon">📊</div>
+                    <h3 class="feature-card__title">Analytics Dashboard</h3>
+                    <p class="feature-card__text">Comprehensive statistics and charts for rescue operation insights</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="content-section content-section--gray">
+        <div class="content-section__container">
+            <h2 class="content-section__title">Technology Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h4 class="tech-item__title">Frontend</h4>
+                    <ul class="tech-item__list">
+                        <li>HTML5 / CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>BEM Methodology</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="tech-item">
+                    <h4 class="tech-item__title">GIS Platform</h4>
+                    <ul class="tech-item__list">
+                        <li>ArcGIS API for JavaScript 4.29</li>
+                        <li>GeoJSON Layer Support</li>
+                        <li>Time Slider Widget</li>
+                        <li>Clustering & Visualization</li>
+                    </ul>
+                </div>
+                <div class="tech-item">
+                    <h4 class="tech-item__title">Backend (Planned)</h4>
+                    <ul class="tech-item__list">
+                        <li>RESTful API</li>
+                        <li>Real-time Database</li>
+                        <li>WebSocket Support</li>
+                        <li>Authentication System</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team / Contact -->
+    <section class="content-section">
+        <div class="content-section__container">
+            <h2 class="content-section__title">Get Involved</h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3 class="contact-card__title">📧 Contact Us</h3>
+                    <p class="contact-card__text">Have questions or suggestions?</p>
+                    <a href="/cdn-cgi/l/email-protection#fa93949c95ba889f89998f9f979b8ad4999597" class="contact-card__link"><span class="__cf_email__" data-cfemail="e78e898188a79582948492828a8697c984888a">[email&#160;protected]</span></a>
+                </div>
+                <div class="contact-card">
+                    <h3 class="contact-card__title">🤝 Volunteer</h3>
+                    <p class="contact-card__text">Join our rescue coordination team</p>
+                    <a href="#" class="contact-card__link">Apply Now →</a>
+                </div>
+                <div class="contact-card">
+                    <h3 class="contact-card__title">💻 Contribute</h3>
+                    <p class="contact-card__text">Help improve the platform</p>
+                    <a href="#" class="contact-card__link">GitHub Repository →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Banner -->
+    <section class="stats-banner">
+        <div class="stats-banner__container">
+            <div class="stats-banner__item">
+                <span class="stats-banner__value">1,248</span>
+                <span class="stats-banner__label">Total Requests</span>
+            </div>
+            <div class="stats-banner__item">
+                <span class="stats-banner__value">1,038</span>
+                <span class="stats-banner__label">Successfully Resolved</span>
+            </div>
+            <div class="stats-banner__item">
+                <span class="stats-banner__value">25 min</span>
+                <span class="stats-banner__label">Avg Response Time</span>
+            </div>
+            <div class="stats-banner__item">
+                <span class="stats-banner__value">45</span>
+                <span class="stats-banner__label">Active Rescue Teams</span>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
