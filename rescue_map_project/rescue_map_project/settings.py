@@ -37,6 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # --- My apps ---
+    'core.apps.CoreConfig',
+    'gis_map.apps.GisMapConfig',
+    'analytics.apps.AnalyticsConfig',
+    'submissions.apps.SubmissionsConfig',
+    'resources.apps.ResourcesConfig',
+    'about.apps.AboutConfig',
 ]
 
 MIDDLEWARE = [
