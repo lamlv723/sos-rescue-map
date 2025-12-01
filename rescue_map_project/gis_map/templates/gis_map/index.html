@@ -10,6 +10,20 @@
             <h2 class="sidebar__title">Filter & Search</h2>
             <button class="sidebar__close">×</button>
         </div>
+        
+        <div class="sidebar__section">
+            <div class="search-box">
+                <input type="text" class="search-box__input" placeholder="Search location, phone...">
+                <button class="search-box__btn">🔍</button>
+            </div>
+        </div>
+
+        <div class="sidebar__section">
+            <h3 class="sidebar__section-title">Status</h3>
+            <div class="filter-group">
+                </div>
+        </div>
+        
         </aside>
 
     <div class="map-container">
@@ -18,13 +32,12 @@
                 [ArcGIS Map View - Initialize with script.js]
             </div>
         </div>
-        </div>
-</main>
-{% endblock %}
+        
+        <div class="map-controls">
+            </div>
 
-{% block extra_js %}
-<script>
-    // Page specific initialization if needed
-    // The main.js already handles init based on URL, but you might want specific scripts here later
-</script>
+        <div class="stats-bar">
+            </div>
+    </div>
+</main>
 {% endblock %}
