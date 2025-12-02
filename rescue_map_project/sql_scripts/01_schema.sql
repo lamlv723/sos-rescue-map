@@ -1,5 +1,5 @@
 -- ==========================================
--- 1. CÁC BẢNG CƠ SỞ (ĐỘC LẬP)
+-- 1. CÁC BẢNG CƠ SỞ
 -- ==========================================
 
 CREATE TABLE point (
@@ -14,13 +14,14 @@ CREATE TABLE region (
     description TEXT
 );
 
+-- Placeholder for line table
 CREATE TABLE line (
     line_id INTEGER PRIMARY KEY AUTOINCREMENT,
     description TEXT
 );
 
 -- ==========================================
--- 2. CÁC BẢNG CHÍNH (PHỤ THUỘC CẤP 1)
+-- 2. CÁC BẢNG CHÍNH
 -- ==========================================
 
 CREATE TABLE admin_unit (
@@ -42,20 +43,10 @@ CREATE TABLE rescue_team (
     FOREIGN KEY (managed_by_unit_id) REFERENCES admin_unit(unit_id)
 );
 
-CREATE TABLE user (
-    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username TEXT NOT NULL UNIQUE,
-    role TEXT NOT NULL,
-    team_id INTEGER,
-    phone_number TEXT,
-    password_hash TEXT NOT NULL,
-    full_name TEXT,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (team_id) REFERENCES rescue_team(team_id)
-);
+-- !!! KHÔNG CẦN BẢNG USER Ở ĐÂY (DJANGO ĐÃ TẠO 'core_user') !!!
 
 -- ==========================================
--- 3. CÁC BẢNG NGHIỆP VỤ (PHỤ THUỘC CẤP 2)
+-- 3. CÁC BẢNG NGHIỆP VỤ
 -- ==========================================
 
 CREATE TABLE rescue_resource (
@@ -87,12 +78,13 @@ CREATE TABLE sos_request (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     resolved_at DATETIME,
     FOREIGN KEY (location) REFERENCES point(point_id),
-    FOREIGN KEY (user_id) REFERENCES user(user_id),
+    -- Quan trọng: Trỏ vào bảng core_user do Django tạo
+    FOREIGN KEY (user_id) REFERENCES core_user(id), 
     FOREIGN KEY (assigned_team_id) REFERENCES rescue_team(team_id)
 );
 
 -- ==========================================
--- 4. BẢNG TRUNG GIAN (N-N)
+-- 4. BẢNG TRUNG GIAN
 -- ==========================================
 
 CREATE TABLE line_point (
