@@ -31,7 +31,7 @@ rescue_map_project/
 │       └── gis_map/
 │           └── index.html    # Kế thừa từ core/base.html
 │
-├── emergency/                # App xử lý SOS
+├── submissions/                # App xử lý SOS
 │   ├── models.py             # Models: SOSRequest, SOSImage...
 │   ├── forms.py
 │   └── templates/
