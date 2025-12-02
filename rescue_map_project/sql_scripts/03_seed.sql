@@ -39,7 +39,7 @@ INSERT INTO sos_request (
  'Normal', 'Supply', NULL, '2024-10-15 18:30:00'),
 
 (102, 2, NULL, NULL, 
- 'Processing', 'Công viên Lê Văn Tám', 
+ 'Open', 'Công viên Lê Văn Tám', 
  'Cây đổ đè người đi đường', 
  'Người đi đường', '0988777666', 
  'Emergency', 'Medical,Rescue', '/media/sos/tree_fall.jpg', '2024-10-16 07:45:00'),
