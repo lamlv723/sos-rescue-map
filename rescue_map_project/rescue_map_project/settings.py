@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'submissions',
     'resources',
     'about',
+    'locations',
 ]
 
 MIDDLEWARE = [
