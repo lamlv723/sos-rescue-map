@@ -1,120 +1,88 @@
 # SOS Rescue Map
 
-A real-time GIS platform connecting people in need with rescue resources during emergencies. This project uses Django for the backend and ArcGIS API for frontend mapping.
+Hệ thống bản đồ cứu hộ khẩn cấp thời gian thực, kết nối người cần giúp đỡ với các nguồn lực cứu trợ. Dự án sử dụng Django (Backend) và ArcGIS API (Frontend).
 
-## Project Structure
-
-```
+```text
 rescue_map_project/
-├── manage.py
-├── rescue_map_project/       # Project configuration (settings.py, urls.py)
-├── static/                   # (Optional) Root static for build pipelines
-├── media/                    # User uploaded files (SOS photos)
-│
-├── core/                     # [COMMON APP] - TRÁI TIM CỦA DỰ ÁN
-│   ├── apps.py
-│   ├── models.py             # Abstract models (if any)
-│   ├── context_processors.py # Để đẩy data vào Header (vd: user info)
-│   ├── static/
-│   │   └── core/
-│   │       ├── css/          # Move main.css here
-│   │       ├── js/           # Move main.js here
-│   │       └── images/       # Move shared logos here
-│   └── templates/
-│       └── core/
-│           ├── base.html     # CHỨA HEADER & FOOTER
-│           └── components/   # Partial templates (nếu cần tách nhỏ hơn)
-│
-├── gis_map/                  # App hiển thị bản đồ
-│   ├── views.py
-│   └── templates/
-│       └── gis_map/
-│           └── index.html    # Kế thừa từ core/base.html
-│
-├── submissions/                # App xử lý SOS
-│   ├── models.py             # Models: SOSRequest, SOSImage...
-│   ├── forms.py
-│   └── templates/
-│       └── emergency/
-│           └── submit_sos.html
-│
-└── ... (các app dashboard, resources tương tự)
+ ├── manage.py                # Trình quản lý dự án Django
+ ├── requirements.txt         # Danh sách thư viện phụ thuộc
+ ├── .env.example             # Mẫu biến môi trường (cần đổi tên thành .env)
+ ├── rescue_map_project/      # Cấu hình lõi của dự án (Settings, URLs, WSGI)
+ ├── sql_scripts/             # Các script SQL (Tạo bảng, Trigger, Dữ liệu mẫu)
+ ├── diagrams/                # Tài liệu thiết kế hệ thống (ERD, Use Case...)
+ │
+ ├── core/                    # [App] Quản lý User, Authentication & Giao diện nền (Base)
+ ├── gis_map/                 # [App] Hiển thị bản đồ chính & Tích hợp ArcGIS
+ ├── locations/               # [App] Quản lý dữ liệu địa lý (Tọa độ, Quận/Huyện)
+ ├── resources/               # [App] Quản lý nguồn lực cứu hộ (Xe, Thuốc, Nhu yếu phẩm)
+ ├── submissions/             # [App] Xử lý các yêu cầu cứu hộ (SOS Request)
+ ├── analytics/               # [App] Dashboard thống kê & Phân tích dữ liệu
+ └── about/                   # [App] Trang giới thiệu thông tin dự án
+ ```
+ 
+## Hướng dẫn Cài đặt & Chạy (Dev)
+
+Yêu cầu: Python 3.10+, Git.
+
+### 1. Thiết lập môi trường
+
+```bash
+# Clone dự án
+git clone [https://github.com/lamlv723/sos-rescue-map.git](https://github.com/lamlv723/sos-rescue-map.git)
+cd rescue_map_project
+
+# Tạo môi trường ảo (Virtual Environment)
+python -m venv venv
+
+# Kích hoạt môi trường (Windows)
+.\venv\Scripts\activate
+# Kích hoạt môi trường (Mac/Linux)
+source venv/bin/activate
+
+# Cài đặt thư viện
+pip install -r requirements.txt
+````
+
+### 2\. Khởi tạo Database (Reset sạch)
+
+Để đảm bảo dữ liệu và logic hoạt động đúng, hãy chạy lần lượt các lệnh sau để tạo mới database và nạp dữ liệu mẫu:
+
+**Bước 1: Xóa DB cũ (nếu có, thực hiện bước này khi muốn reset lại)**
+
+  * Xóa file `db.sqlite3`
+  * Xóa các file trong thư mục `migrations` của các app (trừ `__init__.py`) nếu cần thiết.
+
+**Bước 2: Tạo cấu trúc bảng**
+
+```bash
+python manage.py makemigrations core locations resources submissions
+python manage.py migrate
 ```
 
-## Getting Started
+**Bước 3: Nạp Logic & Dữ liệu mẫu (Bắt buộc)**
 
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+```bash
+# Bỏ qua file 01_schema.sql
+# Nạp Triggers (Tự động cập nhật trạng thái)
+sqlite3 db.sqlite3 < sql_scripts/02_triggers.sql
 
-### Prerequisites
+# Nạp dữ liệu mẫu (Địa điểm, Đội cứu hộ, SOS...)
+sqlite3 db.sqlite3 < sql_scripts/03_seed.sql
+```
 
-* **Python 3.10+**
-* **Git**
-* **pip** (Python package installer)
+**Bước 4: Tạo tài khoản Admin**
 
-### Installation
+```bash
+python manage.py createsuperuser
+```
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/lamlv723/sos-rescue-map.git
-    cd sos-rescue-map
-    ```
-2.  Move to project folder
-    ```
-    cd rescue_map_project
-    ```
+### 3\. Chạy Server
 
-3.  **Create a Virtual Environment**
-    It is recommended to use a virtual environment to manage dependencies.
-    ```bash
-    # Windows
-    python -m venv venv
-    .\venv\Scripts\activate
+```bash
+python manage.py runserver
+```
 
-    # macOS / Linux
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
+Truy cập:
 
-4.  **Install Dependencies**
-    Install the required packages from the `requirements.txt` file located in the project folder.
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-5.  **Environment Configuration (ignore this step for now)**
-    The project requires certain environment variables to run (e.g., `SECRET_KEY`, `DEBUG`).
-    
-    * Create a `.env` file in the `rescue_map_project/` folder (where `manage.py` is located).
-    * You can use the provided `.env.example` as a template:
-    
-    ```bash
-    cp .env.example rescue_map_project/.env
-    ```
-    * Open the `.env` file and update the values if necessary.
-
-    *Note: If you haven't set up `python-dotenv` or `django-environ` in your settings.py yet, make sure to set these variables in your system environment or update `settings.py` manually for local development.*
-
-6.  **Apply Database Migrations (ignore this step for now)**
-    Navigate to the inner project directory where `manage.py` is located and run migrations to set up the database.
-    ```bash
-    cd rescue_map_project
-    python manage.py migrate
-    ```
-
-7.  **Create a Superuser (Optional)**
-    To access the Django admin panel:
-    ```bash
-    python manage.py createsuperuser
-    ```
-
-### Running the Application
-
-1.  **Start the Development Server**
-    ```bash
-    python manage.py runserver
-    ```
-
-2.  **Access the App**
-    Open your web browser and navigate to:
-    * **Main Site:** [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
-    * **Admin Panel:** [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
+  * **Trang chủ:** [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+  * **Admin:** [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
