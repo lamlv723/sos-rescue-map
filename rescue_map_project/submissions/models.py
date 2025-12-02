@@ -32,5 +32,8 @@ class SOSRequest(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True, blank=True)
     assigned_team = models.ForeignKey('core.RescueTeam', on_delete=models.SET_NULL, null=True, blank=True)
 
+    class Meta:
+        db_table = 'sos_request'
+
     def __str__(self):
         return f"SOS #{self.id} - {self.priority}"

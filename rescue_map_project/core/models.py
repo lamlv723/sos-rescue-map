@@ -15,6 +15,9 @@ class RescueTeam(models.Model):
     # FK tới AdminUnit (App locations)
     managed_by_unit = models.ForeignKey('locations.AdminUnit', on_delete=models.SET_NULL, null=True, blank=True)
 
+    class Meta:
+        db_table = 'rescue_team'
+
     def __str__(self):
         return self.name
 

@@ -19,5 +19,8 @@ class RescueResource(models.Model):
     admin_unit = models.ForeignKey('locations.AdminUnit', on_delete=models.CASCADE)
     location = models.ForeignKey('locations.Point', on_delete=models.CASCADE)
 
+    class Meta:
+            db_table = 'rescue_resource'
+
     def __str__(self):
         return f"{self.name} ({self.type})"
