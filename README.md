@@ -19,7 +19,13 @@ rescue_map_project/
  ├── analytics/               # [App] Dashboard thống kê & Phân tích dữ liệu
  └── about/                   # [App] Trang giới thiệu thông tin dự án
  ```
- 
+
+### Các model trong app:
+![Các model trong app](/images/app-model.png)
+
+### Mối quan hệ giữa các bảng:
+![data model](/diagrams/data-model.jpg)
+
 ## Hướng dẫn Cài đặt & Chạy (Dev)
 
 Yêu cầu: Python 3.10+, Git.
@@ -28,7 +34,7 @@ Yêu cầu: Python 3.10+, Git.
 
 ```bash
 # Clone dự án
-git clone [https://github.com/lamlv723/sos-rescue-map.git](https://github.com/lamlv723/sos-rescue-map.git)
+git clone https://github.com/lamlv723/sos-rescue-map.git
 cd rescue_map_project
 
 # Tạo môi trường ảo (Virtual Environment)
@@ -43,11 +49,11 @@ source venv/bin/activate
 pip install -r requirements.txt
 ````
 
-### 2\. Khởi tạo Database (Reset sạch)
+### 2\. Khởi tạo Database
 
 Để đảm bảo dữ liệu và logic hoạt động đúng, hãy chạy lần lượt các lệnh sau để tạo mới database và nạp dữ liệu mẫu:
 
-**Bước 1: Xóa DB cũ (nếu có, thực hiện bước này khi muốn reset lại)**
+**Bước 1: Xóa DB cũ (nếu có, chi thực hiện bước này khi muốn reset lại)**
 
   * Xóa file `db.sqlite3`
   * Xóa các file trong thư mục `migrations` của các app (trừ `__init__.py`) nếu cần thiết.
