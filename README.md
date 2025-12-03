@@ -19,7 +19,13 @@ rescue_map_project/
  ├── analytics/               # [App] Dashboard thống kê & Phân tích dữ liệu
  └── about/                   # [App] Trang giới thiệu thông tin dự án
  ```
- 
+
+### Các model trong app:
+![Các model trong app](/images/app-model.png)
+
+### Mối quan hệ giữa các bảng:
+![data model](/diagrams/data-model.jpg)
+
 ## Hướng dẫn Cài đặt & Chạy (Dev)
 
 Yêu cầu: Python 3.10+, Git.
