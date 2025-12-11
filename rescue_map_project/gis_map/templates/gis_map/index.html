@@ -1,82 +1,94 @@
 {% extends 'core/base.html' %}
 {% load static %}
 
-{% block title %}Map View - Rescue Map{% endblock %}
+{% block title %}Map View - Rescue Map{% endblock %} 
 
 {% block extra_css %}
     <link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/light/main.css" />
 {% endblock %}
 
 {% block content %}
+
 <!-- Main Map Page -->
 <main class="map-page">
     <!-- Sidebar -->
     <aside class="sidebar">
         <div class="sidebar__header">
-            <h2 class="sidebar__title">Filter & Search</h2>
-            <button class="sidebar__close">×</button>
+            <button class="sidebar__close" id="btn-close-sidebar">&#10060;</button>
         </div>
 
         <!-- Search Box -->
         <div class="sidebar__section">
             <div class="search-box">
-                <input type="text" class="search-box__input" placeholder="Search location, phone...">
-                <button class="search-box__btn">🔍</button>
+                <input type="text" id="search-box-input" class="search-box__input" placeholder="Find location..." />
+                <button class="search-box__btn" title="Find" type="button" id="btn-find">
+                    Find
+                </button>
             </div>
         </div>
 
         <!-- Status Filter -->
         <div class="sidebar__section">
-            <h3 class="sidebar__section-title">Status</h3>
+            <h3 class="sidebar__section-title">Operational Status</h3>
             <div class="filter-group">
-                <label class="filter-group__item">
-                    <input type="checkbox" checked>
-                    <span class="filter-group__badge filter-group__badge--open">Open</span>
-                    <span class="filter-group__count">(142)</span>
+                <label class="filter-group__item" for="status-open">
+                    <span>
+                        <span class="filter-group__badge filter-group__badge--open">Open</span>
+                        <span class="filter-group__count">(142)</span>
+                    </span>
+                    <input type="checkbox" id="status-open" name="status" value="open" />
                 </label>
-                <label class="filter-group__item">
-                    <input type="checkbox">
-                    <span class="filter-group__badge filter-group__badge--closed">Closed</span>
-                    <span class="filter-group__count">(234)</span>
+                <label class="filter-group__item" for="status-closed">
+                    <span>
+                        <span class="filter-group__badge filter-group__badge--closed">Closed</span>
+                        <span class="filter-group__count">(234)</span> 
+                    </span>
+                    <input type="checkbox" id="status-closed" name="status" value="closed" />
                 </label>
             </div>
         </div>
 
         <!-- Priority Filter -->
         <div class="sidebar__section">
-            <h3 class="sidebar__section-title">Priority</h3>
+            <h3 class="sidebar__section-title">Priority Level</h3>
             <div class="filter-group">
                 <label class="filter-group__item">
-                    <input type="checkbox" checked>
-                    <span class="filter-group__badge filter-group__badge--critical">Critical</span>
-                    <span class="filter-group__count">(45)</span>
+                    <span>
+                        <span class="filter-group__badge filter-group__badge--critical">Critical</span>
+                        <span class="filter-group__count">(45)</span>
+                    </span>
+                    <input type="checkbox" name="priority" value="critical" />
                 </label>
                 <label class="filter-group__item">
-                    <input type="checkbox" checked>
-                    <span class="filter-group__badge filter-group__badge--high">High</span>
-                    <span class="filter-group__count">(89)</span>
+                    <span>
+                        <span class="filter-group__badge filter-group__badge--high">High</span>
+                        <span class="filter-group__count">(89)</span>
+                    </span>
+                    <input type="checkbox" name="priority" value="high" />
                 </label>
                 <label class="filter-group__item">
-                    <input type="checkbox" checked>
-                    <span class="filter-group__badge filter-group__badge--medium">Medium</span>
-                    <span class="filter-group__count">(76)</span>
+                    <span>
+                        <span class="filter-group__badge filter-group__badge--medium">Medium</span>
+                        <span class="filter-group__count">(76)</span>
+                    </span>
+                    <input type="checkbox" name="priority" value="medium" />
                 </label>
             </div>
         </div>
 
         <!-- Time Range -->
         <div class="sidebar__section">
-            <h3 class="sidebar__section-title">Time Range</h3>
+            <h3 class="sidebar__section-title">Reported Time</h3>
             <div class="time-filter">
-                <button class="time-filter__btn time-filter__btn--active">Last Hour</button>
-                <button class="time-filter__btn">Last 6h</button>
-                <button class="time-filter__btn">Last 24h</button>
-                <button class="time-filter__btn">Custom</button>
+                <button type="button" class="time-filter__btn time-filter__btn--active">Last Hour</button>
+                <button type="button" class="time-filter__btn">Last 6h</button>
+                <button type="button" class="time-filter__btn">Last 24h</button>
+                <button type="button" class="time-filter__btn">Custom</button>
             </div>
         </div>
 
         <!-- Recent Requests List -->
-        <div class="sidebar__section">
+        <!-- <div class="sidebar__section">
             <h3 class="sidebar__section-title">Recent Requests</h3>
             <div class="request-list">
                 <div class="request-card">
@@ -118,11 +130,11 @@
                     <button class="request-card__action">View on Map →</button>
                 </div>
             </div>
-        </div>
+        </div> -->
     </aside>
 
     <!-- Map Container -->
-    <div class="map-container">
+    <div class="map-container" id="map-container">
         <div id="mapView" class="map-container__view">
             <!-- Map will be rendered here -->
             <!-- <div class="map-container__placeholder">
@@ -130,8 +142,8 @@
             </div> -->
         </div>
 
-        <div id="basemapStyles" class="esri-widget" style="display: none;">
-            <select id="selectBasemap" class="esri-select" style="width: 200px; padding: 5px;">
+        <div id="basemapStyles" class="esri-widget">
+            <select id="selectBasemap" class="esri-select basemap-styles">
                 <option value="gray-vector">Bản đồ Xám (Mặc định)</option>
                 <option value="satellite" selected>Ảnh Vệ tinh (Satellite)</option>
                 <option value="streets-vector">Bản đồ Đường phố</option>
@@ -143,17 +155,25 @@
 
         <!-- Map Controls -->
         <div class="map-controls">
-            <button class="map-controls__btn" title="Toggle Sidebar">
-                <span class="map-controls__icon">☰</span>
+            <button class="esri-widget--button" title="Toggle Sidebar" type="button" id="btn-toggle-sidebar">
+                <span class="map-controls__icon">
+                    <img src="{% static 'core/images/menu.svg' %}" alt="Toggle Sidebar" />
+                </span>
             </button>
-            <button class="map-controls__btn" title="My Location">
-                <span class="map-controls__icon">📍</span>
+            <button class="esri-widget--button" title="My Location" type="button" id="btn-my-location">
+                <span class="map-controls__icon">
+                    <img src="{% static 'core/images/locate-fixed.svg' %}" alt="My Location" />
+                </span>
             </button>
-            <button class="map-controls__btn" title="Refresh Data">
-                <span class="map-controls__icon">🔄</span>
+            <button class="esri-widget--button" title="Refresh Data" type="button" id="btn-refresh-data">
+                <span class="map-controls__icon">
+                    <img src="{% static 'core/images/refresh-ccw.svg' %}" alt="Refresh Data" />
+                </span>
             </button>
-            <button class="map-controls__btn" title="Fullscreen">
-                <span class="map-controls__icon">⛶</span>
+            <button class="esri-widget--button" title="Fullscreen" type="button" id="btn-fullscreen">
+                <span class="map-controls__icon">
+                    <img src="{% static 'core/images/fullscreen.svg' %}" alt="Fullscreen" />
+                </span>
             </button>
         </div>
 
@@ -175,12 +195,12 @@
     </div>
 </main>
 {% endblock %}
+
 <!-- remove footer for this page -->
-{% block footer %}
-    {% endblock %}
+{% block footer %}{% endblock %}
 
 {% block extra_js %}
-    <script src="https://js.arcgis.com/4.29/"></script>
-    
-    <script src="{% static 'gis_map/js/map.js' %}"></script>
+<script src="https://js.arcgis.com/4.29/"></script>
+<script src="{% static 'gis_map/js/gis-data.js' %}"></script>
+<script src="{% static 'gis_map/js/map.js' %}"></script>
 {% endblock %}
