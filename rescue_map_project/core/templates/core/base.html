@@ -2,36 +2,69 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Rescue Map{% endblock %}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <link rel="stylesheet" href="{% static 'core/css/main.css' %}">
-    <link rel="icon" type="image/svg" href="{% static 'core/images/logo-4k-no-background.svg' %}">
+    <title>{% block title %}Trang thông tin cứu hộ - UT GIS Project{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static 'core/css/main.css' %}" />
+    <link
+        rel="icon"
+        type="image/x-icon"
+        href="{% static 'core/images/favicon.ico' %}"
+    />
     {% block extra_css %}{% endblock %}
 </head>
 <body>
     <header class="header">
         <div class="header__container">
             <div class="header__logo">
-                <img src="{% static 'core/images/logo-4k-no-background.png' %}" alt="UT GIS Project" class="header__logo-img">
-                <span class="header__logo-text">Rescue Map</span>
+                <img
+                    src="{% static 'core/images/logo.webp' %}"
+                    alt="UT GIS Project"
+                    class="header__logo-img"
+                />
+                <span class="header__logo-text">Bản đồ Cứu hộ</span>
             </div>
             
             <nav class="header__nav">
-                <a href="{% url 'gis_map:index' %}" class="header__nav-link {% if request.resolver_match.view_name == 'gis_map:index' %}header__nav-link--active{% endif %}">Map</a>
-                <a href="{% url 'analytics:dashboard' %}" class="header__nav-link {% if 'analytics' in request.path %}header__nav-link--active{% endif %}">Dashboard</a>
-                <a href="{% url 'emergency:submit' %}" class="header__nav-link {% if 'emergency' in request.path %}header__nav-link--active{% endif %}">Submit SOS</a>
-                <a href="{% url 'resources:list' %}" class="header__nav-link {% if 'resources' in request.path %}header__nav-link--active{% endif %}">Resources</a>
-                <a href="{% url 'core:about' %}" class="header__nav-link {% if 'about' in request.path %}header__nav-link--active{% endif %}">About</a>
+                <a
+                    href="{% url 'gis_map:index' %}"
+                    class="header__nav-link {% if request.resolver_match.view_name == 'gis_map:index' %}header__nav-link--active{% endif %}"
+                >
+                    Bản đồ
+                </a>
+                <a
+                    href="{% url 'analytics:dashboard' %}"
+                    class="header__nav-link {% if 'analytics' in request.path %}header__nav-link--active{% endif %}"
+                >
+                    Bảng điều khiển
+                </a>
+                <a
+                    href="{% url 'resources:list' %}"
+                    class="header__nav-link {% if 'resources' in request.path %}header__nav-link--active{% endif %}"
+                >
+                    Tài nguyên
+                </a>
+                <a
+                    href="{% url 'core:about' %}"
+                    class="header__nav-link {% if 'about' in request.path %}header__nav-link--active{% endif %}"
+                >
+                    Giới thiệu
+                </a>
             </nav>
 
             <div class="header__actions">
-                <button class="header__btn header__btn--emergency" onclick="window.location.href='{% url 'emergency:submit' %}'">
+                <a
+                    href="{% url 'emergency:submit' %}"
+                    class="header__btn header__btn--emergency"
+                >
                     <span class="header__btn-icon">🆘</span>
-                    Emergency
+                    Gửi yêu cầu cứu trợ
+                </a>
+                <button class="header__btn header__btn--login">
+                    Đăng nhập
                 </button>
-                <button class="header__btn header__btn--login">Login</button>
             </div>
 
             <button class="header__menu-toggle">
@@ -42,26 +75,36 @@
         </div>
     </header>
 
-    {% block content %}
-    {% endblock %}
+    {% block content %}{% endblock %}
 
     {% block footer %}
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__section">
                 <h4 class="footer__title">UT GIS Project</h4>
-                <p class="footer__text">Emergency rescue mapping system for disaster response and community safety</p>
+                <p class="footer__text">
+                    Emergency rescue mapping system for disaster response and community safety
+                </p>
             </div>
+            
             <div class="footer__section">
                 <h4 class="footer__title">Quick Links</h4>
                 <ul class="footer__links">
-                    <li><a href="{% url 'gis_map:index' %}">Map View</a></li>
-                    <li><a href="{% url 'analytics:dashboard' %}">Dashboard</a></li>
-                    <li><a href="{% url 'emergency:submit' %}">Submit SOS</a></li>
-                    <li><a href="{% url 'resources:list' %}">Resources</a></li>
+                    <li>
+                        <a href="{% url 'gis_map:index' %}">Map View</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'analytics:dashboard' %}">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'emergency:submit' %}">Submit SOS</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'resources:list' %}">Resources</a>
+                    </li>
                 </ul>
             </div>
+            
             <div class="footer__section">
                 <h4 class="footer__title">Emergency</h4>
                 <ul class="footer__links">
@@ -71,17 +114,25 @@
                     <li>Disaster: 1900 1122</li>
                 </ul>
             </div>
+            
             <div class="footer__section">
                 <h4 class="footer__title">Legal</h4>
                 <ul class="footer__links">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#">Terms of Service</a>
+                    </li>
+                    <li>
+                        <a href="#">Cookie Policy</a>
+                    </li>
                 </ul>
             </div>
         </div>
+        
         <div class="footer__bottom">
-            <p>&copy; 2024 UT GIS Project - Rescue Map. All rights reserved.</p>
+            <p>&copy; <span id="footer__year"></span> UT GIS Project - Rescue Map. All rights reserved.</p>
         </div>
     </footer>
     {% endblock %}
