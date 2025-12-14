@@ -1887,13 +1887,14 @@ textarea {
     padding: var(--spacing-xxl) var(--spacing-lg);
   }
 
-  .hero-section__title {
-    font-size: 40px;
-  }
   .hero-section__logo {
     width: 120px;
     height: 120px;
     margin: 0 auto var(--spacing-lg);
+  }
+
+  .hero-section__title {
+    font-size: 40px;
   }
 
   .hero-section__subtitle {
@@ -1922,6 +1923,7 @@ textarea {
   .mission-card {
     padding: var(--spacing-lg);
   }
+
   .mission-card__icon {
     font-size: 64px;
     margin-bottom: var(--spacing-md);
