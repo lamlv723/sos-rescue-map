@@ -13,14 +13,9 @@
    */
   class GISDataService {
     constructor(config = {}) {
-<<<<<<< HEAD
       this.apiEndpoint =
         config.apiEndpoint || "http://127.0.0.1:8000/api/v1/sos";
       this.useMockData = config.useMockData === true; // Default to false (use API) if not specified
-=======
-      this.apiEndpoint = config.apiEndpoint || "/api/v1/sos-requests/";
-      this.useMockData = config.useMockData !== false; // Default to true if not specified
->>>>>>> 36b8327 (Feature/phuc b gis map (#8))
       this.mockData = config.mockData || this.getDefaultMockData();
     }
 
@@ -69,7 +64,6 @@
       };
     }
 
-<<<<<<< HEAD
     transformToFeatures(data) {
       return data.map((item) => ({
         type: "Feature",
@@ -89,8 +83,6 @@
       }));
     }
 
-=======
->>>>>>> 36b8327 (Feature/phuc b gis map (#8))
     /**
      * Fetch data from API
      * @param {Object} params - Query parameters
@@ -127,11 +119,7 @@
         if (Array.isArray(data)) {
           return {
             type: "FeatureCollection",
-<<<<<<< HEAD
             features: this.transformToFeatures(data),
-=======
-            features: data,
->>>>>>> 36b8327 (Feature/phuc b gis map (#8))
           };
         }
 
