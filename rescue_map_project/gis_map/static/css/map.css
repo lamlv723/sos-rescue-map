@@ -99,7 +99,7 @@
 .sidebar__section {
   display: flex;
   flex-direction: column;
-  padding: var(--spacing-xs) var(--spacing-md);
+  padding: var(--spacing-md);
   border-bottom: 1px solid var(--color-bg-gray);
 }
 
@@ -117,6 +117,38 @@
   font-size: var(--font-size-sm);
   font-weight: 500;
   color: var(--color-dark);
+}
+
+.sidebar__btn-clear-all {
+  width: 100%;
+  padding: var(--spacing-sm);
+  background-color: var(--color-bg-gray);
+  color: var(--color-grey);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.sidebar__btn-clear-all:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.sidebar__btn-clear-all:active {
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  border-color: var(--color-primary-dark);
+}
+
+.sidebar__btn-clear-all-section {
+  display: none;
+  padding: var(--spacing-sm);
+}
+
+.sidebar__btn-clear-all-section--active {
+  display: block;
 }
 
 /* ========================================
@@ -266,6 +298,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
 }
 
 .time-filter__btn {
@@ -278,32 +311,119 @@
   border-radius: var(--radius-sm);
   font-size: var(--font-size-xs);
   background-color: var(--color-white);
+  cursor: pointer;
+  position: relative;
 }
 
-.time-filter__btn:last-of-type {
-  grid-column: span 3;
-  border-color: var(--color-gray);
-  background-color: var(--color-bg-gray);
-  color: var(--color-dark);
+.time-filter__btn input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-.time-filter__btn:last-of-type:hover {
-  background-color: #f9fafb;
-}
-
-.time-filter__btn--active {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  border-color: var(--color-primary);
+.time-filter__btn:has(input[type="radio"]:checked),
+.time-filter__btn--custom:has(input[type="radio"]:checked) {
+  background-color: var(--color-info-light);
+  border-color: var(--color-info);
 }
 
 .time-filter__btn:hover {
-  border-color: var(--color-primary);
+  border-color: var(--color-info-light);
+}
+
+.time-filter__btn--custom {
+  width: 100%;
+  border-color: var(--color-gray);
+  color: var(--color-dark);
+}
+
+.time-filter__btn--custom:hover {
+  background-color: #f9fafb;
 }
 
 .time-filter__btn-icon {
   width: 16px;
   height: 16px;
+}
+
+.time-filter__custom-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+  border-top: 1px solid var(--color-light-gray);
+  padding-top: var(--spacing-sm);
+}
+
+.time-filter__custom-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-dark);
+}
+
+.time-filter__custom-input {
+  width: 100%;
+  padding: var(--spacing-xs);
+  border: 1px solid var(--color-light-gray);
+  border-radius: var(--radius-sm);
+}
+
+.time-filter__custom-inputs {
+  display: none;
+}
+
+.time-filter__btn--custom:has(input[type="radio"]:checked)
+  + .time-filter__custom-inputs {
+  display: block;
+}
+
+.time-filter__actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: flex-end;
+  margin-top: var(--spacing-sm);
+}
+
+.time-filter__btn-clear {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  border: 1px solid var(--color-light-gray);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.time-filter__btn-clear:hover {
+  background-color: var(--color-bg-gray);
+  color: var(--color-dark);
+  border-color: var(--color-primary);
+}
+
+.time-filter__btn-apply {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.time-filter__btn-apply:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.time-filter__btn-apply:active {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: var(--color-white);
+  border-color: var(--color-primary);
 }
 
 /* ========================================
@@ -554,10 +674,6 @@
   .sidebar__close {
     font-size: 32px;
     display: none;
-  }
-
-  .sidebar__section {
-    padding: var(--spacing-md);
   }
 
   .sidebar__section-title {

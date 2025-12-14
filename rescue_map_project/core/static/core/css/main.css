@@ -7,11 +7,14 @@
 :root {
   /* Colors */
   --color-primary: #2c5f8d;
+  --color-primary-light: #d8e4ec;
+  --color-primary-dark: #1e405f;
   --color-secondary: #e67e22;
   --color-emergency: #e74c3c;
   --color-success: #27ae60;
   --color-warning: #f39c12;
   --color-info: #3498db;
+  --color-info-light: #d8e4ec;
 
   /* Status Colors */
   --color-open: #e74c3c;

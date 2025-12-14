@@ -44,141 +44,6 @@ function initMobileMenu() {
 }
 
 // ========================================
-// MAP PAGE FUNCTIONALITY
-// ========================================
-
-// Toggle sidebar on mobile
-function initSidebarToggle() {
-  const toggleBtn = document.querySelector(".map-controls__btn");
-  const sidebar = document.querySelector(".sidebar");
-  const closeBtn = document.querySelector(".sidebar__close");
-
-  if (toggleBtn && sidebar) {
-    toggleBtn.addEventListener("click", () => {
-      sidebar.classList.toggle("sidebar--active");
-    });
-  }
-
-  if (closeBtn && sidebar) {
-    closeBtn.addEventListener("click", () => {
-      sidebar.classList.remove("sidebar--active");
-    });
-  }
-}
-
-// Filter functionality
-function initFilters() {
-  const filterCheckboxes = document.querySelectorAll(
-    '.filter-group__item input[type="checkbox"]'
-  );
-
-  filterCheckboxes.forEach((checkbox) => {
-    checkbox.addEventListener("change", (e) => {
-      updateMapFilters();
-      console.log("Filter changed:", e.target.checked);
-    });
-  });
-}
-
-function updateMapFilters() {
-  // Placeholder: Update map based on selected filters
-  console.log("Updating map filters...", AppState.filters);
-
-  // In production: Call ArcGIS API to update layer filters
-  // Example: layer.definitionExpression = buildFilterExpression();
-}
-
-// Time range filter
-function initTimeFilter() {
-  const timeButtons = document.querySelectorAll(".time-filter__btn");
-
-  timeButtons.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      timeButtons.forEach((b) =>
-        b.classList.remove("time-filter__btn--active")
-      );
-      btn.classList.add("time-filter__btn--active");
-
-      AppState.filters.timeRange = btn.textContent.toLowerCase();
-      updateMapFilters();
-    });
-  });
-}
-
-// Request card click handler
-function initRequestCards() {
-  const requestCards = document.querySelectorAll(".request-card__action");
-
-  requestCards.forEach((card) => {
-    card.addEventListener("click", (e) => {
-      const cardElement = e.target.closest(".request-card");
-      const requestId =
-        cardElement.querySelector(".request-card__id").textContent;
-
-      zoomToRequest(requestId);
-    });
-  });
-}
-
-function zoomToRequest(requestId) {
-  console.log("Zooming to request:", requestId);
-  // Placeholder: Zoom map to specific request location
-  // In production: mapView.goTo({ center: [lng, lat], zoom: 16 });
-}
-
-// Map controls
-function initMapControls() {
-  const refreshBtn = document.querySelectorAll(".map-controls__btn")[2];
-  const locationBtn = document.querySelectorAll(".map-controls__btn")[1];
-  const fullscreenBtn = document.querySelectorAll(".map-controls__btn")[3];
-
-  if (refreshBtn) {
-    refreshBtn.addEventListener("click", () => {
-      console.log("Refreshing map data...");
-      // Placeholder: Reload data from API
-    });
-  }
-
-  if (locationBtn) {
-    locationBtn.addEventListener("click", () => {
-      getUserLocation();
-    });
-  }
-
-  if (fullscreenBtn) {
-    fullscreenBtn.addEventListener("click", () => {
-      toggleFullscreen();
-    });
-  }
-}
-
-function getUserLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        console.log("User location:", position.coords);
-        // Placeholder: Center map on user location
-      },
-      (error) => {
-        alert("Unable to get your location");
-      }
-    );
-  }
-}
-
-function toggleFullscreen() {
-  const mapContainer = document.querySelector(".map-container");
-
-  if (!document.fullscreenElement) {
-    mapContainer.requestFullscreen().catch((err) => {
-      console.error("Fullscreen error:", err);
-    });
-  } else {
-    document.exitFullscreen();
-  }
-}
-
-// ========================================
 // DASHBOARD PAGE FUNCTIONALITY
 // ========================================
 
@@ -520,15 +385,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentPage = window.location.pathname.split("/").pop();
 
   switch (currentPage) {
-    case "index.html":
-    case "":
-      initSidebarToggle();
-      initFilters();
-      initTimeFilter();
-      initRequestCards();
-      initMapControls();
-      break;
-
     case "dashboard.html":
       initDashboard();
       break;
@@ -542,46 +398,6 @@ document.addEventListener("DOMContentLoaded", () => {
       break;
   }
 });
-
-// ========================================
-// UTILITY FUNCTIONS
-// ========================================
-
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-function formatDate(timestamp) {
-  const date = new Date(timestamp);
-  return date.toLocaleString();
-}
-
-function calculateDistance(lat1, lon1, lat2, lon2) {
-  // Haversine formula
-  const R = 6371; // Earth's radius in km
-  const dLat = ((lat2 - lat1) * Math.PI) / 180;
-  const dLon = ((lon2 - lon1) * Math.PI) / 180;
-
-  const a =
-    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-    Math.cos((lat1 * Math.PI) / 180) *
-      Math.cos((lat2 * Math.PI) / 180) *
-      Math.sin(dLon / 2) *
-      Math.sin(dLon / 2);
-
-  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-  const distance = R * c;
-
-  return distance.toFixed(1);
-}
 
 // Export for use in other modules if needed
 if (typeof module !== "undefined" && module.exports) {

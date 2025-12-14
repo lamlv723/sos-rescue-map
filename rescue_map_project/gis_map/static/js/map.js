@@ -261,20 +261,130 @@
      * Initialize search box
      */
     initSearchBox() {
-      const searchTypeRadios = document.querySelectorAll("input[name='search_type']");
+      const searchTypeRadios = document.querySelectorAll(
+        "input[name='search_type']"
+      );
       const searchBoxInput = document.getElementById("search-box-input");
-      const searchBtn = document.getElementById("btn-find");
+      const searchFiltersAreas = document.getElementById(
+        "sidebar-filters__areas"
+      );
+      const searchFiltersPhone = document.getElementById(
+        "sidebar-filters__phone"
+      );
 
       searchTypeRadios.forEach((radio) => {
         radio.addEventListener("change", () => {
           searchBoxInput.value = "";
-          if (radio.value === "address") {
+          console.log(radio.value);
+          if (radio.value === "areas") {
             searchBoxInput.placeholder = "Tìm theo khu vực, phường/quận…";
+            searchFiltersAreas.style.display = "block";
+            searchFiltersPhone.style.display = "none";
           } else if (radio.value === "phone") {
             searchBoxInput.placeholder = "Tìm theo số điện thoại";
+            searchFiltersPhone.style.display = "block";
+            searchFiltersAreas.style.display = "none";
           }
         });
       });
+    }
+
+    /**
+     * Initialize time filter
+     */
+    initTimeFilter() {
+      const timeFilterCustomInputStart = document.getElementById(
+        "time-filter__custom-input-start"
+      );
+      const timeFilterCustomInputEnd = document.getElementById(
+        "time-filter__custom-input-end"
+      );
+
+      // Format date to YYYY-MM-DDTHH:mm for datetime-local input
+      const formatDateTimeLocal = (date) => {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+        const hours = String(date.getHours()).padStart(2, "0");
+        const minutes = String(date.getMinutes()).padStart(2, "0");
+        return `${year}-${month}-${day}T${hours}:${minutes}`;
+      };
+
+      const today = new Date();
+      today.setHours(23, 59, 59, 999);
+      const maxDateTime = formatDateTimeLocal(today);
+
+      timeFilterCustomInputStart.min = "1970-01-01T00:00";
+      timeFilterCustomInputStart.max = maxDateTime;
+      timeFilterCustomInputEnd.min = "1970-01-01T00:00";
+      timeFilterCustomInputEnd.max = maxDateTime;
+    }
+
+    initClearAllTimeFilter() {
+      const btnClearAllTimeFilter = document.getElementById(
+        "btn-clear-all-time-filter"
+      );
+
+      if (btnClearAllTimeFilter) {
+        btnClearAllTimeFilter.addEventListener("click", () => {
+          this.handleClearAllTimeFilter();
+        });
+      }
+
+      // Set up event listeners for all filter inputs to update button visibility
+      const timeRangeRadios = document.querySelectorAll('input[name="time_range"]');
+      const statusCheckboxes = document.querySelectorAll('input[name="status"]');
+      const priorityCheckboxes = document.querySelectorAll('input[name="priority"]');
+      const searchBoxInput = document.getElementById("search-box-input");
+      const timeFilterCustomInputStart = document.getElementById(
+        "time-filter__custom-input-start"
+      );
+      const timeFilterCustomInputEnd = document.getElementById(
+        "time-filter__custom-input-end"
+      );
+
+      // Add change listeners to time range radios
+      timeRangeRadios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          this.updateClearAllButtonVisibility();
+        });
+      });
+
+      // Add change listeners to status checkboxes
+      statusCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", () => {
+          this.updateClearAllButtonVisibility();
+        });
+      });
+
+      // Add change listeners to priority checkboxes
+      priorityCheckboxes.forEach((checkbox) => {
+        checkbox.addEventListener("change", () => {
+          this.updateClearAllButtonVisibility();
+        });
+      });
+
+      // Add input listener to search box
+      if (searchBoxInput) {
+        searchBoxInput.addEventListener("input", () => {
+          this.updateClearAllButtonVisibility();
+        });
+      }
+
+      // Add input listeners to custom time inputs
+      if (timeFilterCustomInputStart) {
+        timeFilterCustomInputStart.addEventListener("input", () => {
+          this.updateClearAllButtonVisibility();
+        });
+      }
+      if (timeFilterCustomInputEnd) {
+        timeFilterCustomInputEnd.addEventListener("input", () => {
+          this.updateClearAllButtonVisibility();
+        });
+      }
+
+      // Initial visibility check
+      this.updateClearAllButtonVisibility();
     }
 
     /**
@@ -348,12 +458,135 @@
     }
 
     /**
+     * Check if any filter has been set/selected
+     */
+    checkIfAnyFilterActive() {
+      const timeFilterCustomInputStart = document.getElementById(
+        "time-filter__custom-input-start"
+      );
+      const timeFilterCustomInputEnd = document.getElementById(
+        "time-filter__custom-input-end"
+      );
+      const timeRangeRadios = document.querySelectorAll('input[name="time_range"]');
+      const searchBoxInput = document.getElementById("search-box-input");
+      const statusCheckboxes = document.querySelectorAll('input[name="status"]');
+      const priorityCheckboxes = document.querySelectorAll('input[name="priority"]');
+
+      // Check if custom time inputs have values
+      if (timeFilterCustomInputStart && timeFilterCustomInputStart.value) {
+        return true;
+      }
+      if (timeFilterCustomInputEnd && timeFilterCustomInputEnd.value) {
+        return true;
+      }
+
+      // Check if time range is not "24" (default)
+      let timeRangeSelected = false;
+      timeRangeRadios.forEach((radio) => {
+        if (radio.checked && radio.value !== "24") {
+          timeRangeSelected = true;
+        }
+      });
+      if (timeRangeSelected) {
+        return true;
+      }
+
+      // Check if search box has value
+      if (searchBoxInput && searchBoxInput.value.trim()) {
+        return true;
+      }
+
+      // Check if any status checkbox is checked
+      const hasStatusChecked = Array.from(statusCheckboxes).some(
+        (checkbox) => checkbox.checked
+      );
+      if (hasStatusChecked) {
+        return true;
+      }
+
+      // Check if any priority checkbox is checked
+      const hasPriorityChecked = Array.from(priorityCheckboxes).some(
+        (checkbox) => checkbox.checked
+      );
+      if (hasPriorityChecked) {
+        return true;
+      }
+
+      return false;
+    }
+
+    /**
+     * Update visibility of clear all button section
+     */
+    updateClearAllButtonVisibility() {
+      const clearAllSection = document.getElementById(
+        "sidebar__btn-clear-all-section"
+      );
+      if (!clearAllSection) return;
+
+      const hasActiveFilters = this.checkIfAnyFilterActive();
+      if (hasActiveFilters) {
+        clearAllSection.classList.add("sidebar__btn-clear-all-section--active");
+      } else {
+        clearAllSection.classList.remove(
+          "sidebar__btn-clear-all-section--active"
+        );
+      }
+    }
+
+    handleClearAllTimeFilter() {
+      const timeFilterCustomInputStart = document.getElementById(
+        "time-filter__custom-input-start"
+      );
+      const timeFilterCustomInputEnd = document.getElementById(
+        "time-filter__custom-input-end"
+      );
+      const timeFilterTimeRange24 = document.querySelector('input[name="time_range"][value="24"]');
+      const searchBoxInput = document.getElementById("search-box-input");
+      const statusCheckboxes = document.querySelectorAll('input[name="status"]');
+      const priorityCheckboxes = document.querySelectorAll('input[name="priority"]');
+
+      // Clear custom time inputs
+      if (timeFilterCustomInputStart) {
+        timeFilterCustomInputStart.value = "";
+      }
+      if (timeFilterCustomInputEnd) {
+        timeFilterCustomInputEnd.value = "";
+      }
+      
+      // Clear search input
+      if (searchBoxInput) {
+        searchBoxInput.value = "";
+      }
+      
+      // Uncheck all status checkboxes
+      statusCheckboxes.forEach((checkbox) => {
+        checkbox.checked = false;
+      });
+      
+      // Uncheck all priority checkboxes
+      priorityCheckboxes.forEach((checkbox) => {
+        checkbox.checked = false;
+      });
+      
+      // Set time range to "24 giờ"
+      if (timeFilterTimeRange24) {
+        timeFilterTimeRange24.checked = true;
+      }
+
+      // Update button visibility after clearing
+      this.updateClearAllButtonVisibility();
+    }
+
+    /**
      * Initialize all controls
      */
     initAll() {
       this.initBasemapSwitcher();
       this.initControlButtons();
       this.initSearchBox();
+      this.initTimeFilter();
+      this.initClearAllTimeFilter();
     }
   }
 
