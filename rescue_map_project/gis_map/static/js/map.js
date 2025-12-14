@@ -51,6 +51,7 @@
       return {
         type: "unique-value",
         field: "status",
+<<<<<<< HEAD
         title: "Tình trạng cứu hộ",
         uniqueValueInfos: [
           {
@@ -82,6 +83,33 @@
               outline: { color: "white", width: 1 },
             },
             label: "Đã hỗ trợ",
+=======
+        defaultSymbol: {
+          type: "simple-marker",
+          color: "gray",
+          size: 10,
+        },
+        uniqueValueInfos: [
+          {
+            value: "Open",
+            symbol: {
+              type: "simple-marker",
+              color: "#F32013",
+              size: 16,
+              outline: { color: "white", width: 1 },
+            },
+            label: "Cần cứu trợ (Open)",
+          },
+          {
+            value: "Closed",
+            symbol: {
+              type: "simple-marker",
+              color: "#4BB543",
+              size: 16,
+              outline: { color: "white", width: 1 },
+            },
+            label: "Đã hỗ trợ (Closed)",
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
           },
         ],
       };
@@ -184,7 +212,11 @@
      * @param {Object} Expand - Expand module
      */
     initAll(layer, TimeSlider, Legend, Expand) {
+<<<<<<< HEAD
       // this.initTimeSlider(layer, TimeSlider);
+=======
+      this.initTimeSlider(layer, TimeSlider);
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
       this.initLegend(Legend, Expand);
       this.view.ui.move("zoom", "bottom-right");
     }
@@ -281,6 +313,10 @@
       searchTypeRadios.forEach((radio) => {
         radio.addEventListener("change", () => {
           searchBoxInput.value = "";
+<<<<<<< HEAD
+=======
+          console.log(radio.value);
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
           if (radio.value === "areas") {
             searchBoxInput.placeholder = "Tìm theo khu vực, phường/quận…";
             searchFiltersAreas.style.display = "block";
@@ -325,6 +361,7 @@
       timeFilterCustomInputEnd.max = maxDateTime;
     }
 
+<<<<<<< HEAD
     initSidebarFilters(data) {
       this.data = data;
       const groupByProperty = {
@@ -382,6 +419,8 @@
       })`;
     }
 
+=======
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
     initClearAllTimeFilter() {
       const btnClearAllTimeFilter = document.getElementById(
         "btn-clear-all-time-filter"
@@ -394,6 +433,7 @@
       }
 
       // Set up event listeners for all filter inputs to update button visibility
+<<<<<<< HEAD
       const timeRangeRadios = document.querySelectorAll(
         'input[name="time_range"]'
       );
@@ -403,6 +443,11 @@
       const priorityCheckboxes = document.querySelectorAll(
         'input[name="priority"]'
       );
+=======
+      const timeRangeRadios = document.querySelectorAll('input[name="time_range"]');
+      const statusCheckboxes = document.querySelectorAll('input[name="status"]');
+      const priorityCheckboxes = document.querySelectorAll('input[name="priority"]');
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
       const searchBoxInput = document.getElementById("search-box-input");
       const timeFilterCustomInputStart = document.getElementById(
         "time-filter__custom-input-start"
@@ -535,6 +580,7 @@
       const timeFilterCustomInputEnd = document.getElementById(
         "time-filter__custom-input-end"
       );
+<<<<<<< HEAD
       const timeRangeRadios = document.querySelectorAll(
         'input[name="time_range"]'
       );
@@ -545,6 +591,12 @@
       const priorityCheckboxes = document.querySelectorAll(
         'input[name="priority"]'
       );
+=======
+      const timeRangeRadios = document.querySelectorAll('input[name="time_range"]');
+      const searchBoxInput = document.getElementById("search-box-input");
+      const statusCheckboxes = document.querySelectorAll('input[name="status"]');
+      const priorityCheckboxes = document.querySelectorAll('input[name="priority"]');
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
 
       // Check if custom time inputs have values
       if (timeFilterCustomInputStart && timeFilterCustomInputStart.value) {
@@ -615,6 +667,7 @@
       const timeFilterCustomInputEnd = document.getElementById(
         "time-filter__custom-input-end"
       );
+<<<<<<< HEAD
       const timeFilterTimeRange24 = document.querySelector(
         'input[name="time_range"][value="24"]'
       );
@@ -625,6 +678,12 @@
       const priorityCheckboxes = document.querySelectorAll(
         'input[name="priority"]'
       );
+=======
+      const timeFilterTimeRange24 = document.querySelector('input[name="time_range"][value="24"]');
+      const searchBoxInput = document.getElementById("search-box-input");
+      const statusCheckboxes = document.querySelectorAll('input[name="status"]');
+      const priorityCheckboxes = document.querySelectorAll('input[name="priority"]');
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
 
       // Clear custom time inputs
       if (timeFilterCustomInputStart) {
@@ -633,22 +692,38 @@
       if (timeFilterCustomInputEnd) {
         timeFilterCustomInputEnd.value = "";
       }
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
       // Clear search input
       if (searchBoxInput) {
         searchBoxInput.value = "";
       }
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
       // Uncheck all status checkboxes
       statusCheckboxes.forEach((checkbox) => {
         checkbox.checked = false;
       });
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
       // Uncheck all priority checkboxes
       priorityCheckboxes.forEach((checkbox) => {
         checkbox.checked = false;
       });
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
       // Set time range to "24 giờ"
       if (timeFilterTimeRange24) {
         timeFilterTimeRange24.checked = true;
@@ -661,12 +736,19 @@
     /**
      * Initialize all controls
      */
+<<<<<<< HEAD
     initAll(data = null) {
+=======
+    initAll() {
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
       this.initBasemapSwitcher();
       this.initControlButtons();
       this.initSearchBox();
       this.initTimeFilter();
+<<<<<<< HEAD
       this.initSidebarFilters(data);
+=======
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
       this.initClearAllTimeFilter();
     }
   }
@@ -685,7 +767,10 @@
       this.widgets = null;
       this.controls = null;
       this.blobURL = null;
+<<<<<<< HEAD
       this.data = null;
+=======
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
     }
 
     /**
@@ -715,15 +800,25 @@
       const { Map, MapView, GeoJSONLayer } = modules;
 
       // Get data
+<<<<<<< HEAD
       this.data = await this.dataService.getData();
 
       // Create blob URL for GeoJSONLayer
       this.blobURL = this.dataService.createBlobURL(this.data);
+=======
+      const geoJsonData = await this.dataService.getData();
+
+      // Create blob URL for GeoJSONLayer
+      this.blobURL = this.dataService.createBlobURL(geoJsonData);
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
 
       // Create layer
       this.layer = new GeoJSONLayer({
         url: this.blobURL,
+<<<<<<< HEAD
         title: "Tình trạng cứu hộ",
+=======
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
         copyright: "HCMC Rescue Data",
         popupTemplate: MapRenderer.getPopupTemplate(),
         renderer: MapRenderer.getRenderer(),
@@ -763,7 +858,11 @@
       // Initialize controls
       this.controls = new MapControls(this.view, this.config);
       this.controls.setMap(this.map);
+<<<<<<< HEAD
       this.controls.initAll(this.data);
+=======
+      this.controls.initAll();
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
 
       // Wait for view to load
       await this.view.when();
@@ -880,10 +979,14 @@
   function initializeMap() {
     const mapContainer = document.getElementById("mapView");
     if (mapContainer && window.RescueMap && window.GISDataService) {
+<<<<<<< HEAD
       const map = new RescueMap({
         apiEndpoint: "http://127.0.0.1:8000/api/sos",
         useMockData: false,
       });
+=======
+      const map = new RescueMap();
+>>>>>>> 36b8327 (Feature/phuc b gis map (#8))
       map.init().catch((error) => {
         console.error("Failed to initialize map:", error);
       });
