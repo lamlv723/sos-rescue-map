@@ -2,19 +2,27 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}Rescue Map{% endblock %}</title>
     
     <link rel="stylesheet" href="{% static 'core/css/main.css' %}">
-    <link rel="icon" type="image/svg" href="{% static 'core/images/logo-4k-no-background.svg' %}">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'core/images/favicon.ico' %}"
+    />
     {% block extra_css %}{% endblock %}
 </head>
 <body>
     <header class="header">
         <div class="header__container">
             <div class="header__logo">
-                <img src="{% static 'core/images/logo-4k-no-background.png' %}" alt="UT GIS Project" class="header__logo-img">
+                <img
+                    src="{% static 'core/images/logo.webp' %}"
+                    alt="UT GIS Project"
+                    class="header__logo-img"
+                />
                 <span class="header__logo-text">Rescue Map</span>
             </div>
             
@@ -27,10 +35,9 @@
             </nav>
 
             <div class="header__actions">
-                <button class="header__btn header__btn--emergency" onclick="window.location.href='{% url 'emergency:submit' %}'">
-                    <span class="header__btn-icon">🆘</span>
-                    Emergency
-                </button>
+                <a href="{% url 'emergency:submit' %}" class="header__btn header__btn--emergency">
+                    <span class="header__btn-icon">🆘</span> Emergency
+                </a>
                 <button class="header__btn header__btn--login">Login</button>
             </div>
 
@@ -81,7 +88,7 @@
             </div>
         </div>
         <div class="footer__bottom">
-            <p>&copy; 2024 UT GIS Project - Rescue Map. All rights reserved.</p>
+            <p>&copy; 2025 UT GIS Project - Rescue Map. All rights reserved.</p>
         </div>
     </footer>
     {% endblock %}
