@@ -1,0 +1,12 @@
+{
+    "status": {
+        "labels": ["Open", "Processing", "Resolved"],
+        "values": [142, 68, 1038],
+        "colors": ["#E74C3C", "#F39C12", "#27AE60"]
+    },
+    "priority": {
+        "labels": ["Critical", "High", "Medium", "Normal"],
+        "values": [45, 89, 150, 964],
+        "colors": ["#C0392B", "#E67E22", "#F39C12", "#3498DB"]
+    }
+}
