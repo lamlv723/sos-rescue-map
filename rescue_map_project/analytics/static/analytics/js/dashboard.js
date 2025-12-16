@@ -35,10 +35,10 @@ function updateKPI(id, value) {
 function updateTrend(elementId, value) {
     const el = document.getElementById(elementId);
     const icon = value > 0 ? '↑' : (value < 0 ? '↓' : '→');
-    const colorClass = value > 0 ? 'bg-success text-white' : (value < 0 ? 'bg-danger text-white' : 'bg-secondary text-white');
+    const colorClass = value > 0 ? 'kpi-card__trend--up' : (value < 0 ? 'kpi-card__trend--down' : 'kpi-card__trend--neutral');
     
     // Xóa class cũ và thêm class mới
-    el.className = `badge ${colorClass}`;
+    el.className = `kpi-card__trend ${colorClass}`;
     el.textContent = `${icon} ${Math.abs(value)}% so với hôm qua`;
 }
 

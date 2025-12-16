@@ -604,9 +604,10 @@ input, select, textarea {
 }
 
 .kpi-card__label {
-    font-size: var(--font-size-sm);
-    color: var(--color-gray);
+    font-size: var(--font-size-base);
+    color: var(--color-dark);
     margin-bottom: var(--spacing-xs);
+    font-weight: bold;
 }
 
 .kpi-card__value {
