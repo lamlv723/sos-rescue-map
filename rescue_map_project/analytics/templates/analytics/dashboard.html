@@ -1,18 +1,18 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
 {% block title %}Dashboard - Rescue Map{% endblock %}
 
 {% block content %}
 <main class="dashboard">
     <div class="dashboard__container">
-        <!-- Page Header -->
         <div class="dashboard__header">
             <div>
                 <h1 class="dashboard__title">Dashboard Overview</h1>
                 <p class="dashboard__subtitle">Real-time rescue operations monitoring</p>
             </div>
             <div class="dashboard__header-actions">
-                <button class="dashboard__export-btn">📊 Export Report</button>
+                <button class="dashboard__export-btn" onclick="location.reload()">🔄 Refresh Data</button>
                 <select class="dashboard__period-select">
                     <option>Last 24 Hours</option>
                     <option>Last 7 Days</option>
@@ -22,14 +22,13 @@
             </div>
         </div>
 
-        <!-- KPI Cards -->
         <div class="kpi-grid">
             <div class="kpi-card kpi-card--total">
                 <div class="kpi-card__icon">📋</div>
                 <div class="kpi-card__content">
                     <span class="kpi-card__label">Total Requests</span>
-                    <span class="kpi-card__value">1,248</span>
-                    <span class="kpi-card__trend kpi-card__trend--up">↑ 12% vs yesterday</span>
+                    <span id="kpi-total" class="kpi-card__value">...</span>
+                    <span id="trend-total" class="kpi-card__trend kpi-card__trend--neutral">Loading...</span>
                 </div>
             </div>
 
@@ -37,8 +36,8 @@
                 <div class="kpi-card__icon">🆘</div>
                 <div class="kpi-card__content">
                     <span class="kpi-card__label">Active Requests</span>
-                    <span class="kpi-card__value">142</span>
-                    <span class="kpi-card__trend kpi-card__trend--down">↓ 8% vs yesterday</span>
+                    <span id="kpi-active" class="kpi-card__value">...</span>
+                    <span id="trend-active" class="kpi-card__trend kpi-card__trend--neutral">Loading...</span>
                 </div>
             </div>
 
@@ -46,8 +45,8 @@
                 <div class="kpi-card__icon">⚙️</div>
                 <div class="kpi-card__content">
                     <span class="kpi-card__label">In Progress</span>
-                    <span class="kpi-card__value">68</span>
-                    <span class="kpi-card__trend kpi-card__trend--neutral">→ Same as yesterday</span>
+                    <span id="kpi-processing" class="kpi-card__value">...</span>
+                    <span id="trend-processing" class="kpi-card__trend kpi-card__trend--neutral">Loading...</span>
                 </div>
             </div>
 
@@ -55,15 +54,13 @@
                 <div class="kpi-card__icon">✅</div>
                 <div class="kpi-card__content">
                     <span class="kpi-card__label">Resolved Today</span>
-                    <span class="kpi-card__value">234</span>
-                    <span class="kpi-card__trend kpi-card__trend--up">↑ 15% vs yesterday</span>
+                    <span id="kpi-resolved" class="kpi-card__value">...</span>
+                    <span id="trend-resolved" class="kpi-card__trend kpi-card__trend--neutral">Loading...</span>
                 </div>
             </div>
         </div>
 
-        <!-- Charts Section -->
         <div class="dashboard__grid">
-            <!-- Timeline Chart -->
             <div class="chart-card chart-card--large">
                 <div class="chart-card__header">
                     <h3 class="chart-card__title">Requests Timeline</h3>
@@ -74,37 +71,34 @@
                     </div>
                 </div>
                 <div class="chart-card__body">
-                    <div class="chart-placeholder">
-                        [Line Chart: Requests over time - Use Chart.js/D3.js]
+                    <div style="height: 300px; width: 100%;">
+                        <canvas id="timelineChart"></canvas>
                     </div>
                 </div>
             </div>
 
-            <!-- Status Distribution -->
             <div class="chart-card">
                 <div class="chart-card__header">
                     <h3 class="chart-card__title">Status Distribution</h3>
                 </div>
                 <div class="chart-card__body">
-                    <div class="chart-placeholder">
-                        [Donut Chart: Status breakdown - Use Chart.js]
+                    <div style="height: 300px; display: flex; justify-content: center;">
+                        <canvas id="statusChart"></canvas>
                     </div>
                 </div>
             </div>
 
-            <!-- Priority Heatmap -->
             <div class="chart-card">
                 <div class="chart-card__header">
                     <h3 class="chart-card__title">Priority Levels</h3>
                 </div>
                 <div class="chart-card__body">
-                    <div class="chart-placeholder">
-                        [Bar Chart: Priority distribution - Use Chart.js]
+                    <div style="height: 300px;">
+                        <canvas id="priorityChart"></canvas>
                     </div>
                 </div>
             </div>
-
-            <!-- Geographic Hotspots -->
+            
             <div class="chart-card">
                 <div class="chart-card__header">
                     <h3 class="chart-card__title">Geographic Hotspots</h3>
@@ -116,19 +110,6 @@
                 </div>
             </div>
 
-            <!-- Response Time Stats -->
-            <div class="chart-card">
-                <div class="chart-card__header">
-                    <h3 class="chart-card__title">Avg Response Time</h3>
-                </div>
-                <div class="chart-card__body">
-                    <div class="chart-placeholder">
-                        [Gauge Chart: Average response time - Use Chart.js]
-                    </div>
-                </div>
-            </div>
-
-            <!-- Resource Allocation -->
             <div class="chart-card chart-card--large">
                 <div class="chart-card__header">
                     <h3 class="chart-card__title">Resource Allocation</h3>
@@ -139,37 +120,12 @@
                             <thead>
                                 <tr>
                                     <th>Resource Type</th>
-                                    <th>Available</th>
-                                    <th>Deployed</th>
+                                    <th>Total</th> <th>Available</th>
                                     <th>Utilization</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>🚑 Ambulance</td>
-                                    <td>12</td>
-                                    <td>8</td>
-                                    <td><span class="progress-bar" style="--progress: 67%"></span> 67%</td>
-                                </tr>
-                                <tr>
-                                    <td>🚤 Rescue Boats</td>
-                                    <td>25</td>
-                                    <td>18</td>
-                                    <td><span class="progress-bar" style="--progress: 72%"></span> 72%</td>
-                                </tr>
-                                <tr>
-                                    <td>🚁 Helicopters</td>
-                                    <td>5</td>
-                                    <td>2</td>
-                                    <td><span class="progress-bar" style="--progress: 40%"></span> 40%</td>
-                                </tr>
-                                <tr>
-                                    <td>👥 Rescue Teams</td>
-                                    <td>45</td>
-                                    <td>32</td>
-                                    <td><span class="progress-bar" style="--progress: 71%"></span> 71%</td>
-                                </tr>
-                            </tbody>
+                            <tbody id="resourceTableBody">
+                                </tbody>
                         </table>
                     </div>
                 </div>
@@ -177,4 +133,9 @@
         </div>
     </div>
 </main>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{% static 'analytics/js/dashboard.js' %}"></script>
 {% endblock %}
