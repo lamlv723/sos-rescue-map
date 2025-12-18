@@ -1,0 +1,762 @@
+[
+  {
+    "region_id": "9c2f2532-f29c-415d-be0d-ad5963755d85",
+    "name": "Mock Region 1",
+    "description": "Auto-generated region #1",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.77632745316998,
+            10.701002952516369
+          ],
+          [
+            106.80732862590474,
+            10.701002952516369
+          ],
+          [
+            106.80732862590474,
+            10.670001779781604
+          ],
+          [
+            106.77632745316998,
+            10.670001779781604
+          ],
+          [
+            106.77632745316998,
+            10.701002952516369
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "OPERATION",
+      "level": "zone"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421539+00:00"
+  },
+  {
+    "region_id": "74d5d6e8-4a32-4c4b-9063-341faffac288",
+    "name": "Mock Region 2",
+    "description": "Auto-generated region #2",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.64342923169619,
+            10.86555765686454
+          ],
+          [
+            106.6904972111931,
+            10.86555765686454
+          ],
+          [
+            106.6904972111931,
+            10.818489677367625
+          ],
+          [
+            106.64342923169619,
+            10.818489677367625
+          ],
+          [
+            106.64342923169619,
+            10.86555765686454
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "ADMIN",
+      "level": "district"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421879+00:00"
+  },
+  {
+    "region_id": "656c981f-8d40-4060-a1c5-49b68a4245f3",
+    "name": "Mock Region 3",
+    "description": "Auto-generated region #3",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.84921543391775,
+            10.717564979572176
+          ],
+          [
+            106.88609230670517,
+            10.717564979572176
+          ],
+          [
+            106.88609230670517,
+            10.680688106784766
+          ],
+          [
+            106.84921543391775,
+            10.680688106784766
+          ],
+          [
+            106.84921543391775,
+            10.717564979572176
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "ADMIN",
+      "level": "district"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421893+00:00"
+  },
+  {
+    "region_id": "fff760f7-3d0e-4dd9-ad7f-fb4cfa0b012d",
+    "name": "Mock Region 4",
+    "description": "Auto-generated region #4",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.58883206006935,
+            10.74820746021886
+          ],
+          [
+            106.62904627159348,
+            10.74820746021886
+          ],
+          [
+            106.62904627159348,
+            10.707993248694725
+          ],
+          [
+            106.58883206006935,
+            10.707993248694725
+          ],
+          [
+            106.58883206006935,
+            10.74820746021886
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "OPERATION",
+      "level": "zone"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421905+00:00"
+  },
+  {
+    "region_id": "a5d01f19-1a65-469f-af83-50e3c73b0ad8",
+    "name": "Mock Region 5",
+    "description": "Auto-generated region #5",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.58496310214956,
+            10.746741971906651
+          ],
+          [
+            106.63095847966075,
+            10.746741971906651
+          ],
+          [
+            106.63095847966075,
+            10.700746594395472
+          ],
+          [
+            106.58496310214956,
+            10.700746594395472
+          ],
+          [
+            106.58496310214956,
+            10.746741971906651
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "ADMIN",
+      "level": "district"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421914+00:00"
+  },
+  {
+    "region_id": "b2cfc8dc-c8aa-4b19-862c-eda3339bb380",
+    "name": "Mock Region 6",
+    "description": "Auto-generated region #6",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.74169713050345,
+            10.750282250526473
+          ],
+          [
+            106.78526775785848,
+            10.750282250526473
+          ],
+          [
+            106.78526775785848,
+            10.706711623171435
+          ],
+          [
+            106.74169713050345,
+            10.706711623171435
+          ],
+          [
+            106.74169713050345,
+            10.750282250526473
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "ADMIN",
+      "level": "district"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421921+00:00"
+  },
+  {
+    "region_id": "2887ce52-c0df-4514-94fd-2c22fae18160",
+    "name": "Mock Region 7",
+    "description": "Auto-generated region #7",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.81671275196669,
+            10.70754611216583
+          ],
+          [
+            106.86894552204001,
+            10.70754611216583
+          ],
+          [
+            106.86894552204001,
+            10.655313342092516
+          ],
+          [
+            106.81671275196669,
+            10.655313342092516
+          ],
+          [
+            106.81671275196669,
+            10.70754611216583
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "OPERATION",
+      "level": "zone"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421927+00:00"
+  },
+  {
+    "region_id": "328cf8be-9354-41d3-a7d8-ac769ea208db",
+    "name": "Mock Region 8",
+    "description": "Auto-generated region #8",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.79633222850023,
+            10.767964703630193
+          ],
+          [
+            106.8225514084927,
+            10.767964703630193
+          ],
+          [
+            106.8225514084927,
+            10.741745523637723
+          ],
+          [
+            106.79633222850023,
+            10.741745523637723
+          ],
+          [
+            106.79633222850023,
+            10.767964703630193
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "ADMIN",
+      "level": "district"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421935+00:00"
+  },
+  {
+    "region_id": "506b0a04-e848-4001-94bf-18741293a8e9",
+    "name": "Mock Region 9",
+    "description": "Auto-generated region #9",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.87530900479443,
+            10.765905716792382
+          ],
+          [
+            106.89901883852964,
+            10.765905716792382
+          ],
+          [
+            106.89901883852964,
+            10.742195883057175
+          ],
+          [
+            106.87530900479443,
+            10.742195883057175
+          ],
+          [
+            106.87530900479443,
+            10.765905716792382
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "ADMIN",
+      "level": "district"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421942+00:00"
+  },
+  {
+    "region_id": "c5d7945a-29e1-4354-8b0f-07548549d74a",
+    "name": "Mock Region 10",
+    "description": "Auto-generated region #10",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.60694039242269,
+            10.88852328122378
+          ],
+          [
+            106.65108943367737,
+            10.88852328122378
+          ],
+          [
+            106.65108943367737,
+            10.844374239969103
+          ],
+          [
+            106.60694039242269,
+            10.844374239969103
+          ],
+          [
+            106.60694039242269,
+            10.88852328122378
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "OPERATION",
+      "level": "zone"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421949+00:00"
+  },
+  {
+    "region_id": "e5fd88d0-5ba4-4983-b514-600b854d1fb8",
+    "name": "Mock Region 11",
+    "description": "Auto-generated region #11",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.82141392015322,
+            10.861265554901735
+          ],
+          [
+            106.86286304381142,
+            10.861265554901735
+          ],
+          [
+            106.86286304381142,
+            10.819816431243545
+          ],
+          [
+            106.82141392015322,
+            10.819816431243545
+          ],
+          [
+            106.82141392015322,
+            10.861265554901735
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "ADMIN",
+      "level": "district"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421957+00:00"
+  },
+  {
+    "region_id": "f7e8c65d-3bfa-4edc-8f11-3ad42cc4f876",
+    "name": "Mock Region 12",
+    "description": "Auto-generated region #12",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.87089391656836,
+            10.784318375611303
+          ],
+          [
+            106.91297554181928,
+            10.784318375611303
+          ],
+          [
+            106.91297554181928,
+            10.742236750360373
+          ],
+          [
+            106.87089391656836,
+            10.742236750360373
+          ],
+          [
+            106.87089391656836,
+            10.784318375611303
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "ADMIN",
+      "level": "district"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421966+00:00"
+  },
+  {
+    "region_id": "8ee7f567-8712-477a-a2a3-1dafe8441199",
+    "name": "Mock Region 13",
+    "description": "Auto-generated region #13",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.82158726126968,
+            10.84330848352635
+          ],
+          [
+            106.87605553728213,
+            10.84330848352635
+          ],
+          [
+            106.87605553728213,
+            10.788840207513918
+          ],
+          [
+            106.82158726126968,
+            10.788840207513918
+          ],
+          [
+            106.82158726126968,
+            10.84330848352635
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "OPERATION",
+      "level": "zone"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421973+00:00"
+  },
+  {
+    "region_id": "64e326fd-a8a9-442c-8771-11d26f14000e",
+    "name": "Mock Region 14",
+    "description": "Auto-generated region #14",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.76228915590391,
+            10.845922291640395
+          ],
+          [
+            106.78412213125014,
+            10.845922291640395
+          ],
+          [
+            106.78412213125014,
+            10.82408931629417
+          ],
+          [
+            106.76228915590391,
+            10.82408931629417
+          ],
+          [
+            106.76228915590391,
+            10.845922291640395
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "ADMIN",
+      "level": "district"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421981+00:00"
+  },
+  {
+    "region_id": "782be869-59d2-4866-ada2-e8ce5063c5eb",
+    "name": "Mock Region 15",
+    "description": "Auto-generated region #15",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.656773643157,
+            10.755261191530936
+          ],
+          [
+            106.67996532223394,
+            10.755261191530936
+          ],
+          [
+            106.67996532223394,
+            10.732069512453991
+          ],
+          [
+            106.656773643157,
+            10.732069512453991
+          ],
+          [
+            106.656773643157,
+            10.755261191530936
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "ADMIN",
+      "level": "district"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421987+00:00"
+  },
+  {
+    "region_id": "24fc0f50-a5ce-4d51-8194-58bad8dfea28",
+    "name": "Mock Region 16",
+    "description": "Auto-generated region #16",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.65427779384609,
+            10.717779786532342
+          ],
+          [
+            106.6853967379705,
+            10.717779786532342
+          ],
+          [
+            106.6853967379705,
+            10.686660842407937
+          ],
+          [
+            106.65427779384609,
+            10.686660842407937
+          ],
+          [
+            106.65427779384609,
+            10.717779786532342
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "OPERATION",
+      "level": "zone"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421993+00:00"
+  },
+  {
+    "region_id": "97a850df-2a30-401a-b3c4-4162f8831a24",
+    "name": "Mock Region 17",
+    "description": "Auto-generated region #17",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.77330171393699,
+            10.777666698715755
+          ],
+          [
+            106.80810895262165,
+            10.777666698715755
+          ],
+          [
+            106.80810895262165,
+            10.742859460031081
+          ],
+          [
+            106.77330171393699,
+            10.742859460031081
+          ],
+          [
+            106.77330171393699,
+            10.777666698715755
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "ADMIN",
+      "level": "district"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.421999+00:00"
+  },
+  {
+    "region_id": "99ce3b13-3c62-4da0-8912-ad5c7e536c25",
+    "name": "Mock Region 18",
+    "description": "Auto-generated region #18",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.63411901747719,
+            10.767468212605054
+          ],
+          [
+            106.69158520098568,
+            10.767468212605054
+          ],
+          [
+            106.69158520098568,
+            10.710002029096556
+          ],
+          [
+            106.63411901747719,
+            10.710002029096556
+          ],
+          [
+            106.63411901747719,
+            10.767468212605054
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "ADMIN",
+      "level": "district"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.422006+00:00"
+  },
+  {
+    "region_id": "88ea2aad-f56c-4f62-a962-1e9b7fc214b4",
+    "name": "Mock Region 19",
+    "description": "Auto-generated region #19",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.78098784261002,
+            10.8274315942107
+          ],
+          [
+            106.80783338853794,
+            10.8274315942107
+          ],
+          [
+            106.80783338853794,
+            10.800586048282776
+          ],
+          [
+            106.78098784261002,
+            10.800586048282776
+          ],
+          [
+            106.78098784261002,
+            10.8274315942107
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "OPERATION",
+      "level": "zone"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.422016+00:00"
+  },
+  {
+    "region_id": "b9333bca-7601-4f19-b625-5db13d59a9f9",
+    "name": "Mock Region 20",
+    "description": "Auto-generated region #20",
+    "geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            106.80114893054996,
+            10.733537657462778
+          ],
+          [
+            106.83632714822026,
+            10.733537657462778
+          ],
+          [
+            106.83632714822026,
+            10.69835943979247
+          ],
+          [
+            106.80114893054996,
+            10.69835943979247
+          ],
+          [
+            106.80114893054996,
+            10.733537657462778
+          ]
+        ]
+      ]
+    },
+    "properties": {
+      "region_type": "ADMIN",
+      "level": "district"
+    },
+    "source": "auto-generator",
+    "created_at": "2025-12-18T08:31:53.422029+00:00"
+  }
+]

@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    "django.contrib.gis",           # BẮT BUỘC (GIS)
+
     # --- My apps ---
     'core',
     'gis_map',
@@ -82,11 +84,16 @@ WSGI_APPLICATION = 'rescue_map_project.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.contrib.gis.db.backends.postgis",
+        "NAME": "sos_rescue_map",
+        "USER": "postgres",
+        "PASSWORD": "123456",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
+
 
 
 # Password validation
@@ -131,3 +138,23 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'core.User'
+
+import os
+
+GDAL_LIBRARY_PATH = os.path.join(
+    BASE_DIR,
+    "venv",
+    "Lib",
+    "site-packages",
+    "osgeo",
+    "gdal.dll"
+)
+
+GEOS_LIBRARY_PATH = os.path.join(
+    BASE_DIR,
+    "venv",
+    "Lib",
+    "site-packages",
+    "osgeo",
+    "geos_c.dll"
+)

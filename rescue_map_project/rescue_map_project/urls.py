@@ -24,7 +24,11 @@ urlpatterns = [
     # Include app URLs
     path('', include('gis_map.urls')),          # Root URL -> Map
     path('analytics/', include('analytics.urls')),
-    path('emergency/', include('submissions.urls')),
+    # path('emergency/', include('submissions.urls')),
     path('resources/', include('resources.urls')),
     path('', include('about.urls')),            # Maps /about/
+
+    path('api/', include('submissions.urls')),
+    path('api/maps/', include('gis_map.urls')),
+
 ]

@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import MapPoint, Region
 
-# Register your models here.
+admin.site.register(MapPoint)
+admin.site.register(Region)
