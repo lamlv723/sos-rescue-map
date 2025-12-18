@@ -1,0 +1,22 @@
+[
+  {"resource_id":1,"name":"Xe cứu thương 1","type":"VEHICLE","status":"AVAILABLE","capacity_total":4,"capacity_available":4,"admin_unit_id":2,"location_lat":10.775,"location_lng":106.702},
+  {"resource_id":2,"name":"Xe cứu thương 2","type":"VEHICLE","status":"IN_USE","capacity_total":4,"capacity_available":1,"admin_unit_id":3,"location_lat":10.781,"location_lng":106.722},
+  {"resource_id":3,"name":"Bộ thuốc A","type":"MEDICINE","status":"AVAILABLE","capacity_total":100,"capacity_available":100,"admin_unit_id":4,"location_lat":10.770,"location_lng":106.705},
+  {"resource_id":4,"name":"Lương thực 1","type":"FOOD","status":"AVAILABLE","capacity_total":500,"capacity_available":500,"admin_unit_id":5,"location_lat":10.760,"location_lng":106.690},
+  {"resource_id":5,"name":"Xe cứu thương 3","type":"VEHICLE","status":"MAINTENANCE","capacity_total":4,"capacity_available":0,"admin_unit_id":6,"location_lat":10.740,"location_lng":106.682},
+  {"resource_id":6,"name":"Xe cứu thương 4","type":"VEHICLE","status":"AVAILABLE","capacity_total":4,"capacity_available":4,"admin_unit_id":7,"location_lat":10.732,"location_lng":106.672},
+  {"resource_id":7,"name":"Bộ thuốc B","type":"MEDICINE","status":"IN_USE","capacity_total":200,"capacity_available":50,"admin_unit_id":8,"location_lat":10.722,"location_lng":106.662},
+  {"resource_id":8,"name":"Lương thực 2","type":"FOOD","status":"AVAILABLE","capacity_total":300,"capacity_available":300,"admin_unit_id":9,"location_lat":10.712,"location_lng":106.652},
+  {"resource_id":9,"name":"Xe cứu hộ nhỏ","type":"VEHICLE","status":"AVAILABLE","capacity_total":2,"capacity_available":2,"admin_unit_id":10,"location_lat":10.702,"location_lng":106.642},
+  {"resource_id":10,"name":"Bộ thuốc C","type":"MEDICINE","status":"AVAILABLE","capacity_total":150,"capacity_available":150,"admin_unit_id":11,"location_lat":10.692,"location_lng":106.632},
+  {"resource_id":11,"name":"Lương thực 3","type":"FOOD","status":"IN_USE","capacity_total":200,"capacity_available":20,"admin_unit_id":12,"location_lat":10.682,"location_lng":106.622},
+  {"resource_id":12,"name":"Xe địa hình","type":"VEHICLE","status":"AVAILABLE","capacity_total":6,"capacity_available":6,"admin_unit_id":13,"location_lat":10.772,"location_lng":106.717},
+  {"resource_id":13,"name":"Xe cứu thương 5","type":"VEHICLE","status":"AVAILABLE","capacity_total":4,"capacity_available":4,"admin_unit_id":14,"location_lat":10.737,"location_lng":106.692},
+  {"resource_id":14,"name":"Bộ thuốc D","type":"MEDICINE","status":"AVAILABLE","capacity_total":100,"capacity_available":100,"admin_unit_id":15,"location_lat":10.747,"location_lng":106.707},
+  {"resource_id":15,"name":"Lương thực 4","type":"FOOD","status":"AVAILABLE","capacity_total":400,"capacity_available":400,"admin_unit_id":16,"location_lat":10.757,"location_lng":106.727},
+  {"resource_id":16,"name":"Xe cứu thương 6","type":"VEHICLE","status":"MAINTENANCE","capacity_total":4,"capacity_available":0,"admin_unit_id":17,"location_lat":10.767,"location_lng":106.737},
+  {"resource_id":17,"name":"Bộ thuốc E","type":"MEDICINE","status":"AVAILABLE","capacity_total":120,"capacity_available":120,"admin_unit_id":18,"location_lat":10.787,"location_lng":106.747},
+  {"resource_id":18,"name":"Lương thực 5","type":"FOOD","status":"AVAILABLE","capacity_total":600,"capacity_available":600,"admin_unit_id":19,"location_lat":10.797,"location_lng":106.757},
+  {"resource_id":19,"name":"Xe cứu thương 7","type":"VEHICLE","status":"AVAILABLE","capacity_total":4,"capacity_available":4,"admin_unit_id":20,"location_lat":10.807,"location_lng":106.767},
+  {"resource_id":20,"name":"Bộ thuốc F","type":"MEDICINE","status":"REQUESTED","capacity_total":80,"capacity_available":80,"admin_unit_id":1,"location_lat":10.817,"location_lng":106.777}
+]

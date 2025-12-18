@@ -1,0 +1,22 @@
+[
+  {"unit_id":1,"name":"TP Hồ Chí Minh","description":"Thành phố HCM","type":"TINH","region_id":null,"parent_unit":null},
+  {"unit_id":2,"name":"Quận 1","description":"Quận 1 HCM","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":3,"name":"Quận 2","description":"Quận 2 HCM","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":4,"name":"Quận 3","description":"Quận 3 HCM","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":5,"name":"Quận 4","description":"Quận 4 HCM","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":6,"name":"Quận 5","description":"Quận 5 HCM","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":7,"name":"Quận 6","description":"Quận 6 HCM","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":8,"name":"Quận 7","description":"Quận 7 HCM","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":9,"name":"Quận 8","description":"Quận 8 HCM","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":10,"name":"Quận 9","description":"Quận 9 HCM","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":11,"name":"Huyện Nhà Bè","description":"H. Nhà Bè","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":12,"name":"Huyện Củ Chi","description":"H. Củ Chi","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":13,"name":"Huyện Hóc Môn","description":"H. Hóc Môn","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":14,"name":"Huyện Bình Chánh","description":"H. Bình Chánh","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":15,"name":"Quận Bình Thạnh","description":"Q. Bình Thạnh","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":16,"name":"Quận Gò Vấp","description":"Q. Gò Vấp","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":17,"name":"Quận Tân Bình","description":"Q. Tân Bình","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":18,"name":"Quận Tân Phú","description":"Q. Tân Phú","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":19,"name":"Quận Phú Nhuận","description":"Q. Phú Nhuận","type":"HUYEN","region_id":1,"parent_unit":1},
+  {"unit_id":20,"name":"Quận Thủ Đức","description":"Q. Thủ Đức","type":"HUYEN","region_id":1,"parent_unit":1}
+]
