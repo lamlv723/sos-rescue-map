@@ -250,43 +250,43 @@ class Command(BaseCommand):
             self.stdout.write(self.style.SUCCESS("Loaded request resources"))
 
         # --- load map points ---
-        map_points_file = os.path.join(folder, 'map_points.json')
-        if os.path.exists(map_points_file):
-            with open(map_points_file, 'r', encoding='utf-8') as f:
-                points = json.load(f)
-
-                model_map = {
-                    'SOS': 'submissions.SOSRequest',
-                    'TEAM': 'submissions.RescueTeam',
-                    'RESOURCE': 'submissions.RescueResource',
-                    'USER': 'core.User',
-                }
-
-                for item in points:
-                    geom = Point(
-                        float(item['longitude']),
-                        float(item['latitude']),
-                        srid=4326
-                    )
-
-                    object_type = item.get('object_type')
-                    model_label = model_map.get(object_type)
-                    if not model_label:
-                        raise ValueError(f"Unsupported object_type: {object_type}")
-
-                    model = apps.get_model(model_label)
-                    content_type = ContentType.objects.get_for_model(model)
-
-                    MapPoint.objects.create(
-                        title=item.get('title'),
-                        description=item.get('description'),
-                        content_type=content_type,
-                        object_id=str(item.get('object_id')),
-                        geom=geom,
-                        properties=item.get('properties', {}),
-                        source='mock',
-                        is_public=item.get('is_public', True),
-                    )
-            self.stdout.write(self.style.SUCCESS("Loaded map points"))
+        # map_points_file = os.path.join(folder, 'map_points.json')
+        # if os.path.exists(map_points_file):
+        #     with open(map_points_file, 'r', encoding='utf-8') as f:
+        #         points = json.load(f)
+        #
+        #         model_map = {
+        #             'SOS': 'submissions.SOSRequest',
+        #             'TEAM': 'submissions.RescueTeam',
+        #             'RESOURCE': 'submissions.RescueResource',
+        #             'USER': 'core.User',
+        #         }
+        #
+        #         for item in points:
+        #             geom = Point(
+        #                 float(item['longitude']),
+        #                 float(item['latitude']),
+        #                 srid=4326
+        #             )
+        #
+        #             object_type = item.get('object_type')
+        #             model_label = model_map.get(object_type)
+        #             if not model_label:
+        #                 raise ValueError(f"Unsupported object_type: {object_type}")
+        #
+        #             model = apps.get_model(model_label)
+        #             content_type = ContentType.objects.get_for_model(model)
+        #
+        #             MapPoint.objects.create(
+        #                 title=item.get('title'),
+        #                 description=item.get('description'),
+        #                 content_type=content_type,
+        #                 object_id=str(item.get('object_id')),
+        #                 geom=geom,
+        #                 properties=item.get('properties', {}),
+        #                 source='mock',
+        #                 is_public=item.get('is_public', True),
+        #             )
+        #     self.stdout.write(self.style.SUCCESS("Loaded map points"))
 
 
