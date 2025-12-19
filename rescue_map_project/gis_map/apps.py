@@ -1,6 +1,7 @@
 from django.apps import AppConfig
 
+class MapsConfig(AppConfig):
+    name = "gis_map"
+    def ready(self):
+        import gis_map.signals
 
-class GisMapConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'gis_map'
