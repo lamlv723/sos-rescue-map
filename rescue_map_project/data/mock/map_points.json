@@ -1,3202 +1,3202 @@
 [
   {
-    "point_id": "61194114-361e-4c7a-9b10-318d04c23e91",
+    "point_id": "e3be6862-aa13-4a4e-b0bc-1c098589fd4d",
     "title": "TEAM point 1",
     "description": "Auto-generated point #1 for TEAM",
     "object_type": "TEAM",
-    "object_id": 11,
-    "latitude": 10.8208,
-    "longitude": 106.896857,
+    "object_id": 16,
+    "latitude": 10.882904,
+    "longitude": 106.670247,
     "properties": {
       "status": "PENDING",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423415+00:00"
+    "created_at": "2025-12-20T10:39:21.127500+00:00"
   },
   {
-    "point_id": "5f9dc249-88ec-4210-af6e-599eae85569b",
-    "title": "RESOURCE point 2",
-    "description": "Auto-generated point #2 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 13,
-    "latitude": 10.687062,
-    "longitude": 106.668714,
+    "point_id": "d1c494ff-9b3b-4f7b-9fda-ed60661a2bf3",
+    "title": "SOS point 2",
+    "description": "Auto-generated point #2 for SOS",
+    "object_type": "SOS",
+    "object_id": 10,
+    "latitude": 10.844281,
+    "longitude": 106.877287,
+    "properties": {
+      "status": "PENDING",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127514+00:00"
+  },
+  {
+    "point_id": "f8ca6f86-32f7-44f6-9a7f-433afd9910d7",
+    "title": "SOS point 3",
+    "description": "Auto-generated point #3 for SOS",
+    "object_type": "SOS",
+    "object_id": 34,
+    "latitude": 10.880138,
+    "longitude": 106.64261,
     "properties": {
       "status": "RESOLVED",
-      "icon": "resource"
+      "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423437+00:00"
+    "created_at": "2025-12-20T10:39:21.127521+00:00"
   },
   {
-    "point_id": "efd625d1-85a4-4e6f-b344-39319249c9eb",
-    "title": "RESOURCE point 3",
-    "description": "Auto-generated point #3 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 7,
-    "latitude": 10.88089,
-    "longitude": 106.619857,
+    "point_id": "83755013-1a95-41a8-b084-43eac359dd7c",
+    "title": "SOS point 4",
+    "description": "Auto-generated point #4 for SOS",
+    "object_type": "SOS",
+    "object_id": 23,
+    "latitude": 10.818513,
+    "longitude": 106.780793,
     "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
+      "status": "PENDING",
+      "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423451+00:00"
+    "created_at": "2025-12-20T10:39:21.127528+00:00"
   },
   {
-    "point_id": "cc9c75ef-27f8-4948-863e-747aae07cbe8",
-    "title": "USER point 4",
-    "description": "Auto-generated point #4 for USER",
+    "point_id": "f2fc67e7-6e6d-4585-9acc-eb47703c2395",
+    "title": "USER point 5",
+    "description": "Auto-generated point #5 for USER",
     "object_type": "USER",
-    "object_id": 5,
-    "latitude": 10.8812,
-    "longitude": 106.71869,
+    "object_id": 18,
+    "latitude": 10.854223,
+    "longitude": 106.721085,
     "properties": {
-      "status": "RESOLVED",
+      "status": "PENDING",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423461+00:00"
+    "created_at": "2025-12-20T10:39:21.127534+00:00"
   },
   {
-    "point_id": "e3bb2225-1aa1-46d6-a4fe-3989f437ad0f",
-    "title": "RESOURCE point 5",
-    "description": "Auto-generated point #5 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 19,
-    "latitude": 10.843898,
-    "longitude": 106.641889,
+    "point_id": "2da89fd1-b640-4f18-b662-20a6fd1d67d2",
+    "title": "SOS point 6",
+    "description": "Auto-generated point #6 for SOS",
+    "object_type": "SOS",
+    "object_id": 14,
+    "latitude": 10.738449,
+    "longitude": 106.820366,
     "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
+      "status": "PENDING",
+      "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423471+00:00"
+    "created_at": "2025-12-20T10:39:21.127539+00:00"
   },
   {
-    "point_id": "585f8633-3e7b-400a-9baa-29b6316aa585",
-    "title": "TEAM point 6",
-    "description": "Auto-generated point #6 for TEAM",
+    "point_id": "73146228-67cb-456c-8f92-851963499c1f",
+    "title": "TEAM point 7",
+    "description": "Auto-generated point #7 for TEAM",
     "object_type": "TEAM",
-    "object_id": 5,
-    "latitude": 10.767868,
-    "longitude": 106.869347,
+    "object_id": 2,
+    "latitude": 10.779031,
+    "longitude": 106.662978,
     "properties": {
       "status": "AVAILABLE",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423480+00:00"
+    "created_at": "2025-12-20T10:39:21.127544+00:00"
   },
   {
-    "point_id": "f6934e14-ac39-499b-8730-2c8bae5b704b",
-    "title": "SOS point 7",
-    "description": "Auto-generated point #7 for SOS",
-    "object_type": "SOS",
-    "object_id": 10,
-    "latitude": 10.690366,
-    "longitude": 106.627273,
+    "point_id": "0749ee6b-6475-4afa-841d-804972dd344f",
+    "title": "TEAM point 8",
+    "description": "Auto-generated point #8 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 16,
+    "latitude": 10.89374,
+    "longitude": 106.887518,
+    "properties": {
+      "status": "PENDING",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127555+00:00"
+  },
+  {
+    "point_id": "17321342-a0c2-4558-8673-167745becce8",
+    "title": "USER point 9",
+    "description": "Auto-generated point #9 for USER",
+    "object_type": "USER",
+    "object_id": 23,
+    "latitude": 10.854095,
+    "longitude": 106.711877,
+    "properties": {
+      "status": "PENDING",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127560+00:00"
+  },
+  {
+    "point_id": "017e6a41-6f02-4fc3-bc24-46dac30d1f07",
+    "title": "TEAM point 10",
+    "description": "Auto-generated point #10 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 3,
+    "latitude": 10.796675,
+    "longitude": 106.795372,
     "properties": {
       "status": "ASSIGNED",
-      "icon": "sos"
+      "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423490+00:00"
+    "created_at": "2025-12-20T10:39:21.127566+00:00"
   },
   {
-    "point_id": "8a4e5f77-13fe-411f-9feb-b03b2bbd5152",
-    "title": "SOS point 8",
-    "description": "Auto-generated point #8 for SOS",
-    "object_type": "SOS",
-    "object_id": 25,
-    "latitude": 10.772875,
-    "longitude": 106.837624,
+    "point_id": "709fe647-e1be-435b-9219-df5404e5b1fd",
+    "title": "USER point 11",
+    "description": "Auto-generated point #11 for USER",
+    "object_type": "USER",
+    "object_id": 4,
+    "latitude": 10.73231,
+    "longitude": 106.621701,
     "properties": {
       "status": "AVAILABLE",
-      "icon": "sos"
+      "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423499+00:00"
+    "created_at": "2025-12-20T10:39:21.127570+00:00"
   },
   {
-    "point_id": "584de49d-eaed-431b-a305-05729797b497",
-    "title": "RESOURCE point 9",
-    "description": "Auto-generated point #9 for RESOURCE",
+    "point_id": "e679d898-3a90-42ce-a071-b35cf3a378e9",
+    "title": "RESOURCE point 12",
+    "description": "Auto-generated point #12 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 6,
+    "latitude": 10.835316,
+    "longitude": 106.805861,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127574+00:00"
+  },
+  {
+    "point_id": "b40214de-df75-4e84-8f2b-e7ad9ce3cddc",
+    "title": "RESOURCE point 13",
+    "description": "Auto-generated point #13 for RESOURCE",
     "object_type": "RESOURCE",
     "object_id": 18,
-    "latitude": 10.782971,
-    "longitude": 106.778767,
+    "latitude": 10.815842,
+    "longitude": 106.665614,
     "properties": {
-      "status": "PENDING",
+      "status": "RESOLVED",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423508+00:00"
+    "created_at": "2025-12-20T10:39:21.127579+00:00"
   },
   {
-    "point_id": "bfe49efe-d6ef-4603-b7fa-4bf0016242cd",
-    "title": "RESOURCE point 10",
-    "description": "Auto-generated point #10 for RESOURCE",
+    "point_id": "6ea44444-7a0b-4c9d-a297-2d15940d8432",
+    "title": "RESOURCE point 14",
+    "description": "Auto-generated point #14 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 11,
-    "latitude": 10.705201,
-    "longitude": 106.804085,
-    "properties": {
-      "status": "PENDING",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423517+00:00"
-  },
-  {
-    "point_id": "1f936506-c703-4c26-a55b-c59540a68508",
-    "title": "SOS point 11",
-    "description": "Auto-generated point #11 for SOS",
-    "object_type": "SOS",
-    "object_id": 47,
-    "latitude": 10.714795,
-    "longitude": 106.68805,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "sos"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423526+00:00"
-  },
-  {
-    "point_id": "676dc49c-f48c-4731-aea1-19acdbef66df",
-    "title": "SOS point 12",
-    "description": "Auto-generated point #12 for SOS",
-    "object_type": "SOS",
-    "object_id": 41,
-    "latitude": 10.847632,
-    "longitude": 106.891566,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "sos"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423535+00:00"
-  },
-  {
-    "point_id": "828e4583-76e8-4426-9b30-64e6d554689f",
-    "title": "TEAM point 13",
-    "description": "Auto-generated point #13 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 5,
-    "latitude": 10.791686,
-    "longitude": 106.852501,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423543+00:00"
-  },
-  {
-    "point_id": "12afd957-8b01-4b68-a767-8fd3528df811",
-    "title": "SOS point 14",
-    "description": "Auto-generated point #14 for SOS",
-    "object_type": "SOS",
-    "object_id": 39,
-    "latitude": 10.798663,
-    "longitude": 106.828753,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "sos"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423552+00:00"
-  },
-  {
-    "point_id": "a24712e8-791f-48db-a1af-3c6437072900",
-    "title": "RESOURCE point 15",
-    "description": "Auto-generated point #15 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 10,
-    "latitude": 10.704611,
-    "longitude": 106.746582,
+    "object_id": 16,
+    "latitude": 10.856729,
+    "longitude": 106.812478,
     "properties": {
       "status": "ASSIGNED",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423560+00:00"
+    "created_at": "2025-12-20T10:39:21.127583+00:00"
   },
   {
-    "point_id": "306fc5e4-96c4-4787-bc5b-632f93ca4984",
-    "title": "SOS point 16",
-    "description": "Auto-generated point #16 for SOS",
-    "object_type": "SOS",
-    "object_id": 6,
-    "latitude": 10.873162,
-    "longitude": 106.617378,
+    "point_id": "bdec15d4-5b4c-4f9b-a784-38eaee412d03",
+    "title": "USER point 15",
+    "description": "Auto-generated point #15 for USER",
+    "object_type": "USER",
+    "object_id": 4,
+    "latitude": 10.686689,
+    "longitude": 106.622627,
     "properties": {
-      "status": "AVAILABLE",
-      "icon": "sos"
+      "status": "ASSIGNED",
+      "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423568+00:00"
+    "created_at": "2025-12-20T10:39:21.127587+00:00"
   },
   {
-    "point_id": "36003685-e776-4bdb-aecd-57e0e9543079",
-    "title": "TEAM point 17",
-    "description": "Auto-generated point #17 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 5,
-    "latitude": 10.895157,
-    "longitude": 106.844807,
+    "point_id": "bcb2721c-0825-45b1-a72c-aadc4502aecc",
+    "title": "RESOURCE point 16",
+    "description": "Auto-generated point #16 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 1,
+    "latitude": 10.687418,
+    "longitude": 106.755889,
     "properties": {
-      "status": "AVAILABLE",
-      "icon": "team"
+      "status": "ASSIGNED",
+      "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423577+00:00"
+    "created_at": "2025-12-20T10:39:21.127592+00:00"
   },
   {
-    "point_id": "43e96615-5af3-4839-a250-1feb6b820874",
+    "point_id": "7b13678c-38ad-4d03-9032-af081483129e",
+    "title": "RESOURCE point 17",
+    "description": "Auto-generated point #17 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 16,
+    "latitude": 10.821884,
+    "longitude": 106.636163,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127596+00:00"
+  },
+  {
+    "point_id": "774baba5-656c-4cdd-b0e4-f4590bc9e937",
     "title": "USER point 18",
     "description": "Auto-generated point #18 for USER",
     "object_type": "USER",
-    "object_id": 7,
-    "latitude": 10.716328,
-    "longitude": 106.884055,
+    "object_id": 6,
+    "latitude": 10.893424,
+    "longitude": 106.825493,
     "properties": {
-      "status": "ASSIGNED",
+      "status": "PENDING",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423585+00:00"
+    "created_at": "2025-12-20T10:39:21.127601+00:00"
   },
   {
-    "point_id": "a41f5d7a-a250-4c3b-adcd-bab6cd48da59",
-    "title": "RESOURCE point 19",
-    "description": "Auto-generated point #19 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 15,
-    "latitude": 10.767778,
-    "longitude": 106.813885,
+    "point_id": "8e998b26-216b-4f00-a716-297c60249cb3",
+    "title": "TEAM point 19",
+    "description": "Auto-generated point #19 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 14,
+    "latitude": 10.868438,
+    "longitude": 106.740934,
     "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
+      "status": "PENDING",
+      "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423594+00:00"
+    "created_at": "2025-12-20T10:39:21.127605+00:00"
   },
   {
-    "point_id": "afbb362d-b97f-4cec-95fa-e51d35c3ee4b",
+    "point_id": "eb083229-08a2-4bde-99e0-ebfec3324bce",
     "title": "RESOURCE point 20",
     "description": "Auto-generated point #20 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 1,
-    "latitude": 10.729433,
-    "longitude": 106.636301,
+    "object_id": 11,
+    "latitude": 10.750961,
+    "longitude": 106.82621,
     "properties": {
-      "status": "ASSIGNED",
+      "status": "PENDING",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423602+00:00"
+    "created_at": "2025-12-20T10:39:21.127609+00:00"
   },
   {
-    "point_id": "5376bff4-53f0-4b57-98e5-1a5b5093083c",
+    "point_id": "237562fc-3ad6-4687-9218-d8a310d9a941",
     "title": "SOS point 21",
     "description": "Auto-generated point #21 for SOS",
     "object_type": "SOS",
-    "object_id": 15,
-    "latitude": 10.681582,
-    "longitude": 106.776532,
+    "object_id": 25,
+    "latitude": 10.732852,
+    "longitude": 106.874982,
     "properties": {
       "status": "PENDING",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423610+00:00"
+    "created_at": "2025-12-20T10:39:21.127627+00:00"
   },
   {
-    "point_id": "7f8afb3c-1a9d-4385-ae62-55b68174eed4",
-    "title": "SOS point 22",
-    "description": "Auto-generated point #22 for SOS",
-    "object_type": "SOS",
-    "object_id": 33,
-    "latitude": 10.86912,
-    "longitude": 106.871626,
+    "point_id": "dcf1c36a-733b-42f0-994d-0497c3af28a7",
+    "title": "USER point 22",
+    "description": "Auto-generated point #22 for USER",
+    "object_type": "USER",
+    "object_id": 17,
+    "latitude": 10.880545,
+    "longitude": 106.774273,
     "properties": {
       "status": "ASSIGNED",
-      "icon": "sos"
+      "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423618+00:00"
+    "created_at": "2025-12-20T10:39:21.127657+00:00"
   },
   {
-    "point_id": "76a9e3f7-9ef7-44ca-bd30-143b788c92b0",
-    "title": "TEAM point 23",
-    "description": "Auto-generated point #23 for TEAM",
-    "object_type": "TEAM",
+    "point_id": "bce7d2e9-2ae8-4bd9-b58f-d918247fbfc3",
+    "title": "RESOURCE point 23",
+    "description": "Auto-generated point #23 for RESOURCE",
+    "object_type": "RESOURCE",
     "object_id": 19,
-    "latitude": 10.786791,
-    "longitude": 106.683543,
+    "latitude": 10.826547,
+    "longitude": 106.764249,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127664+00:00"
+  },
+  {
+    "point_id": "8222e7c2-9012-40b7-93e7-6e70be360832",
+    "title": "TEAM point 24",
+    "description": "Auto-generated point #24 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 2,
+    "latitude": 10.846641,
+    "longitude": 106.854336,
     "properties": {
       "status": "AVAILABLE",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423626+00:00"
+    "created_at": "2025-12-20T10:39:21.127671+00:00"
   },
   {
-    "point_id": "a25b3732-2c1c-47c4-b293-8ca068f37792",
-    "title": "USER point 24",
-    "description": "Auto-generated point #24 for USER",
-    "object_type": "USER",
-    "object_id": 7,
-    "latitude": 10.784054,
-    "longitude": 106.672899,
-    "properties": {
-      "status": "PENDING",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423634+00:00"
-  },
-  {
-    "point_id": "8e4d8428-6e91-4628-b266-af4fec53175c",
-    "title": "USER point 25",
-    "description": "Auto-generated point #25 for USER",
-    "object_type": "USER",
-    "object_id": 14,
-    "latitude": 10.774831,
-    "longitude": 106.629079,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423642+00:00"
-  },
-  {
-    "point_id": "a91a616e-9662-4103-96c6-3297aa69243e",
-    "title": "SOS point 26",
-    "description": "Auto-generated point #26 for SOS",
-    "object_type": "SOS",
-    "object_id": 4,
-    "latitude": 10.691918,
-    "longitude": 106.859151,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "sos"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423650+00:00"
-  },
-  {
-    "point_id": "b423bce9-afd8-486b-84f4-f31e3566d2d4",
-    "title": "SOS point 27",
-    "description": "Auto-generated point #27 for SOS",
-    "object_type": "SOS",
-    "object_id": 16,
-    "latitude": 10.85613,
-    "longitude": 106.818464,
+    "point_id": "34a58963-91cf-475a-9f57-11bf5b1079d1",
+    "title": "RESOURCE point 25",
+    "description": "Auto-generated point #25 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 12,
+    "latitude": 10.714396,
+    "longitude": 106.655806,
     "properties": {
       "status": "ASSIGNED",
-      "icon": "sos"
+      "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423659+00:00"
+    "created_at": "2025-12-20T10:39:21.127679+00:00"
   },
   {
-    "point_id": "4270357c-4b02-44de-9b64-466ca24d7cbd",
+    "point_id": "bb9a049c-7d13-47dc-a62a-9b40599cb94b",
+    "title": "TEAM point 26",
+    "description": "Auto-generated point #26 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 10,
+    "latitude": 10.852302,
+    "longitude": 106.809145,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127684+00:00"
+  },
+  {
+    "point_id": "2b972543-aca6-4290-9dd9-b31ad2d92302",
+    "title": "TEAM point 27",
+    "description": "Auto-generated point #27 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 16,
+    "latitude": 10.8969,
+    "longitude": 106.655494,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127688+00:00"
+  },
+  {
+    "point_id": "bfc583b2-07da-43f5-b598-5219c08dd6f6",
     "title": "USER point 28",
     "description": "Auto-generated point #28 for USER",
     "object_type": "USER",
-    "object_id": 6,
-    "latitude": 10.778695,
-    "longitude": 106.657063,
+    "object_id": 16,
+    "latitude": 10.72633,
+    "longitude": 106.838945,
     "properties": {
       "status": "RESOLVED",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423666+00:00"
+    "created_at": "2025-12-20T10:39:21.127692+00:00"
   },
   {
-    "point_id": "d1b09974-d307-4efd-bee1-4a12aeb07672",
+    "point_id": "088c82e2-6b3f-4eff-bf4f-852ed74bcfb7",
     "title": "SOS point 29",
     "description": "Auto-generated point #29 for SOS",
     "object_type": "SOS",
-    "object_id": 29,
-    "latitude": 10.872387,
-    "longitude": 106.738788,
+    "object_id": 23,
+    "latitude": 10.803555,
+    "longitude": 106.627538,
     "properties": {
       "status": "PENDING",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423678+00:00"
+    "created_at": "2025-12-20T10:39:21.127696+00:00"
   },
   {
-    "point_id": "3761d5a3-d2f0-451d-b114-37b50d21f865",
+    "point_id": "eb9aba0d-5ec5-471a-bb2e-4e2cc6028eba",
     "title": "SOS point 30",
     "description": "Auto-generated point #30 for SOS",
     "object_type": "SOS",
-    "object_id": 6,
-    "latitude": 10.899842,
-    "longitude": 106.615176,
+    "object_id": 44,
+    "latitude": 10.813858,
+    "longitude": 106.718068,
     "properties": {
-      "status": "ASSIGNED",
+      "status": "PENDING",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423687+00:00"
+    "created_at": "2025-12-20T10:39:21.127700+00:00"
   },
   {
-    "point_id": "e63f1c27-7345-4b95-901a-afb6f86c977e",
-    "title": "TEAM point 31",
-    "description": "Auto-generated point #31 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 13,
-    "latitude": 10.786841,
-    "longitude": 106.649893,
-    "properties": {
-      "status": "PENDING",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423695+00:00"
-  },
-  {
-    "point_id": "64166dfd-6e65-407f-a914-b34374e953a4",
-    "title": "USER point 32",
-    "description": "Auto-generated point #32 for USER",
+    "point_id": "311b6da3-a02d-4b0e-931c-1afd6a5df99b",
+    "title": "USER point 31",
+    "description": "Auto-generated point #31 for USER",
     "object_type": "USER",
-    "object_id": 9,
-    "latitude": 10.680474,
-    "longitude": 106.649391,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423703+00:00"
-  },
-  {
-    "point_id": "e041e123-6ddf-4ac7-a3aa-9c2ca45d25ad",
-    "title": "USER point 33",
-    "description": "Auto-generated point #33 for USER",
-    "object_type": "USER",
-    "object_id": 5,
-    "latitude": 10.83325,
-    "longitude": 106.685575,
+    "object_id": 4,
+    "latitude": 10.800646,
+    "longitude": 106.715656,
     "properties": {
       "status": "ASSIGNED",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423712+00:00"
+    "created_at": "2025-12-20T10:39:21.127705+00:00"
   },
   {
-    "point_id": "11bdf59f-7116-416d-942c-8de4e1430e6c",
+    "point_id": "7465378c-e92b-4301-ad5e-b43b3346779a",
+    "title": "SOS point 32",
+    "description": "Auto-generated point #32 for SOS",
+    "object_type": "SOS",
+    "object_id": 28,
+    "latitude": 10.872807,
+    "longitude": 106.73873,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127709+00:00"
+  },
+  {
+    "point_id": "aa9870e8-3cc3-4436-a58e-3016e39d10dc",
+    "title": "RESOURCE point 33",
+    "description": "Auto-generated point #33 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 3,
+    "latitude": 10.696191,
+    "longitude": 106.716043,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127737+00:00"
+  },
+  {
+    "point_id": "7adb9c87-3527-4928-8ecf-b6885000a2e8",
     "title": "SOS point 34",
     "description": "Auto-generated point #34 for SOS",
     "object_type": "SOS",
-    "object_id": 48,
-    "latitude": 10.893116,
-    "longitude": 106.689012,
+    "object_id": 40,
+    "latitude": 10.710245,
+    "longitude": 106.618451,
     "properties": {
-      "status": "RESOLVED",
+      "status": "ASSIGNED",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423720+00:00"
+    "created_at": "2025-12-20T10:39:21.127743+00:00"
   },
   {
-    "point_id": "7f530983-67ef-46dc-8bef-8afb45b7ac70",
+    "point_id": "d8167327-b79c-4a37-9917-38d283c35db2",
     "title": "TEAM point 35",
     "description": "Auto-generated point #35 for TEAM",
     "object_type": "TEAM",
-    "object_id": 2,
-    "latitude": 10.808519,
-    "longitude": 106.61715,
+    "object_id": 10,
+    "latitude": 10.704428,
+    "longitude": 106.802848,
     "properties": {
-      "status": "PENDING",
+      "status": "ASSIGNED",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423728+00:00"
+    "created_at": "2025-12-20T10:39:21.127747+00:00"
   },
   {
-    "point_id": "2802d76b-e3a9-4b96-8744-677a969bd86c",
-    "title": "SOS point 36",
-    "description": "Auto-generated point #36 for SOS",
-    "object_type": "SOS",
-    "object_id": 44,
-    "latitude": 10.695075,
-    "longitude": 106.855403,
+    "point_id": "8ba4372c-8984-4659-b870-b3e670a8acc1",
+    "title": "RESOURCE point 36",
+    "description": "Auto-generated point #36 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 10,
+    "latitude": 10.821202,
+    "longitude": 106.760505,
     "properties": {
-      "status": "ASSIGNED",
+      "status": "AVAILABLE",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127752+00:00"
+  },
+  {
+    "point_id": "686b192b-630f-4d24-82c0-788d854c0fda",
+    "title": "USER point 37",
+    "description": "Auto-generated point #37 for USER",
+    "object_type": "USER",
+    "object_id": 5,
+    "latitude": 10.788911,
+    "longitude": 106.840148,
+    "properties": {
+      "status": "PENDING",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127757+00:00"
+  },
+  {
+    "point_id": "910ece51-6cf1-4b78-aedd-0bbeb666bfa5",
+    "title": "SOS point 38",
+    "description": "Auto-generated point #38 for SOS",
+    "object_type": "SOS",
+    "object_id": 19,
+    "latitude": 10.803349,
+    "longitude": 106.670368,
+    "properties": {
+      "status": "AVAILABLE",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423736+00:00"
+    "created_at": "2025-12-20T10:39:21.127761+00:00"
   },
   {
-    "point_id": "c71cd59c-f0e8-4494-8fcb-0cf15a4bacc3",
-    "title": "TEAM point 37",
-    "description": "Auto-generated point #37 for TEAM",
+    "point_id": "4c67060b-4213-4cff-bc22-6dbf29be0626",
+    "title": "USER point 39",
+    "description": "Auto-generated point #39 for USER",
+    "object_type": "USER",
+    "object_id": 1,
+    "latitude": 10.88414,
+    "longitude": 106.635724,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127766+00:00"
+  },
+  {
+    "point_id": "c91a35ad-950e-4793-854c-a4da4ce37b26",
+    "title": "TEAM point 40",
+    "description": "Auto-generated point #40 for TEAM",
     "object_type": "TEAM",
-    "object_id": 19,
-    "latitude": 10.887151,
-    "longitude": 106.721133,
+    "object_id": 7,
+    "latitude": 10.842123,
+    "longitude": 106.770194,
     "properties": {
       "status": "PENDING",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423746+00:00"
+    "created_at": "2025-12-20T10:39:21.127770+00:00"
   },
   {
-    "point_id": "fca6967b-15e3-4c02-8104-24bde8bce224",
-    "title": "RESOURCE point 38",
-    "description": "Auto-generated point #38 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 9,
-    "latitude": 10.772229,
-    "longitude": 106.785814,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423754+00:00"
-  },
-  {
-    "point_id": "34308189-a26b-46e1-aaff-5d4398258b79",
-    "title": "RESOURCE point 39",
-    "description": "Auto-generated point #39 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 13,
-    "latitude": 10.74912,
-    "longitude": 106.800918,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423762+00:00"
-  },
-  {
-    "point_id": "1c5319db-0f2c-481e-bab0-e5a8b2ac140a",
-    "title": "RESOURCE point 40",
-    "description": "Auto-generated point #40 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 3,
-    "latitude": 10.745999,
-    "longitude": 106.801507,
-    "properties": {
-      "status": "PENDING",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423770+00:00"
-  },
-  {
-    "point_id": "f70be016-efae-446e-909a-e94961788d63",
+    "point_id": "d94b6e3d-bb4c-4770-b398-bf796a156ec2",
     "title": "SOS point 41",
     "description": "Auto-generated point #41 for SOS",
     "object_type": "SOS",
-    "object_id": 5,
-    "latitude": 10.89966,
-    "longitude": 106.737486,
+    "object_id": 39,
+    "latitude": 10.866964,
+    "longitude": 106.618029,
     "properties": {
-      "status": "ASSIGNED",
+      "status": "AVAILABLE",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423778+00:00"
+    "created_at": "2025-12-20T10:39:21.127774+00:00"
   },
   {
-    "point_id": "50b303c4-7fa5-4090-896c-23c0ad3dd229",
-    "title": "RESOURCE point 42",
-    "description": "Auto-generated point #42 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 3,
-    "latitude": 10.70914,
-    "longitude": 106.751765,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423786+00:00"
-  },
-  {
-    "point_id": "07c168b5-676c-4595-bebf-e744bbc78fc2",
-    "title": "RESOURCE point 43",
-    "description": "Auto-generated point #43 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 20,
-    "latitude": 10.714704,
-    "longitude": 106.710858,
-    "properties": {
-      "status": "PENDING",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423795+00:00"
-  },
-  {
-    "point_id": "f082cb97-b90d-4454-97ff-a54d973d9235",
-    "title": "SOS point 44",
-    "description": "Auto-generated point #44 for SOS",
+    "point_id": "410cd18b-5a86-49d9-a17c-406233d83ff7",
+    "title": "SOS point 42",
+    "description": "Auto-generated point #42 for SOS",
     "object_type": "SOS",
-    "object_id": 9,
-    "latitude": 10.802013,
-    "longitude": 106.800359,
+    "object_id": 32,
+    "latitude": 10.681271,
+    "longitude": 106.767407,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127779+00:00"
+  },
+  {
+    "point_id": "65246372-e456-45b1-a6da-2575f74c608d",
+    "title": "USER point 43",
+    "description": "Auto-generated point #43 for USER",
+    "object_type": "USER",
+    "object_id": 18,
+    "latitude": 10.69807,
+    "longitude": 106.703826,
     "properties": {
       "status": "RESOLVED",
-      "icon": "sos"
+      "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423803+00:00"
+    "created_at": "2025-12-20T10:39:21.127783+00:00"
   },
   {
-    "point_id": "8a879d3e-fe75-499b-a113-8fa0485624a3",
+    "point_id": "611a5a11-a4c7-4bd4-8844-b1b1fc6d85b4",
+    "title": "TEAM point 44",
+    "description": "Auto-generated point #44 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 17,
+    "latitude": 10.735111,
+    "longitude": 106.859523,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127788+00:00"
+  },
+  {
+    "point_id": "4715e534-8937-4c29-b6ee-dbcfef7a777a",
     "title": "TEAM point 45",
     "description": "Auto-generated point #45 for TEAM",
     "object_type": "TEAM",
-    "object_id": 9,
-    "latitude": 10.703548,
-    "longitude": 106.634629,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423811+00:00"
-  },
-  {
-    "point_id": "cbb1837b-187f-4afc-99f4-238d66dee6ef",
-    "title": "TEAM point 46",
-    "description": "Auto-generated point #46 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 9,
-    "latitude": 10.837875,
-    "longitude": 106.781449,
+    "object_id": 10,
+    "latitude": 10.834032,
+    "longitude": 106.650271,
     "properties": {
       "status": "AVAILABLE",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423821+00:00"
+    "created_at": "2025-12-20T10:39:21.127832+00:00"
   },
   {
-    "point_id": "ab8868ee-03d2-4418-afc0-266311847c78",
+    "point_id": "eef71218-bcce-4a5e-bfbf-e1ed500599cb",
+    "title": "RESOURCE point 46",
+    "description": "Auto-generated point #46 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 4,
+    "latitude": 10.736213,
+    "longitude": 106.670919,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127849+00:00"
+  },
+  {
+    "point_id": "59f58ff9-87fb-40d5-bfa4-17385cf0b46f",
     "title": "SOS point 47",
     "description": "Auto-generated point #47 for SOS",
     "object_type": "SOS",
-    "object_id": 6,
-    "latitude": 10.879795,
-    "longitude": 106.675336,
+    "object_id": 9,
+    "latitude": 10.713944,
+    "longitude": 106.819902,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127854+00:00"
+  },
+  {
+    "point_id": "69d225cd-44e5-4be0-bdf1-185ec60ff8bd",
+    "title": "TEAM point 48",
+    "description": "Auto-generated point #48 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 15,
+    "latitude": 10.742209,
+    "longitude": 106.694865,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127858+00:00"
+  },
+  {
+    "point_id": "e8bbfe41-c8b2-4db6-96b0-825fcaa378db",
+    "title": "SOS point 49",
+    "description": "Auto-generated point #49 for SOS",
+    "object_type": "SOS",
+    "object_id": 21,
+    "latitude": 10.70791,
+    "longitude": 106.706383,
     "properties": {
       "status": "AVAILABLE",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423832+00:00"
+    "created_at": "2025-12-20T10:39:21.127863+00:00"
   },
   {
-    "point_id": "a693ca06-f451-4315-bb61-29882df6a018",
-    "title": "RESOURCE point 48",
-    "description": "Auto-generated point #48 for RESOURCE",
+    "point_id": "e4f9f0df-1cd6-4bba-b412-20040b688eea",
+    "title": "USER point 50",
+    "description": "Auto-generated point #50 for USER",
+    "object_type": "USER",
+    "object_id": 24,
+    "latitude": 10.763839,
+    "longitude": 106.805211,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127868+00:00"
+  },
+  {
+    "point_id": "2e1c4675-bef4-420d-89ff-33ab29dc5e74",
+    "title": "USER point 51",
+    "description": "Auto-generated point #51 for USER",
+    "object_type": "USER",
+    "object_id": 24,
+    "latitude": 10.680768,
+    "longitude": 106.745587,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127872+00:00"
+  },
+  {
+    "point_id": "a506d35e-bb77-4be4-850c-acd2e05b8d89",
+    "title": "RESOURCE point 52",
+    "description": "Auto-generated point #52 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 5,
-    "latitude": 10.689699,
-    "longitude": 106.848804,
+    "object_id": 2,
+    "latitude": 10.785121,
+    "longitude": 106.829424,
+    "properties": {
+      "status": "PENDING",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127880+00:00"
+  },
+  {
+    "point_id": "2069e700-6184-41c8-8f27-a18b5af8102b",
+    "title": "SOS point 53",
+    "description": "Auto-generated point #53 for SOS",
+    "object_type": "SOS",
+    "object_id": 3,
+    "latitude": 10.856605,
+    "longitude": 106.891311,
+    "properties": {
+      "status": "PENDING",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127885+00:00"
+  },
+  {
+    "point_id": "c9f9aff2-50f8-4678-9e26-b09f6182b894",
+    "title": "RESOURCE point 54",
+    "description": "Auto-generated point #54 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 20,
+    "latitude": 10.728144,
+    "longitude": 106.773501,
     "properties": {
       "status": "RESOLVED",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423841+00:00"
+    "created_at": "2025-12-20T10:39:21.127890+00:00"
   },
   {
-    "point_id": "ac045f5f-cc9c-423a-803c-4066a067d8ef",
-    "title": "USER point 49",
-    "description": "Auto-generated point #49 for USER",
+    "point_id": "414f4098-0982-4546-bf98-508aa3cf0c3c",
+    "title": "USER point 55",
+    "description": "Auto-generated point #55 for USER",
     "object_type": "USER",
-    "object_id": 18,
-    "latitude": 10.777204,
-    "longitude": 106.648475,
+    "object_id": 8,
+    "latitude": 10.756111,
+    "longitude": 106.836425,
     "properties": {
-      "status": "PENDING",
+      "status": "RESOLVED",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423850+00:00"
+    "created_at": "2025-12-20T10:39:21.127895+00:00"
   },
   {
-    "point_id": "50928740-43be-4053-80d0-b566e042e486",
-    "title": "TEAM point 50",
-    "description": "Auto-generated point #50 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 18,
-    "latitude": 10.887911,
-    "longitude": 106.633562,
-    "properties": {
-      "status": "PENDING",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423858+00:00"
-  },
-  {
-    "point_id": "69b6ef68-421e-453d-b803-1acfb47de260",
-    "title": "TEAM point 51",
-    "description": "Auto-generated point #51 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 14,
-    "latitude": 10.808152,
-    "longitude": 106.850379,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423866+00:00"
-  },
-  {
-    "point_id": "2e3d145e-18ee-4538-893c-c7a9a7e5bae1",
-    "title": "SOS point 52",
-    "description": "Auto-generated point #52 for SOS",
-    "object_type": "SOS",
-    "object_id": 23,
-    "latitude": 10.760223,
-    "longitude": 106.612549,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "sos"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423874+00:00"
-  },
-  {
-    "point_id": "fa2b789c-f35b-4133-869e-2037137c3255",
-    "title": "RESOURCE point 53",
-    "description": "Auto-generated point #53 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 18,
-    "latitude": 10.826725,
-    "longitude": 106.80462,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423897+00:00"
-  },
-  {
-    "point_id": "2eb2b9f7-dfc8-47ed-959d-d46fbe17a722",
-    "title": "TEAM point 54",
-    "description": "Auto-generated point #54 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 6,
-    "latitude": 10.844885,
-    "longitude": 106.892151,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423905+00:00"
-  },
-  {
-    "point_id": "59bf4c56-51f0-497f-ab76-24ad3f28ee30",
-    "title": "RESOURCE point 55",
-    "description": "Auto-generated point #55 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 14,
-    "latitude": 10.685453,
-    "longitude": 106.864425,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423913+00:00"
-  },
-  {
-    "point_id": "95dc722e-5de9-4ea2-8f3a-1461ae028942",
+    "point_id": "f7a5fbaf-0758-4fe8-9675-a90acb295972",
     "title": "SOS point 56",
     "description": "Auto-generated point #56 for SOS",
     "object_type": "SOS",
-    "object_id": 25,
-    "latitude": 10.853222,
-    "longitude": 106.680042,
+    "object_id": 12,
+    "latitude": 10.758351,
+    "longitude": 106.649321,
     "properties": {
-      "status": "PENDING",
+      "status": "ASSIGNED",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423921+00:00"
+    "created_at": "2025-12-20T10:39:21.127900+00:00"
   },
   {
-    "point_id": "2eb0fdd7-c577-4b6b-afbe-960d7e810d73",
-    "title": "USER point 57",
-    "description": "Auto-generated point #57 for USER",
-    "object_type": "USER",
-    "object_id": 12,
-    "latitude": 10.728935,
-    "longitude": 106.857578,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423930+00:00"
-  },
-  {
-    "point_id": "80714c1b-0acf-4f90-8042-bbb2daa9a0da",
-    "title": "TEAM point 58",
-    "description": "Auto-generated point #58 for TEAM",
+    "point_id": "44aee4ff-655f-4825-8789-05a7b629e6c2",
+    "title": "TEAM point 57",
+    "description": "Auto-generated point #57 for TEAM",
     "object_type": "TEAM",
     "object_id": 1,
-    "latitude": 10.871691,
-    "longitude": 106.846161,
+    "latitude": 10.834069,
+    "longitude": 106.682053,
     "properties": {
       "status": "ASSIGNED",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423938+00:00"
+    "created_at": "2025-12-20T10:39:21.127904+00:00"
   },
   {
-    "point_id": "9d2853da-3fbf-42b7-8971-2f540b3ff833",
-    "title": "SOS point 59",
-    "description": "Auto-generated point #59 for SOS",
-    "object_type": "SOS",
-    "object_id": 50,
-    "latitude": 10.741293,
-    "longitude": 106.71954,
+    "point_id": "b3bbc0db-d6ef-4d57-9c8c-853a0cce8c81",
+    "title": "USER point 58",
+    "description": "Auto-generated point #58 for USER",
+    "object_type": "USER",
+    "object_id": 2,
+    "latitude": 10.788755,
+    "longitude": 106.827588,
     "properties": {
-      "status": "RESOLVED",
-      "icon": "sos"
+      "status": "PENDING",
+      "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423946+00:00"
+    "created_at": "2025-12-20T10:39:21.127909+00:00"
   },
   {
-    "point_id": "e9c19442-1f63-4740-945c-d7fb7cb876a0",
+    "point_id": "18bfd4c9-4ed2-4231-adcb-546be6f6815d",
+    "title": "TEAM point 59",
+    "description": "Auto-generated point #59 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 10,
+    "latitude": 10.828303,
+    "longitude": 106.867009,
+    "properties": {
+      "status": "PENDING",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127913+00:00"
+  },
+  {
+    "point_id": "450e6419-a820-4337-86d5-1403a318959a",
     "title": "RESOURCE point 60",
     "description": "Auto-generated point #60 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 1,
-    "latitude": 10.792069,
-    "longitude": 106.705344,
+    "object_id": 4,
+    "latitude": 10.857124,
+    "longitude": 106.698389,
     "properties": {
       "status": "PENDING",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423954+00:00"
+    "created_at": "2025-12-20T10:39:21.127917+00:00"
   },
   {
-    "point_id": "8d60dc8d-0d61-4ed8-a04d-d40876328930",
-    "title": "RESOURCE point 61",
-    "description": "Auto-generated point #61 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 2,
-    "latitude": 10.737467,
-    "longitude": 106.863112,
+    "point_id": "3ea1d26f-5f59-4fda-a9a3-a932300ddd24",
+    "title": "USER point 61",
+    "description": "Auto-generated point #61 for USER",
+    "object_type": "USER",
+    "object_id": 3,
+    "latitude": 10.820208,
+    "longitude": 106.775282,
     "properties": {
       "status": "PENDING",
-      "icon": "resource"
+      "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423962+00:00"
+    "created_at": "2025-12-20T10:39:21.127922+00:00"
   },
   {
-    "point_id": "3af5c99e-cdcd-4935-a6d6-18863755decf",
-    "title": "RESOURCE point 62",
-    "description": "Auto-generated point #62 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 14,
-    "latitude": 10.756051,
-    "longitude": 106.778971,
+    "point_id": "1ff68763-eca0-4333-a61b-c87500a00430",
+    "title": "SOS point 62",
+    "description": "Auto-generated point #62 for SOS",
+    "object_type": "SOS",
+    "object_id": 35,
+    "latitude": 10.881568,
+    "longitude": 106.726041,
     "properties": {
       "status": "PENDING",
-      "icon": "resource"
+      "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423970+00:00"
+    "created_at": "2025-12-20T10:39:21.127926+00:00"
   },
   {
-    "point_id": "d1c7f081-971c-447c-9607-d33d3f28688a",
-    "title": "RESOURCE point 63",
-    "description": "Auto-generated point #63 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 2,
-    "latitude": 10.806849,
-    "longitude": 106.715559,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423980+00:00"
-  },
-  {
-    "point_id": "10a25a32-6b7d-46da-b576-4c715c2e1026",
-    "title": "TEAM point 64",
-    "description": "Auto-generated point #64 for TEAM",
+    "point_id": "f84e7232-4fba-4c66-a16f-4fb637da69f2",
+    "title": "TEAM point 63",
+    "description": "Auto-generated point #63 for TEAM",
     "object_type": "TEAM",
-    "object_id": 12,
-    "latitude": 10.883627,
-    "longitude": 106.600507,
+    "object_id": 10,
+    "latitude": 10.730795,
+    "longitude": 106.818064,
     "properties": {
       "status": "AVAILABLE",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423988+00:00"
+    "created_at": "2025-12-20T10:39:21.127930+00:00"
   },
   {
-    "point_id": "f0f0bae4-1bdd-480c-9ff9-343382e0a5bb",
-    "title": "RESOURCE point 65",
-    "description": "Auto-generated point #65 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 20,
-    "latitude": 10.826132,
-    "longitude": 106.620992,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.423996+00:00"
-  },
-  {
-    "point_id": "33517d87-765c-4135-8502-57ff0c1752e7",
-    "title": "RESOURCE point 66",
-    "description": "Auto-generated point #66 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 17,
-    "latitude": 10.707418,
-    "longitude": 106.799016,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424005+00:00"
-  },
-  {
-    "point_id": "7c31a702-64f4-45f3-9f4d-3f49c4dcfe84",
-    "title": "RESOURCE point 67",
-    "description": "Auto-generated point #67 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 18,
-    "latitude": 10.75176,
-    "longitude": 106.800068,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424012+00:00"
-  },
-  {
-    "point_id": "984b4279-c80b-489a-9115-c14c5a667622",
-    "title": "USER point 68",
-    "description": "Auto-generated point #68 for USER",
+    "point_id": "3497ad3f-d093-47ad-ad82-beb2f83d6cc5",
+    "title": "USER point 64",
+    "description": "Auto-generated point #64 for USER",
     "object_type": "USER",
-    "object_id": 22,
-    "latitude": 10.826284,
-    "longitude": 106.657552,
+    "object_id": 4,
+    "latitude": 10.833068,
+    "longitude": 106.62388,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127935+00:00"
+  },
+  {
+    "point_id": "f2415bfd-6d1c-42ce-93a5-67e19b5fc026",
+    "title": "USER point 65",
+    "description": "Auto-generated point #65 for USER",
+    "object_type": "USER",
+    "object_id": 25,
+    "latitude": 10.80128,
+    "longitude": 106.688839,
     "properties": {
       "status": "ASSIGNED",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424020+00:00"
+    "created_at": "2025-12-20T10:39:21.127939+00:00"
   },
   {
-    "point_id": "5dce2502-9baf-425b-a917-02349e5b1b99",
-    "title": "SOS point 69",
-    "description": "Auto-generated point #69 for SOS",
+    "point_id": "af1539d8-e255-4ea6-9f3d-e5ae99a65ec3",
+    "title": "SOS point 66",
+    "description": "Auto-generated point #66 for SOS",
     "object_type": "SOS",
-    "object_id": 20,
-    "latitude": 10.746209,
-    "longitude": 106.784654,
+    "object_id": 35,
+    "latitude": 10.889713,
+    "longitude": 106.731613,
     "properties": {
-      "status": "RESOLVED",
+      "status": "ASSIGNED",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424028+00:00"
+    "created_at": "2025-12-20T10:39:21.127945+00:00"
   },
   {
-    "point_id": "c97efc37-c962-4b45-aab0-03a1c771c506",
+    "point_id": "43f32a76-726b-40d3-9ff0-bb51af6c24fc",
+    "title": "USER point 67",
+    "description": "Auto-generated point #67 for USER",
+    "object_type": "USER",
+    "object_id": 19,
+    "latitude": 10.89763,
+    "longitude": 106.800236,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127949+00:00"
+  },
+  {
+    "point_id": "0a17990e-60ea-434c-8395-a5118728796c",
+    "title": "TEAM point 68",
+    "description": "Auto-generated point #68 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 2,
+    "latitude": 10.686429,
+    "longitude": 106.856679,
+    "properties": {
+      "status": "PENDING",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127954+00:00"
+  },
+  {
+    "point_id": "e7864025-8278-493a-acea-3f64499c1b97",
+    "title": "TEAM point 69",
+    "description": "Auto-generated point #69 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 7,
+    "latitude": 10.894622,
+    "longitude": 106.602001,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.127958+00:00"
+  },
+  {
+    "point_id": "8c56040e-9bba-4ad4-8d59-c6bcfae25e63",
     "title": "RESOURCE point 70",
     "description": "Auto-generated point #70 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 15,
-    "latitude": 10.852867,
-    "longitude": 106.663055,
+    "object_id": 11,
+    "latitude": 10.693388,
+    "longitude": 106.890146,
     "properties": {
       "status": "AVAILABLE",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424036+00:00"
+    "created_at": "2025-12-20T10:39:21.127962+00:00"
   },
   {
-    "point_id": "d39f8ee3-af52-4f58-a926-5f6fd917749c",
-    "title": "USER point 71",
-    "description": "Auto-generated point #71 for USER",
-    "object_type": "USER",
-    "object_id": 24,
-    "latitude": 10.727014,
-    "longitude": 106.732648,
+    "point_id": "45bde218-9c82-4b41-8699-0ef121edc471",
+    "title": "TEAM point 71",
+    "description": "Auto-generated point #71 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 2,
+    "latitude": 10.805935,
+    "longitude": 106.664169,
     "properties": {
       "status": "ASSIGNED",
-      "icon": "user"
+      "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424044+00:00"
+    "created_at": "2025-12-20T10:39:21.127966+00:00"
   },
   {
-    "point_id": "614a2d70-a2f0-4299-b4db-e15e487c31e6",
+    "point_id": "1489f890-4143-4a39-bf83-3322ed795784",
     "title": "RESOURCE point 72",
     "description": "Auto-generated point #72 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 3,
-    "latitude": 10.742433,
-    "longitude": 106.797655,
+    "object_id": 19,
+    "latitude": 10.872241,
+    "longitude": 106.646267,
     "properties": {
-      "status": "ASSIGNED",
+      "status": "PENDING",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424052+00:00"
+    "created_at": "2025-12-20T10:39:21.127971+00:00"
   },
   {
-    "point_id": "6ba76d81-2108-41aa-bcac-0bf54fd02074",
+    "point_id": "ce669f46-3f3d-4265-91a8-0d9603c13356",
     "title": "TEAM point 73",
     "description": "Auto-generated point #73 for TEAM",
     "object_type": "TEAM",
-    "object_id": 5,
-    "latitude": 10.729421,
-    "longitude": 106.801839,
+    "object_id": 13,
+    "latitude": 10.893245,
+    "longitude": 106.804627,
     "properties": {
-      "status": "PENDING",
+      "status": "RESOLVED",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424061+00:00"
+    "created_at": "2025-12-20T10:39:21.127976+00:00"
   },
   {
-    "point_id": "f5927a1e-0490-4849-99e1-9b458f8c52e6",
-    "title": "SOS point 74",
-    "description": "Auto-generated point #74 for SOS",
-    "object_type": "SOS",
-    "object_id": 30,
-    "latitude": 10.896466,
-    "longitude": 106.613864,
+    "point_id": "9a1f7623-87aa-4121-b83a-224f538ccd21",
+    "title": "USER point 74",
+    "description": "Auto-generated point #74 for USER",
+    "object_type": "USER",
+    "object_id": 17,
+    "latitude": 10.885546,
+    "longitude": 106.725179,
     "properties": {
-      "status": "AVAILABLE",
-      "icon": "sos"
+      "status": "RESOLVED",
+      "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424069+00:00"
+    "created_at": "2025-12-20T10:39:21.127980+00:00"
   },
   {
-    "point_id": "5e6cfe99-d8b0-4d10-800c-0e55fcfa8d78",
+    "point_id": "55756cfa-0812-4773-9052-dd5fdfa459eb",
     "title": "USER point 75",
     "description": "Auto-generated point #75 for USER",
     "object_type": "USER",
-    "object_id": 16,
-    "latitude": 10.806648,
-    "longitude": 106.865841,
+    "object_id": 6,
+    "latitude": 10.805347,
+    "longitude": 106.754435,
     "properties": {
       "status": "AVAILABLE",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424077+00:00"
+    "created_at": "2025-12-20T10:39:21.127984+00:00"
   },
   {
-    "point_id": "9b1a710c-d47f-4c4c-bdb4-ec5d6c27e50d",
+    "point_id": "fc9a0555-a150-4480-86ab-c4628f303d1a",
     "title": "SOS point 76",
     "description": "Auto-generated point #76 for SOS",
     "object_type": "SOS",
-    "object_id": 49,
-    "latitude": 10.824333,
-    "longitude": 106.673195,
+    "object_id": 47,
+    "latitude": 10.75739,
+    "longitude": 106.735955,
     "properties": {
-      "status": "PENDING",
+      "status": "AVAILABLE",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424085+00:00"
+    "created_at": "2025-12-20T10:39:21.127989+00:00"
   },
   {
-    "point_id": "6dc829bf-da1a-4caa-9662-de724793efb9",
-    "title": "USER point 77",
-    "description": "Auto-generated point #77 for USER",
-    "object_type": "USER",
-    "object_id": 2,
-    "latitude": 10.728145,
-    "longitude": 106.833526,
+    "point_id": "845b5262-dd69-4976-b056-994232a40a42",
+    "title": "SOS point 77",
+    "description": "Auto-generated point #77 for SOS",
+    "object_type": "SOS",
+    "object_id": 8,
+    "latitude": 10.876727,
+    "longitude": 106.742559,
     "properties": {
-      "status": "ASSIGNED",
-      "icon": "user"
+      "status": "RESOLVED",
+      "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424093+00:00"
+    "created_at": "2025-12-20T10:39:21.127993+00:00"
   },
   {
-    "point_id": "817732b3-52aa-452e-84df-53c4e27ffb73",
+    "point_id": "e6af7e64-0c9b-4334-9387-d1c3469eee15",
     "title": "TEAM point 78",
     "description": "Auto-generated point #78 for TEAM",
     "object_type": "TEAM",
-    "object_id": 15,
-    "latitude": 10.706699,
-    "longitude": 106.875241,
+    "object_id": 13,
+    "latitude": 10.825694,
+    "longitude": 106.789921,
     "properties": {
       "status": "RESOLVED",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424102+00:00"
+    "created_at": "2025-12-20T10:39:21.127998+00:00"
   },
   {
-    "point_id": "65d2a305-a9cc-4409-8b2f-75a7d15234f9",
-    "title": "USER point 79",
-    "description": "Auto-generated point #79 for USER",
-    "object_type": "USER",
-    "object_id": 18,
-    "latitude": 10.876114,
-    "longitude": 106.885012,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424112+00:00"
-  },
-  {
-    "point_id": "c22d98a8-db44-4c25-8610-a9fb9048766c",
-    "title": "USER point 80",
-    "description": "Auto-generated point #80 for USER",
-    "object_type": "USER",
-    "object_id": 15,
-    "latitude": 10.843604,
-    "longitude": 106.869162,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424123+00:00"
-  },
-  {
-    "point_id": "5dccb535-36d1-4c45-9a04-b5c5194907b4",
-    "title": "RESOURCE point 81",
-    "description": "Auto-generated point #81 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 17,
-    "latitude": 10.86477,
-    "longitude": 106.825533,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424132+00:00"
-  },
-  {
-    "point_id": "1954abd0-c727-471a-a498-f569ba5d76e5",
-    "title": "SOS point 82",
-    "description": "Auto-generated point #82 for SOS",
+    "point_id": "b722220a-d161-4840-981c-4e3afe1d6f50",
+    "title": "SOS point 79",
+    "description": "Auto-generated point #79 for SOS",
     "object_type": "SOS",
-    "object_id": 46,
-    "latitude": 10.740411,
-    "longitude": 106.788025,
+    "object_id": 10,
+    "latitude": 10.776481,
+    "longitude": 106.638445,
     "properties": {
-      "status": "RESOLVED",
+      "status": "AVAILABLE",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424140+00:00"
+    "created_at": "2025-12-20T10:39:21.128002+00:00"
   },
   {
-    "point_id": "7fcaf0a7-fff4-4870-abfa-812e2bb5f1b0",
-    "title": "SOS point 83",
-    "description": "Auto-generated point #83 for SOS",
+    "point_id": "027dc314-a3ec-4f68-ab42-a4c9a7254efd",
+    "title": "SOS point 80",
+    "description": "Auto-generated point #80 for SOS",
     "object_type": "SOS",
-    "object_id": 9,
-    "latitude": 10.753886,
-    "longitude": 106.670348,
+    "object_id": 41,
+    "latitude": 10.771749,
+    "longitude": 106.850476,
     "properties": {
       "status": "ASSIGNED",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424148+00:00"
+    "created_at": "2025-12-20T10:39:21.128006+00:00"
   },
   {
-    "point_id": "089ea329-f296-466f-a3ab-a5b9360b056b",
+    "point_id": "c9d6503a-1acc-4aba-bd78-11bfffa91f8b",
+    "title": "TEAM point 81",
+    "description": "Auto-generated point #81 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 7,
+    "latitude": 10.76425,
+    "longitude": 106.812965,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128010+00:00"
+  },
+  {
+    "point_id": "81c4a395-2fdf-43f4-a196-536cf1182612",
+    "title": "RESOURCE point 82",
+    "description": "Auto-generated point #82 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 8,
+    "latitude": 10.882823,
+    "longitude": 106.723742,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128014+00:00"
+  },
+  {
+    "point_id": "090468ec-db0d-4777-a971-26d14d6600de",
+    "title": "RESOURCE point 83",
+    "description": "Auto-generated point #83 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 16,
+    "latitude": 10.767162,
+    "longitude": 106.686584,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128018+00:00"
+  },
+  {
+    "point_id": "d4cef79f-a934-4287-8a8c-2ea55191583e",
     "title": "TEAM point 84",
     "description": "Auto-generated point #84 for TEAM",
     "object_type": "TEAM",
-    "object_id": 3,
-    "latitude": 10.832669,
-    "longitude": 106.669378,
+    "object_id": 19,
+    "latitude": 10.728767,
+    "longitude": 106.892599,
     "properties": {
       "status": "AVAILABLE",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424156+00:00"
+    "created_at": "2025-12-20T10:39:21.128022+00:00"
   },
   {
-    "point_id": "3319f9ca-3d21-4838-bf50-9fdd140a1a0b",
-    "title": "USER point 85",
-    "description": "Auto-generated point #85 for USER",
-    "object_type": "USER",
+    "point_id": "6b4a91f2-683c-4c90-8d8b-3db4d4071607",
+    "title": "TEAM point 85",
+    "description": "Auto-generated point #85 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 18,
+    "latitude": 10.703195,
+    "longitude": 106.799063,
+    "properties": {
+      "status": "PENDING",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128026+00:00"
+  },
+  {
+    "point_id": "2382e1b8-3885-4520-bc8a-2ce6fc4fbef6",
+    "title": "RESOURCE point 86",
+    "description": "Auto-generated point #86 for RESOURCE",
+    "object_type": "RESOURCE",
     "object_id": 2,
-    "latitude": 10.799374,
-    "longitude": 106.72228,
+    "latitude": 10.693244,
+    "longitude": 106.615518,
     "properties": {
       "status": "ASSIGNED",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424165+00:00"
-  },
-  {
-    "point_id": "b9709258-7756-458a-8161-cf688bda14de",
-    "title": "SOS point 86",
-    "description": "Auto-generated point #86 for SOS",
-    "object_type": "SOS",
-    "object_id": 49,
-    "latitude": 10.765685,
-    "longitude": 106.849867,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "sos"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424174+00:00"
-  },
-  {
-    "point_id": "0d85ecc3-5ae6-4213-b31d-2a2e1da4d730",
-    "title": "RESOURCE point 87",
-    "description": "Auto-generated point #87 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 13,
-    "latitude": 10.887403,
-    "longitude": 106.743094,
-    "properties": {
-      "status": "AVAILABLE",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424184+00:00"
+    "created_at": "2025-12-20T10:39:21.128030+00:00"
   },
   {
-    "point_id": "562cda9b-96e4-49d2-9275-efea7ec51192",
+    "point_id": "885f1fe2-a398-4c12-a113-665e3d6169cb",
+    "title": "USER point 87",
+    "description": "Auto-generated point #87 for USER",
+    "object_type": "USER",
+    "object_id": 22,
+    "latitude": 10.707453,
+    "longitude": 106.781452,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128033+00:00"
+  },
+  {
+    "point_id": "db1f01af-3f6a-413b-805a-f189ec1906d7",
     "title": "TEAM point 88",
     "description": "Auto-generated point #88 for TEAM",
     "object_type": "TEAM",
-    "object_id": 16,
-    "latitude": 10.841619,
-    "longitude": 106.761466,
+    "object_id": 6,
+    "latitude": 10.879744,
+    "longitude": 106.897507,
     "properties": {
-      "status": "ASSIGNED",
+      "status": "AVAILABLE",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424194+00:00"
+    "created_at": "2025-12-20T10:39:21.128037+00:00"
   },
   {
-    "point_id": "bdeeedfb-9395-42d2-bdee-a0daa89e614d",
+    "point_id": "f7dd4273-4be4-4ec8-8e50-5417983baf12",
     "title": "USER point 89",
     "description": "Auto-generated point #89 for USER",
     "object_type": "USER",
-    "object_id": 11,
-    "latitude": 10.786841,
-    "longitude": 106.681881,
+    "object_id": 12,
+    "latitude": 10.832816,
+    "longitude": 106.733551,
     "properties": {
-      "status": "AVAILABLE",
+      "status": "RESOLVED",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424202+00:00"
+    "created_at": "2025-12-20T10:39:21.128041+00:00"
   },
   {
-    "point_id": "c965a503-3fcb-4b23-9229-f2374726f7a9",
+    "point_id": "c0cf4674-3df0-477f-9293-69ed6cfa7216",
     "title": "TEAM point 90",
     "description": "Auto-generated point #90 for TEAM",
     "object_type": "TEAM",
-    "object_id": 20,
-    "latitude": 10.864911,
-    "longitude": 106.817254,
+    "object_id": 12,
+    "latitude": 10.867661,
+    "longitude": 106.60115,
     "properties": {
-      "status": "PENDING",
+      "status": "ASSIGNED",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424210+00:00"
+    "created_at": "2025-12-20T10:39:21.128045+00:00"
   },
   {
-    "point_id": "b138bd5b-aee6-4e9d-b0dd-deb94b115946",
-    "title": "SOS point 91",
-    "description": "Auto-generated point #91 for SOS",
-    "object_type": "SOS",
-    "object_id": 6,
-    "latitude": 10.810216,
-    "longitude": 106.872079,
+    "point_id": "6f6762fa-b5cd-480f-b7bc-3bf21c8cf647",
+    "title": "RESOURCE point 91",
+    "description": "Auto-generated point #91 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 18,
+    "latitude": 10.845296,
+    "longitude": 106.652786,
     "properties": {
       "status": "AVAILABLE",
-      "icon": "sos"
+      "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424218+00:00"
+    "created_at": "2025-12-20T10:39:21.128049+00:00"
   },
   {
-    "point_id": "0d7b6c53-a509-4ddb-9080-297e08e76063",
+    "point_id": "3bc44acd-566c-4a9c-a603-cf1ee4340314",
     "title": "SOS point 92",
     "description": "Auto-generated point #92 for SOS",
     "object_type": "SOS",
-    "object_id": 17,
-    "latitude": 10.781574,
-    "longitude": 106.64071,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "sos"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424226+00:00"
-  },
-  {
-    "point_id": "ba7a4b20-f2e6-4171-8f80-e467229fa5ea",
-    "title": "RESOURCE point 93",
-    "description": "Auto-generated point #93 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 13,
-    "latitude": 10.780034,
-    "longitude": 106.698206,
+    "object_id": 29,
+    "latitude": 10.713604,
+    "longitude": 106.730121,
     "properties": {
       "status": "RESOLVED",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424234+00:00"
-  },
-  {
-    "point_id": "12ad7359-25ba-4717-aecb-8ffd5a0f5370",
-    "title": "RESOURCE point 94",
-    "description": "Auto-generated point #94 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 3,
-    "latitude": 10.863023,
-    "longitude": 106.825603,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424242+00:00"
-  },
-  {
-    "point_id": "54d93c0c-e055-4cfc-abad-d46b6612b431",
-    "title": "RESOURCE point 95",
-    "description": "Auto-generated point #95 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 8,
-    "latitude": 10.798672,
-    "longitude": 106.605815,
-    "properties": {
-      "status": "PENDING",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424250+00:00"
-  },
-  {
-    "point_id": "1eb68da2-7ae4-456f-9d9b-879f6a666217",
-    "title": "SOS point 96",
-    "description": "Auto-generated point #96 for SOS",
-    "object_type": "SOS",
-    "object_id": 16,
-    "latitude": 10.823386,
-    "longitude": 106.83437,
-    "properties": {
-      "status": "ASSIGNED",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424258+00:00"
+    "created_at": "2025-12-20T10:39:21.128053+00:00"
   },
   {
-    "point_id": "cdfe2fed-201d-490f-86de-a3e29ab79596",
-    "title": "TEAM point 97",
-    "description": "Auto-generated point #97 for TEAM",
-    "object_type": "TEAM",
+    "point_id": "ca85cbb2-be64-4d5a-844e-bbff265ab1d4",
+    "title": "USER point 93",
+    "description": "Auto-generated point #93 for USER",
+    "object_type": "USER",
     "object_id": 5,
-    "latitude": 10.816694,
-    "longitude": 106.851769,
+    "latitude": 10.806085,
+    "longitude": 106.878205,
     "properties": {
       "status": "AVAILABLE",
-      "icon": "team"
+      "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424270+00:00"
+    "created_at": "2025-12-20T10:39:21.128056+00:00"
   },
   {
-    "point_id": "0d078ac2-3935-4031-9b59-9028e8e64349",
-    "title": "TEAM point 98",
-    "description": "Auto-generated point #98 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 15,
-    "latitude": 10.804073,
-    "longitude": 106.800838,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424278+00:00"
-  },
-  {
-    "point_id": "766c3472-8341-4ac4-98c9-88f8dfabbd07",
-    "title": "SOS point 99",
-    "description": "Auto-generated point #99 for SOS",
-    "object_type": "SOS",
-    "object_id": 50,
-    "latitude": 10.716914,
-    "longitude": 106.830069,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "sos"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424286+00:00"
-  },
-  {
-    "point_id": "c71d73b3-9687-4f31-9e88-8e2b90ad1d75",
-    "title": "SOS point 100",
-    "description": "Auto-generated point #100 for SOS",
+    "point_id": "fec242b1-07e2-4395-acaf-3df8167795f0",
+    "title": "SOS point 94",
+    "description": "Auto-generated point #94 for SOS",
     "object_type": "SOS",
     "object_id": 20,
-    "latitude": 10.703782,
-    "longitude": 106.889416,
+    "latitude": 10.859591,
+    "longitude": 106.860434,
     "properties": {
       "status": "AVAILABLE",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424294+00:00"
+    "created_at": "2025-12-20T10:39:21.128061+00:00"
   },
   {
-    "point_id": "775681db-d93f-4afc-96ae-db72ab49e90e",
-    "title": "SOS point 101",
-    "description": "Auto-generated point #101 for SOS",
+    "point_id": "3691c22f-dd47-4a1b-bcd6-0be9c6f72974",
+    "title": "TEAM point 95",
+    "description": "Auto-generated point #95 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 9,
+    "latitude": 10.722071,
+    "longitude": 106.890744,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128065+00:00"
+  },
+  {
+    "point_id": "d4de6973-f9cb-4eb1-bc8d-a6f71be7d204",
+    "title": "USER point 96",
+    "description": "Auto-generated point #96 for USER",
+    "object_type": "USER",
+    "object_id": 19,
+    "latitude": 10.726546,
+    "longitude": 106.622217,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128068+00:00"
+  },
+  {
+    "point_id": "3aeacbd2-b620-47a5-a7a7-71e430935212",
+    "title": "SOS point 97",
+    "description": "Auto-generated point #97 for SOS",
     "object_type": "SOS",
-    "object_id": 38,
-    "latitude": 10.837303,
-    "longitude": 106.718996,
+    "object_id": 40,
+    "latitude": 10.802602,
+    "longitude": 106.644055,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128073+00:00"
+  },
+  {
+    "point_id": "5207d479-97b4-40de-92cd-1202bb6edb6e",
+    "title": "USER point 98",
+    "description": "Auto-generated point #98 for USER",
+    "object_type": "USER",
+    "object_id": 7,
+    "latitude": 10.822462,
+    "longitude": 106.856069,
     "properties": {
       "status": "ASSIGNED",
-      "icon": "sos"
+      "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424302+00:00"
+    "created_at": "2025-12-20T10:39:21.128076+00:00"
   },
   {
-    "point_id": "2f8eed2b-9888-47bc-8ae6-3756cb15ae36",
-    "title": "SOS point 102",
-    "description": "Auto-generated point #102 for SOS",
-    "object_type": "SOS",
-    "object_id": 37,
-    "latitude": 10.849946,
-    "longitude": 106.63057,
+    "point_id": "75c542c4-ed58-464d-a933-716c6a225d98",
+    "title": "TEAM point 99",
+    "description": "Auto-generated point #99 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 3,
+    "latitude": 10.869739,
+    "longitude": 106.723264,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128080+00:00"
+  },
+  {
+    "point_id": "af38701b-94f5-4a7c-af1a-8993ba499ef4",
+    "title": "USER point 100",
+    "description": "Auto-generated point #100 for USER",
+    "object_type": "USER",
+    "object_id": 9,
+    "latitude": 10.779742,
+    "longitude": 106.669108,
     "properties": {
       "status": "PENDING",
-      "icon": "sos"
+      "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424310+00:00"
+    "created_at": "2025-12-20T10:39:21.128084+00:00"
   },
   {
-    "point_id": "1e195a01-1fc1-44f8-a236-957a05a3a0bc",
-    "title": "RESOURCE point 103",
-    "description": "Auto-generated point #103 for RESOURCE",
+    "point_id": "fe436f34-3508-4b9a-8bfb-a68c9961d409",
+    "title": "RESOURCE point 101",
+    "description": "Auto-generated point #101 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 3,
-    "latitude": 10.774243,
-    "longitude": 106.704161,
+    "object_id": 15,
+    "latitude": 10.68265,
+    "longitude": 106.88673,
     "properties": {
       "status": "RESOLVED",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424318+00:00"
+    "created_at": "2025-12-20T10:39:21.128088+00:00"
   },
   {
-    "point_id": "37e041c0-bc7d-4428-a5ba-0d2a16ce1e31",
+    "point_id": "03d3e337-23a3-43ff-9a36-4c12e75c7211",
+    "title": "USER point 102",
+    "description": "Auto-generated point #102 for USER",
+    "object_type": "USER",
+    "object_id": 23,
+    "latitude": 10.718234,
+    "longitude": 106.747813,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128092+00:00"
+  },
+  {
+    "point_id": "1bdc9a49-131a-48ac-9bf1-6b689159a3bd",
+    "title": "TEAM point 103",
+    "description": "Auto-generated point #103 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 11,
+    "latitude": 10.838107,
+    "longitude": 106.729377,
+    "properties": {
+      "status": "PENDING",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128096+00:00"
+  },
+  {
+    "point_id": "456c430b-d55f-449c-a986-e85a9d375c12",
     "title": "USER point 104",
     "description": "Auto-generated point #104 for USER",
     "object_type": "USER",
-    "object_id": 4,
-    "latitude": 10.772413,
-    "longitude": 106.603796,
+    "object_id": 12,
+    "latitude": 10.765166,
+    "longitude": 106.829823,
     "properties": {
-      "status": "AVAILABLE",
+      "status": "ASSIGNED",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424327+00:00"
+    "created_at": "2025-12-20T10:39:21.128100+00:00"
   },
   {
-    "point_id": "158a7732-42b1-4ac9-9500-ab2d3d5f1efb",
+    "point_id": "5f665a5a-438a-42b3-9683-d5a5c7343074",
     "title": "USER point 105",
     "description": "Auto-generated point #105 for USER",
     "object_type": "USER",
-    "object_id": 23,
-    "latitude": 10.819829,
-    "longitude": 106.888236,
+    "object_id": 19,
+    "latitude": 10.881933,
+    "longitude": 106.805847,
     "properties": {
-      "status": "ASSIGNED",
+      "status": "PENDING",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424335+00:00"
+    "created_at": "2025-12-20T10:39:21.128104+00:00"
   },
   {
-    "point_id": "3c4d5582-433a-415f-967d-a98fc7a4491c",
-    "title": "RESOURCE point 106",
-    "description": "Auto-generated point #106 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 20,
-    "latitude": 10.841435,
-    "longitude": 106.730646,
+    "point_id": "5f1113dd-5753-4344-a7f2-8e16905be478",
+    "title": "TEAM point 106",
+    "description": "Auto-generated point #106 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 4,
+    "latitude": 10.759105,
+    "longitude": 106.788712,
     "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
+      "status": "PENDING",
+      "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424344+00:00"
+    "created_at": "2025-12-20T10:39:21.128107+00:00"
   },
   {
-    "point_id": "b3f8a34e-18ee-473d-9bf1-1a17338c901c",
+    "point_id": "1215fcbc-ea68-4c8e-a27e-3965489cb0cb",
     "title": "RESOURCE point 107",
     "description": "Auto-generated point #107 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 11,
-    "latitude": 10.861662,
-    "longitude": 106.739462,
+    "object_id": 5,
+    "latitude": 10.860734,
+    "longitude": 106.673237,
     "properties": {
       "status": "ASSIGNED",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424354+00:00"
+    "created_at": "2025-12-20T10:39:21.128111+00:00"
   },
   {
-    "point_id": "d446cd1c-f61a-460d-8fb8-6213b578f864",
-    "title": "USER point 108",
-    "description": "Auto-generated point #108 for USER",
-    "object_type": "USER",
-    "object_id": 8,
-    "latitude": 10.699066,
-    "longitude": 106.849219,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424362+00:00"
-  },
-  {
-    "point_id": "ccbea7e2-b0e9-4840-a467-a7cc31ae1e1c",
-    "title": "RESOURCE point 109",
-    "description": "Auto-generated point #109 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 1,
-    "latitude": 10.827001,
-    "longitude": 106.770955,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424370+00:00"
-  },
-  {
-    "point_id": "0b8bae94-9e3a-4577-aa1a-3efa25a587df",
-    "title": "TEAM point 110",
-    "description": "Auto-generated point #110 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 12,
-    "latitude": 10.720005,
-    "longitude": 106.855286,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424378+00:00"
-  },
-  {
-    "point_id": "bb0e31cd-e359-4275-a758-b058edcbb988",
-    "title": "RESOURCE point 111",
-    "description": "Auto-generated point #111 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 18,
-    "latitude": 10.87367,
-    "longitude": 106.702102,
-    "properties": {
-      "status": "PENDING",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424386+00:00"
-  },
-  {
-    "point_id": "10b37ff4-60b4-4b80-b5d6-a2dd3874f0ee",
-    "title": "TEAM point 112",
-    "description": "Auto-generated point #112 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 14,
-    "latitude": 10.722032,
-    "longitude": 106.754988,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424394+00:00"
-  },
-  {
-    "point_id": "a1312fd3-43ff-47eb-8b0e-5f0251ae1216",
-    "title": "USER point 113",
-    "description": "Auto-generated point #113 for USER",
-    "object_type": "USER",
-    "object_id": 21,
-    "latitude": 10.732871,
-    "longitude": 106.766553,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424402+00:00"
-  },
-  {
-    "point_id": "e3d3f7df-66e2-4d8c-8eb8-1d113f5df2cc",
-    "title": "RESOURCE point 114",
-    "description": "Auto-generated point #114 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 8,
-    "latitude": 10.683794,
-    "longitude": 106.734452,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424412+00:00"
-  },
-  {
-    "point_id": "6073997b-9163-4501-b4e5-25a155418936",
-    "title": "RESOURCE point 115",
-    "description": "Auto-generated point #115 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 16,
-    "latitude": 10.747365,
-    "longitude": 106.807536,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424420+00:00"
-  },
-  {
-    "point_id": "1f01ed11-93fb-453e-bfa4-5d8917670a47",
-    "title": "RESOURCE point 116",
-    "description": "Auto-generated point #116 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 12,
-    "latitude": 10.844106,
-    "longitude": 106.727651,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424428+00:00"
-  },
-  {
-    "point_id": "0336d01f-53f1-4ed7-8501-a04dcee1fc23",
-    "title": "SOS point 117",
-    "description": "Auto-generated point #117 for SOS",
-    "object_type": "SOS",
-    "object_id": 47,
-    "latitude": 10.735309,
-    "longitude": 106.681275,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "sos"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424438+00:00"
-  },
-  {
-    "point_id": "593d0588-598b-4385-ae49-942218e91832",
-    "title": "TEAM point 118",
-    "description": "Auto-generated point #118 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 7,
-    "latitude": 10.843434,
-    "longitude": 106.694664,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424447+00:00"
-  },
-  {
-    "point_id": "b1b1007c-2a19-4947-b6ac-1ca505f5af59",
-    "title": "RESOURCE point 119",
-    "description": "Auto-generated point #119 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 4,
-    "latitude": 10.74083,
-    "longitude": 106.821581,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424457+00:00"
-  },
-  {
-    "point_id": "6f7e102f-ad28-41d0-bfa6-7df74e9897a1",
-    "title": "RESOURCE point 120",
-    "description": "Auto-generated point #120 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 1,
-    "latitude": 10.759394,
-    "longitude": 106.688874,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424465+00:00"
-  },
-  {
-    "point_id": "2cce8fba-43bd-4780-8333-c31cc6c118fc",
-    "title": "RESOURCE point 121",
-    "description": "Auto-generated point #121 for RESOURCE",
+    "point_id": "e06c5fc2-81fc-4e0c-86aa-6321e6267536",
+    "title": "RESOURCE point 108",
+    "description": "Auto-generated point #108 for RESOURCE",
     "object_type": "RESOURCE",
     "object_id": 5,
-    "latitude": 10.894345,
-    "longitude": 106.682293,
+    "latitude": 10.885907,
+    "longitude": 106.746433,
     "properties": {
       "status": "AVAILABLE",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424473+00:00"
+    "created_at": "2025-12-20T10:39:21.128115+00:00"
   },
   {
-    "point_id": "634b4ecd-0e1f-4399-8b96-739ecaa74584",
-    "title": "RESOURCE point 122",
-    "description": "Auto-generated point #122 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 16,
-    "latitude": 10.682698,
-    "longitude": 106.630776,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424481+00:00"
-  },
-  {
-    "point_id": "d7403e71-28f9-49fd-bbfa-d396c37385ef",
-    "title": "SOS point 123",
-    "description": "Auto-generated point #123 for SOS",
-    "object_type": "SOS",
-    "object_id": 17,
-    "latitude": 10.72056,
-    "longitude": 106.732141,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "sos"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424489+00:00"
-  },
-  {
-    "point_id": "27a67592-f555-4705-9f1c-f00f6a04c64b",
-    "title": "USER point 124",
-    "description": "Auto-generated point #124 for USER",
+    "point_id": "9464d31c-5a8e-4b87-9367-f0ac986e8295",
+    "title": "USER point 109",
+    "description": "Auto-generated point #109 for USER",
     "object_type": "USER",
-    "object_id": 3,
-    "latitude": 10.694376,
-    "longitude": 106.634226,
+    "object_id": 7,
+    "latitude": 10.726754,
+    "longitude": 106.767241,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128119+00:00"
+  },
+  {
+    "point_id": "e2f774c5-9722-4ba3-8569-4cda032b4824",
+    "title": "USER point 110",
+    "description": "Auto-generated point #110 for USER",
+    "object_type": "USER",
+    "object_id": 17,
+    "latitude": 10.784178,
+    "longitude": 106.886374,
     "properties": {
       "status": "PENDING",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424497+00:00"
+    "created_at": "2025-12-20T10:39:21.128124+00:00"
   },
   {
-    "point_id": "f2ddde07-10bc-4bbf-a6b3-461bac8a2cbc",
+    "point_id": "51745957-e25d-4318-958f-11aabff88dfc",
+    "title": "USER point 111",
+    "description": "Auto-generated point #111 for USER",
+    "object_type": "USER",
+    "object_id": 10,
+    "latitude": 10.705866,
+    "longitude": 106.848521,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128128+00:00"
+  },
+  {
+    "point_id": "d647603b-a702-4b06-bf5b-3ef597e962e4",
+    "title": "USER point 112",
+    "description": "Auto-generated point #112 for USER",
+    "object_type": "USER",
+    "object_id": 17,
+    "latitude": 10.713556,
+    "longitude": 106.637851,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128131+00:00"
+  },
+  {
+    "point_id": "a61eab6b-795c-46d9-9d66-2ed688f0cbde",
+    "title": "TEAM point 113",
+    "description": "Auto-generated point #113 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 17,
+    "latitude": 10.74023,
+    "longitude": 106.892924,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128135+00:00"
+  },
+  {
+    "point_id": "00dfe7c9-0a01-4e8b-a5ec-8557b93f4e7d",
+    "title": "SOS point 114",
+    "description": "Auto-generated point #114 for SOS",
+    "object_type": "SOS",
+    "object_id": 41,
+    "latitude": 10.694581,
+    "longitude": 106.719392,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128139+00:00"
+  },
+  {
+    "point_id": "5c6f3457-db4a-4f30-a23f-1a097c186627",
+    "title": "SOS point 115",
+    "description": "Auto-generated point #115 for SOS",
+    "object_type": "SOS",
+    "object_id": 27,
+    "latitude": 10.807994,
+    "longitude": 106.888159,
+    "properties": {
+      "status": "PENDING",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128143+00:00"
+  },
+  {
+    "point_id": "f0100228-3454-4458-8311-a60b23dfec46",
+    "title": "TEAM point 116",
+    "description": "Auto-generated point #116 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 10,
+    "latitude": 10.716182,
+    "longitude": 106.88556,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128147+00:00"
+  },
+  {
+    "point_id": "b0c2f891-981e-4dc9-8125-1ef2013aee0a",
+    "title": "USER point 117",
+    "description": "Auto-generated point #117 for USER",
+    "object_type": "USER",
+    "object_id": 9,
+    "latitude": 10.839893,
+    "longitude": 106.711814,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128151+00:00"
+  },
+  {
+    "point_id": "41ff89a2-a87a-493a-9844-e5f7e5ae5f2d",
+    "title": "RESOURCE point 118",
+    "description": "Auto-generated point #118 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 13,
+    "latitude": 10.895952,
+    "longitude": 106.801331,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128155+00:00"
+  },
+  {
+    "point_id": "ede37f85-b565-4b3b-a8ce-074360c86552",
+    "title": "TEAM point 119",
+    "description": "Auto-generated point #119 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 15,
+    "latitude": 10.86322,
+    "longitude": 106.833076,
+    "properties": {
+      "status": "PENDING",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128159+00:00"
+  },
+  {
+    "point_id": "eafd8b56-6f06-4c7d-b398-5034115ffb5f",
+    "title": "USER point 120",
+    "description": "Auto-generated point #120 for USER",
+    "object_type": "USER",
+    "object_id": 15,
+    "latitude": 10.691881,
+    "longitude": 106.726422,
+    "properties": {
+      "status": "PENDING",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128162+00:00"
+  },
+  {
+    "point_id": "e0f3c499-4f1b-42c5-a561-5f3dc0f234b2",
+    "title": "USER point 121",
+    "description": "Auto-generated point #121 for USER",
+    "object_type": "USER",
+    "object_id": 15,
+    "latitude": 10.713388,
+    "longitude": 106.658056,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128167+00:00"
+  },
+  {
+    "point_id": "c0fc87a4-41f7-4ac5-8db3-99738499e32b",
+    "title": "TEAM point 122",
+    "description": "Auto-generated point #122 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 2,
+    "latitude": 10.774226,
+    "longitude": 106.794871,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128170+00:00"
+  },
+  {
+    "point_id": "85a1ed1d-151b-4450-b8d0-c785d20b2f55",
+    "title": "RESOURCE point 123",
+    "description": "Auto-generated point #123 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 16,
+    "latitude": 10.748286,
+    "longitude": 106.759585,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128174+00:00"
+  },
+  {
+    "point_id": "d3475569-9c0a-4471-ac2d-393a96c68cb3",
+    "title": "SOS point 124",
+    "description": "Auto-generated point #124 for SOS",
+    "object_type": "SOS",
+    "object_id": 43,
+    "latitude": 10.796018,
+    "longitude": 106.659472,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128178+00:00"
+  },
+  {
+    "point_id": "0611182c-95a0-4dd6-86d5-61ff18364ebf",
     "title": "RESOURCE point 125",
     "description": "Auto-generated point #125 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 3,
-    "latitude": 10.858451,
-    "longitude": 106.645518,
+    "object_id": 7,
+    "latitude": 10.786447,
+    "longitude": 106.632531,
     "properties": {
-      "status": "ASSIGNED",
+      "status": "PENDING",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424504+00:00"
+    "created_at": "2025-12-20T10:39:21.128182+00:00"
   },
   {
-    "point_id": "6b5e0069-efe0-4749-b4bf-5271de174a95",
+    "point_id": "9dd0ab11-845e-4ce4-bb16-fe67cf85b7c6",
     "title": "TEAM point 126",
     "description": "Auto-generated point #126 for TEAM",
     "object_type": "TEAM",
-    "object_id": 17,
-    "latitude": 10.848178,
-    "longitude": 106.635535,
+    "object_id": 18,
+    "latitude": 10.710046,
+    "longitude": 106.766232,
     "properties": {
       "status": "AVAILABLE",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424512+00:00"
+    "created_at": "2025-12-20T10:39:21.128185+00:00"
   },
   {
-    "point_id": "ee269edb-1eb5-4df1-a397-0c286e25cf84",
+    "point_id": "943aa790-7543-4073-9464-a3dda23194f6",
     "title": "USER point 127",
     "description": "Auto-generated point #127 for USER",
     "object_type": "USER",
-    "object_id": 10,
-    "latitude": 10.777399,
-    "longitude": 106.735154,
-    "properties": {
-      "status": "PENDING",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424522+00:00"
-  },
-  {
-    "point_id": "413c1412-8969-46a1-a07f-b3e5f90450fb",
-    "title": "TEAM point 128",
-    "description": "Auto-generated point #128 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 7,
-    "latitude": 10.84282,
-    "longitude": 106.782889,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424530+00:00"
-  },
-  {
-    "point_id": "2328052e-8ef4-4b09-915d-c0247cc7f7bc",
-    "title": "TEAM point 129",
-    "description": "Auto-generated point #129 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 18,
-    "latitude": 10.714553,
-    "longitude": 106.798128,
-    "properties": {
-      "status": "PENDING",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424538+00:00"
-  },
-  {
-    "point_id": "61d213d2-6bcb-41e0-a5f8-c9c2ed9bdb6f",
-    "title": "USER point 130",
-    "description": "Auto-generated point #130 for USER",
-    "object_type": "USER",
-    "object_id": 10,
-    "latitude": 10.769874,
-    "longitude": 106.64696,
-    "properties": {
-      "status": "PENDING",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424546+00:00"
-  },
-  {
-    "point_id": "ebf8d3b3-aeb9-4f6a-9302-222bac8999a7",
-    "title": "USER point 131",
-    "description": "Auto-generated point #131 for USER",
-    "object_type": "USER",
-    "object_id": 3,
-    "latitude": 10.83553,
-    "longitude": 106.669443,
+    "object_id": 17,
+    "latitude": 10.815356,
+    "longitude": 106.765189,
     "properties": {
       "status": "ASSIGNED",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424556+00:00"
+    "created_at": "2025-12-20T10:39:21.128189+00:00"
   },
   {
-    "point_id": "fb8b12c2-4fa7-467e-8f0d-82780ebccce8",
+    "point_id": "36adf237-f718-4c42-8892-d0c95fc6b66f",
+    "title": "SOS point 128",
+    "description": "Auto-generated point #128 for SOS",
+    "object_type": "SOS",
+    "object_id": 38,
+    "latitude": 10.712984,
+    "longitude": 106.701187,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128193+00:00"
+  },
+  {
+    "point_id": "3f67d808-50b2-4775-94d0-570b635b1086",
+    "title": "USER point 129",
+    "description": "Auto-generated point #129 for USER",
+    "object_type": "USER",
+    "object_id": 22,
+    "latitude": 10.782568,
+    "longitude": 106.735162,
+    "properties": {
+      "status": "PENDING",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128197+00:00"
+  },
+  {
+    "point_id": "286bd754-9bef-4389-a7ac-502fc27f919d",
+    "title": "SOS point 130",
+    "description": "Auto-generated point #130 for SOS",
+    "object_type": "SOS",
+    "object_id": 36,
+    "latitude": 10.755082,
+    "longitude": 106.862175,
+    "properties": {
+      "status": "PENDING",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128201+00:00"
+  },
+  {
+    "point_id": "db432327-fda1-457c-ac83-31ae85b7089a",
+    "title": "RESOURCE point 131",
+    "description": "Auto-generated point #131 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 15,
+    "latitude": 10.818778,
+    "longitude": 106.881433,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128205+00:00"
+  },
+  {
+    "point_id": "b17168df-eda1-47e2-8724-0090deec173b",
     "title": "TEAM point 132",
     "description": "Auto-generated point #132 for TEAM",
     "object_type": "TEAM",
-    "object_id": 14,
-    "latitude": 10.853322,
-    "longitude": 106.877173,
+    "object_id": 6,
+    "latitude": 10.70049,
+    "longitude": 106.837672,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128209+00:00"
+  },
+  {
+    "point_id": "6e7b152c-c770-4153-94c6-cdf479f3439f",
+    "title": "TEAM point 133",
+    "description": "Auto-generated point #133 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 16,
+    "latitude": 10.778402,
+    "longitude": 106.664035,
     "properties": {
       "status": "PENDING",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424564+00:00"
+    "created_at": "2025-12-20T10:39:21.128213+00:00"
   },
   {
-    "point_id": "378ee883-16f2-485a-98ea-499e99af700a",
-    "title": "RESOURCE point 133",
-    "description": "Auto-generated point #133 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 5,
-    "latitude": 10.82248,
-    "longitude": 106.763369,
-    "properties": {
-      "status": "PENDING",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424572+00:00"
-  },
-  {
-    "point_id": "a4165ef9-8f0f-4964-af3a-158aa75572bf",
+    "point_id": "3cd5b1a6-5f78-4e60-8459-2093c626523c",
     "title": "RESOURCE point 134",
     "description": "Auto-generated point #134 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 15,
-    "latitude": 10.854378,
-    "longitude": 106.617891,
+    "object_id": 5,
+    "latitude": 10.82575,
+    "longitude": 106.71946,
     "properties": {
-      "status": "PENDING",
+      "status": "AVAILABLE",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424581+00:00"
+    "created_at": "2025-12-20T10:39:21.128217+00:00"
   },
   {
-    "point_id": "bcac91b9-e0e2-4658-a98d-360e97371ba2",
+    "point_id": "4941c81e-e877-47cb-908a-f9a3f6c3ba50",
     "title": "USER point 135",
     "description": "Auto-generated point #135 for USER",
     "object_type": "USER",
     "object_id": 9,
-    "latitude": 10.7469,
-    "longitude": 106.740609,
+    "latitude": 10.748599,
+    "longitude": 106.725934,
+    "properties": {
+      "status": "PENDING",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128220+00:00"
+  },
+  {
+    "point_id": "1cf64b6e-f8e7-4a05-8273-c8c2ca8136fe",
+    "title": "SOS point 136",
+    "description": "Auto-generated point #136 for SOS",
+    "object_type": "SOS",
+    "object_id": 44,
+    "latitude": 10.718301,
+    "longitude": 106.878495,
     "properties": {
       "status": "AVAILABLE",
-      "icon": "user"
+      "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424589+00:00"
+    "created_at": "2025-12-20T10:39:21.128224+00:00"
   },
   {
-    "point_id": "68c7fcf9-261f-4346-b594-4c75c6b5c72a",
-    "title": "USER point 136",
-    "description": "Auto-generated point #136 for USER",
-    "object_type": "USER",
-    "object_id": 24,
-    "latitude": 10.811568,
-    "longitude": 106.731328,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424597+00:00"
-  },
-  {
-    "point_id": "72224c71-246c-41a2-bbd4-509e75ee8a38",
+    "point_id": "fda90ea9-4fe3-47a5-957c-a54cf5d963d8",
     "title": "TEAM point 137",
     "description": "Auto-generated point #137 for TEAM",
     "object_type": "TEAM",
-    "object_id": 19,
-    "latitude": 10.68569,
-    "longitude": 106.781114,
+    "object_id": 2,
+    "latitude": 10.72656,
+    "longitude": 106.882744,
     "properties": {
       "status": "PENDING",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424607+00:00"
+    "created_at": "2025-12-20T10:39:21.128228+00:00"
   },
   {
-    "point_id": "da1bdfa2-9f44-4f9f-a45a-c1bd59002891",
+    "point_id": "70048876-3da6-4c78-90fe-7ecb1b7bfc50",
     "title": "RESOURCE point 138",
     "description": "Auto-generated point #138 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 19,
-    "latitude": 10.827902,
-    "longitude": 106.899872,
+    "object_id": 8,
+    "latitude": 10.709904,
+    "longitude": 106.829515,
     "properties": {
-      "status": "PENDING",
+      "status": "AVAILABLE",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424615+00:00"
+    "created_at": "2025-12-20T10:39:21.128232+00:00"
   },
   {
-    "point_id": "45f81d6b-88ba-4a62-bcc4-f69a97393660",
-    "title": "USER point 139",
-    "description": "Auto-generated point #139 for USER",
-    "object_type": "USER",
-    "object_id": 9,
-    "latitude": 10.718542,
-    "longitude": 106.828933,
+    "point_id": "91a824d9-32f0-44b1-90f0-0975c83183bb",
+    "title": "SOS point 139",
+    "description": "Auto-generated point #139 for SOS",
+    "object_type": "SOS",
+    "object_id": 12,
+    "latitude": 10.81413,
+    "longitude": 106.836217,
     "properties": {
       "status": "ASSIGNED",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424623+00:00"
-  },
-  {
-    "point_id": "2aafd6d3-b6f3-47c3-854e-ed5bf9ebc114",
-    "title": "USER point 140",
-    "description": "Auto-generated point #140 for USER",
-    "object_type": "USER",
-    "object_id": 3,
-    "latitude": 10.775895,
-    "longitude": 106.899084,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424630+00:00"
-  },
-  {
-    "point_id": "f2913700-3269-44ed-9565-d1e78f0681ab",
-    "title": "SOS point 141",
-    "description": "Auto-generated point #141 for SOS",
-    "object_type": "SOS",
-    "object_id": 11,
-    "latitude": 10.753328,
-    "longitude": 106.704388,
-    "properties": {
-      "status": "RESOLVED",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424638+00:00"
+    "created_at": "2025-12-20T10:39:21.128236+00:00"
   },
   {
-    "point_id": "eadd1a04-ae8a-4155-bd7b-ee012511d5d0",
+    "point_id": "c04b0684-aa80-468a-a02e-5b3e51fab41e",
+    "title": "TEAM point 140",
+    "description": "Auto-generated point #140 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 8,
+    "latitude": 10.692786,
+    "longitude": 106.802294,
+    "properties": {
+      "status": "PENDING",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128240+00:00"
+  },
+  {
+    "point_id": "64e34241-714a-4af5-b513-4cc58d12284f",
+    "title": "TEAM point 141",
+    "description": "Auto-generated point #141 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 19,
+    "latitude": 10.709191,
+    "longitude": 106.710422,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128243+00:00"
+  },
+  {
+    "point_id": "7e0a48f1-766b-48ac-b97b-605e5e2915e7",
     "title": "USER point 142",
     "description": "Auto-generated point #142 for USER",
     "object_type": "USER",
-    "object_id": 25,
-    "latitude": 10.789003,
-    "longitude": 106.723494,
+    "object_id": 12,
+    "latitude": 10.726594,
+    "longitude": 106.675102,
     "properties": {
-      "status": "PENDING",
+      "status": "RESOLVED",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424648+00:00"
+    "created_at": "2025-12-20T10:39:21.128247+00:00"
   },
   {
-    "point_id": "09811b2b-b58e-48ad-aa78-f1a5f803f997",
-    "title": "RESOURCE point 143",
-    "description": "Auto-generated point #143 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 4,
-    "latitude": 10.749194,
-    "longitude": 106.736448,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424656+00:00"
-  },
-  {
-    "point_id": "2648bb3b-7d39-4fa2-895c-155bfbca20db",
-    "title": "SOS point 144",
-    "description": "Auto-generated point #144 for SOS",
+    "point_id": "e47d5bcc-34b7-42d7-9585-930debb79468",
+    "title": "SOS point 143",
+    "description": "Auto-generated point #143 for SOS",
     "object_type": "SOS",
-    "object_id": 43,
-    "latitude": 10.861484,
-    "longitude": 106.859473,
+    "object_id": 42,
+    "latitude": 10.682712,
+    "longitude": 106.860964,
     "properties": {
-      "status": "AVAILABLE",
+      "status": "ASSIGNED",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424664+00:00"
+    "created_at": "2025-12-20T10:39:21.128251+00:00"
   },
   {
-    "point_id": "9718c80c-f7c0-4324-bfb5-e51f02711e40",
-    "title": "RESOURCE point 145",
-    "description": "Auto-generated point #145 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 20,
-    "latitude": 10.721268,
-    "longitude": 106.723974,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424672+00:00"
-  },
-  {
-    "point_id": "d979929e-3581-45c8-8283-76394040648e",
-    "title": "TEAM point 146",
-    "description": "Auto-generated point #146 for TEAM",
+    "point_id": "bb6a1d6c-c940-4afd-b623-cca756495561",
+    "title": "TEAM point 144",
+    "description": "Auto-generated point #144 for TEAM",
     "object_type": "TEAM",
-    "object_id": 9,
-    "latitude": 10.847198,
-    "longitude": 106.787623,
+    "object_id": 2,
+    "latitude": 10.69955,
+    "longitude": 106.721288,
     "properties": {
-      "status": "ASSIGNED",
+      "status": "PENDING",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424680+00:00"
+    "created_at": "2025-12-20T10:39:21.128255+00:00"
   },
   {
-    "point_id": "f4c58fc3-0769-41e7-9213-c64a730721b6",
-    "title": "USER point 147",
-    "description": "Auto-generated point #147 for USER",
-    "object_type": "USER",
-    "object_id": 4,
-    "latitude": 10.776386,
-    "longitude": 106.878302,
-    "properties": {
-      "status": "PENDING",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424689+00:00"
-  },
-  {
-    "point_id": "90e932d0-1f75-41e0-b207-acc059662d6d",
-    "title": "TEAM point 148",
-    "description": "Auto-generated point #148 for TEAM",
+    "point_id": "a3a07735-fe86-4a68-9411-83f9f5c6b7a7",
+    "title": "TEAM point 145",
+    "description": "Auto-generated point #145 for TEAM",
     "object_type": "TEAM",
-    "object_id": 6,
-    "latitude": 10.813952,
-    "longitude": 106.891944,
+    "object_id": 1,
+    "latitude": 10.877435,
+    "longitude": 106.636442,
     "properties": {
       "status": "RESOLVED",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424699+00:00"
+    "created_at": "2025-12-20T10:39:21.128259+00:00"
   },
   {
-    "point_id": "adb71b4f-5469-432e-a4e3-8bb4250cbf01",
-    "title": "SOS point 149",
-    "description": "Auto-generated point #149 for SOS",
-    "object_type": "SOS",
-    "object_id": 15,
-    "latitude": 10.801495,
-    "longitude": 106.765252,
+    "point_id": "dec3ab21-4765-466e-9181-0bad4d85892f",
+    "title": "RESOURCE point 146",
+    "description": "Auto-generated point #146 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 10,
+    "latitude": 10.748329,
+    "longitude": 106.806831,
     "properties": {
-      "status": "PENDING",
-      "icon": "sos"
+      "status": "AVAILABLE",
+      "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424709+00:00"
+    "created_at": "2025-12-20T10:39:21.128263+00:00"
   },
   {
-    "point_id": "40616998-ba6f-4ea2-b8ed-33c24c679fe1",
+    "point_id": "efadbf29-de0b-4a39-9cf4-bde6d9dfd014",
+    "title": "TEAM point 147",
+    "description": "Auto-generated point #147 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 20,
+    "latitude": 10.710341,
+    "longitude": 106.689124,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128266+00:00"
+  },
+  {
+    "point_id": "5e15f438-0fdf-40ea-8ee3-5113ddab1705",
+    "title": "RESOURCE point 148",
+    "description": "Auto-generated point #148 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 2,
+    "latitude": 10.71539,
+    "longitude": 106.768712,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128270+00:00"
+  },
+  {
+    "point_id": "2acd40c3-9865-496f-b168-7f72eab88360",
+    "title": "TEAM point 149",
+    "description": "Auto-generated point #149 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 9,
+    "latitude": 10.863933,
+    "longitude": 106.80516,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128274+00:00"
+  },
+  {
+    "point_id": "fc592db1-1b94-4a3c-8a8f-e39006176729",
     "title": "TEAM point 150",
     "description": "Auto-generated point #150 for TEAM",
     "object_type": "TEAM",
     "object_id": 16,
-    "latitude": 10.705843,
-    "longitude": 106.738434,
+    "latitude": 10.718871,
+    "longitude": 106.72405,
+    "properties": {
+      "status": "PENDING",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128278+00:00"
+  },
+  {
+    "point_id": "8675332b-1177-4084-9fd5-0667e2519756",
+    "title": "SOS point 151",
+    "description": "Auto-generated point #151 for SOS",
+    "object_type": "SOS",
+    "object_id": 39,
+    "latitude": 10.772082,
+    "longitude": 106.735631,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128282+00:00"
+  },
+  {
+    "point_id": "2d697fea-5bfb-4a75-abe8-1670985dfeea",
+    "title": "RESOURCE point 152",
+    "description": "Auto-generated point #152 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 6,
+    "latitude": 10.848667,
+    "longitude": 106.807707,
     "properties": {
       "status": "RESOLVED",
-      "icon": "team"
+      "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424719+00:00"
+    "created_at": "2025-12-20T10:39:21.128286+00:00"
   },
   {
-    "point_id": "4f195131-ff53-4478-9aef-4938fb891105",
-    "title": "USER point 151",
-    "description": "Auto-generated point #151 for USER",
-    "object_type": "USER",
-    "object_id": 16,
-    "latitude": 10.740153,
-    "longitude": 106.752662,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424727+00:00"
-  },
-  {
-    "point_id": "f822c601-0fa0-4ae1-aa93-e4e784bfcd4b",
-    "title": "TEAM point 152",
-    "description": "Auto-generated point #152 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 20,
-    "latitude": 10.711821,
-    "longitude": 106.737036,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424735+00:00"
-  },
-  {
-    "point_id": "665ea238-36fd-4f1a-b695-db772f17d7cc",
+    "point_id": "5c82628c-299a-459b-b83a-6e58d806b859",
     "title": "USER point 153",
     "description": "Auto-generated point #153 for USER",
     "object_type": "USER",
-    "object_id": 11,
-    "latitude": 10.740774,
-    "longitude": 106.859208,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424744+00:00"
-  },
-  {
-    "point_id": "5be3004e-a9e8-4445-ba30-7020d465867e",
-    "title": "RESOURCE point 154",
-    "description": "Auto-generated point #154 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 19,
-    "latitude": 10.742225,
-    "longitude": 106.846165,
+    "object_id": 2,
+    "latitude": 10.763594,
+    "longitude": 106.897447,
     "properties": {
       "status": "AVAILABLE",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424752+00:00"
-  },
-  {
-    "point_id": "34048dce-6346-4510-ab86-8544b88b9d50",
-    "title": "USER point 155",
-    "description": "Auto-generated point #155 for USER",
-    "object_type": "USER",
-    "object_id": 12,
-    "latitude": 10.77824,
-    "longitude": 106.859578,
-    "properties": {
-      "status": "RESOLVED",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424760+00:00"
+    "created_at": "2025-12-20T10:39:21.128290+00:00"
   },
   {
-    "point_id": "e662e3f5-099d-4aa8-a2b8-3503861f122c",
+    "point_id": "31e5d46a-cd87-4a6c-9c4a-dddf4df57adb",
+    "title": "TEAM point 154",
+    "description": "Auto-generated point #154 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 15,
+    "latitude": 10.797391,
+    "longitude": 106.792303,
+    "properties": {
+      "status": "PENDING",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128294+00:00"
+  },
+  {
+    "point_id": "017e0b16-772f-4b3b-b3c6-c7c024458bc8",
+    "title": "SOS point 155",
+    "description": "Auto-generated point #155 for SOS",
+    "object_type": "SOS",
+    "object_id": 31,
+    "latitude": 10.720722,
+    "longitude": 106.870944,
+    "properties": {
+      "status": "PENDING",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128297+00:00"
+  },
+  {
+    "point_id": "b60ecd74-956e-4371-af8f-7c0bcd94142e",
     "title": "USER point 156",
     "description": "Auto-generated point #156 for USER",
     "object_type": "USER",
-    "object_id": 11,
-    "latitude": 10.799555,
-    "longitude": 106.765575,
+    "object_id": 1,
+    "latitude": 10.863397,
+    "longitude": 106.84596,
     "properties": {
-      "status": "ASSIGNED",
+      "status": "AVAILABLE",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424767+00:00"
+    "created_at": "2025-12-20T10:39:21.128301+00:00"
   },
   {
-    "point_id": "0ad75487-ca6e-4fd9-8992-33f343606c24",
+    "point_id": "9f54cbe5-b5c0-4a97-99bc-bae78ea65e00",
     "title": "USER point 157",
     "description": "Auto-generated point #157 for USER",
     "object_type": "USER",
-    "object_id": 8,
-    "latitude": 10.732537,
-    "longitude": 106.894232,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424777+00:00"
-  },
-  {
-    "point_id": "265fe9f7-7046-4ad4-9463-1da8502c734f",
-    "title": "USER point 158",
-    "description": "Auto-generated point #158 for USER",
-    "object_type": "USER",
-    "object_id": 13,
-    "latitude": 10.843835,
-    "longitude": 106.613094,
+    "object_id": 5,
+    "latitude": 10.779791,
+    "longitude": 106.682067,
     "properties": {
       "status": "ASSIGNED",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424785+00:00"
+    "created_at": "2025-12-20T10:39:21.128305+00:00"
   },
   {
-    "point_id": "480dfe44-6fea-49bd-a6ba-8f43d4480a84",
-    "title": "RESOURCE point 159",
-    "description": "Auto-generated point #159 for RESOURCE",
+    "point_id": "41a5f2d6-35b0-48a7-892e-6862a89439f6",
+    "title": "RESOURCE point 158",
+    "description": "Auto-generated point #158 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 4,
-    "latitude": 10.688144,
-    "longitude": 106.748599,
+    "object_id": 3,
+    "latitude": 10.792294,
+    "longitude": 106.749752,
     "properties": {
-      "status": "AVAILABLE",
+      "status": "PENDING",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424793+00:00"
+    "created_at": "2025-12-20T10:39:21.128309+00:00"
   },
   {
-    "point_id": "b6e9b048-3b9d-45f1-ab43-2b52946b4fd7",
-    "title": "SOS point 160",
-    "description": "Auto-generated point #160 for SOS",
+    "point_id": "3170f526-6bde-440f-b42c-c3c4281d99fe",
+    "title": "SOS point 159",
+    "description": "Auto-generated point #159 for SOS",
     "object_type": "SOS",
-    "object_id": 47,
-    "latitude": 10.880297,
-    "longitude": 106.629914,
+    "object_id": 9,
+    "latitude": 10.705532,
+    "longitude": 106.758062,
     "properties": {
-      "status": "ASSIGNED",
+      "status": "AVAILABLE",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424801+00:00"
+    "created_at": "2025-12-20T10:39:21.128330+00:00"
   },
   {
-    "point_id": "6ae9756c-1061-4068-a242-c41675cbb574",
-    "title": "TEAM point 161",
-    "description": "Auto-generated point #161 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 3,
-    "latitude": 10.824052,
-    "longitude": 106.722994,
+    "point_id": "0e71b168-4473-4b8d-9b40-7f07e1d47440",
+    "title": "RESOURCE point 160",
+    "description": "Auto-generated point #160 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 4,
+    "latitude": 10.682,
+    "longitude": 106.71104,
     "properties": {
-      "status": "AVAILABLE",
-      "icon": "team"
+      "status": "PENDING",
+      "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424809+00:00"
+    "created_at": "2025-12-20T10:39:21.128334+00:00"
   },
   {
-    "point_id": "774901f1-e9a5-4499-9bd6-96aa87c5929e",
+    "point_id": "ca29c0c3-921f-4b04-b65d-fe3ea2659812",
+    "title": "RESOURCE point 161",
+    "description": "Auto-generated point #161 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 4,
+    "latitude": 10.776983,
+    "longitude": 106.81766,
+    "properties": {
+      "status": "PENDING",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128338+00:00"
+  },
+  {
+    "point_id": "7ca7d186-b4a7-4129-b94a-9fb3dd820de2",
     "title": "USER point 162",
     "description": "Auto-generated point #162 for USER",
     "object_type": "USER",
-    "object_id": 21,
-    "latitude": 10.738305,
-    "longitude": 106.834458,
+    "object_id": 12,
+    "latitude": 10.868369,
+    "longitude": 106.844918,
     "properties": {
       "status": "PENDING",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424817+00:00"
+    "created_at": "2025-12-20T10:39:21.128342+00:00"
   },
   {
-    "point_id": "52afe912-992e-42e4-bb01-8b926f314437",
+    "point_id": "ec26317c-25f2-46b1-adfa-8538dfac9ece",
     "title": "USER point 163",
     "description": "Auto-generated point #163 for USER",
     "object_type": "USER",
-    "object_id": 11,
-    "latitude": 10.867515,
-    "longitude": 106.85553,
+    "object_id": 14,
+    "latitude": 10.761682,
+    "longitude": 106.625458,
     "properties": {
-      "status": "AVAILABLE",
+      "status": "PENDING",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424825+00:00"
+    "created_at": "2025-12-20T10:39:21.128346+00:00"
   },
   {
-    "point_id": "76901dbe-4ab2-45de-b572-9e9179354b8b",
+    "point_id": "e6fd491e-e74c-4abc-8a85-37118e6122e4",
     "title": "SOS point 164",
     "description": "Auto-generated point #164 for SOS",
     "object_type": "SOS",
-    "object_id": 16,
-    "latitude": 10.687898,
-    "longitude": 106.861715,
+    "object_id": 28,
+    "latitude": 10.806614,
+    "longitude": 106.75678,
     "properties": {
-      "status": "RESOLVED",
+      "status": "AVAILABLE",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424832+00:00"
+    "created_at": "2025-12-20T10:39:21.128350+00:00"
   },
   {
-    "point_id": "f24c1103-92d7-4125-950b-6392194df7e9",
-    "title": "USER point 165",
-    "description": "Auto-generated point #165 for USER",
-    "object_type": "USER",
-    "object_id": 4,
-    "latitude": 10.844289,
-    "longitude": 106.899228,
+    "point_id": "5f7b5fe7-03e3-402b-b03c-7a7f43c321b8",
+    "title": "SOS point 165",
+    "description": "Auto-generated point #165 for SOS",
+    "object_type": "SOS",
+    "object_id": 31,
+    "latitude": 10.780578,
+    "longitude": 106.883515,
     "properties": {
       "status": "PENDING",
-      "icon": "user"
+      "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424842+00:00"
+    "created_at": "2025-12-20T10:39:21.128354+00:00"
   },
   {
-    "point_id": "1bf86603-3d2c-44a0-98ad-ea7822330562",
+    "point_id": "a2c076e9-f016-48f0-baae-f9ddf95aa078",
     "title": "SOS point 166",
     "description": "Auto-generated point #166 for SOS",
     "object_type": "SOS",
-    "object_id": 3,
-    "latitude": 10.83268,
-    "longitude": 106.733104,
+    "object_id": 32,
+    "latitude": 10.835221,
+    "longitude": 106.64123,
     "properties": {
-      "status": "RESOLVED",
+      "status": "AVAILABLE",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424852+00:00"
+    "created_at": "2025-12-20T10:39:21.128357+00:00"
   },
   {
-    "point_id": "0bcff10d-180b-4d76-b48e-6375b30d9e2c",
-    "title": "RESOURCE point 167",
-    "description": "Auto-generated point #167 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 14,
-    "latitude": 10.744541,
-    "longitude": 106.838843,
+    "point_id": "1cee1a91-4016-4a42-ac63-c7fac04596d0",
+    "title": "SOS point 167",
+    "description": "Auto-generated point #167 for SOS",
+    "object_type": "SOS",
+    "object_id": 21,
+    "latitude": 10.8138,
+    "longitude": 106.839725,
     "properties": {
-      "status": "ASSIGNED",
+      "status": "PENDING",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128361+00:00"
+  },
+  {
+    "point_id": "245aa33f-4d6c-47cd-aec6-e5361757fba7",
+    "title": "RESOURCE point 168",
+    "description": "Auto-generated point #168 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 12,
+    "latitude": 10.681868,
+    "longitude": 106.640929,
+    "properties": {
+      "status": "RESOLVED",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424863+00:00"
+    "created_at": "2025-12-20T10:39:21.128365+00:00"
   },
   {
-    "point_id": "ad0cb78e-ed13-4f44-af5d-b9243998dab2",
-    "title": "TEAM point 168",
-    "description": "Auto-generated point #168 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 6,
-    "latitude": 10.770651,
-    "longitude": 106.673259,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424871+00:00"
-  },
-  {
-    "point_id": "1f109e6c-26cc-4348-af0b-dec3d872bb27",
-    "title": "TEAM point 169",
-    "description": "Auto-generated point #169 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 16,
-    "latitude": 10.871585,
-    "longitude": 106.623691,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424879+00:00"
-  },
-  {
-    "point_id": "da031f99-fa67-42e6-9a62-8031e1dcf01f",
-    "title": "USER point 170",
-    "description": "Auto-generated point #170 for USER",
+    "point_id": "bd0bcd1f-201e-4131-b17b-d97bbe55c9ab",
+    "title": "USER point 169",
+    "description": "Auto-generated point #169 for USER",
     "object_type": "USER",
-    "object_id": 9,
-    "latitude": 10.820339,
-    "longitude": 106.669657,
+    "object_id": 2,
+    "latitude": 10.762231,
+    "longitude": 106.818757,
     "properties": {
       "status": "PENDING",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424887+00:00"
+    "created_at": "2025-12-20T10:39:21.128369+00:00"
   },
   {
-    "point_id": "91cec498-f7c3-43eb-80e3-131814f4f75f",
+    "point_id": "8cf313c1-a533-4aca-8185-69a4f93bc38a",
+    "title": "RESOURCE point 170",
+    "description": "Auto-generated point #170 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 6,
+    "latitude": 10.812006,
+    "longitude": 106.736407,
+    "properties": {
+      "status": "PENDING",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128373+00:00"
+  },
+  {
+    "point_id": "a572b48b-e6e0-46fe-afd1-bfa94d693b80",
     "title": "RESOURCE point 171",
     "description": "Auto-generated point #171 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 18,
-    "latitude": 10.782356,
-    "longitude": 106.869673,
+    "object_id": 14,
+    "latitude": 10.833306,
+    "longitude": 106.715719,
+    "properties": {
+      "status": "PENDING",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128377+00:00"
+  },
+  {
+    "point_id": "efa85613-38ae-4216-8214-31be1cc209c9",
+    "title": "SOS point 172",
+    "description": "Auto-generated point #172 for SOS",
+    "object_type": "SOS",
+    "object_id": 22,
+    "latitude": 10.811426,
+    "longitude": 106.609058,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128380+00:00"
+  },
+  {
+    "point_id": "4e83aca2-572e-4650-a3ba-d4adfbb6c6c9",
+    "title": "SOS point 173",
+    "description": "Auto-generated point #173 for SOS",
+    "object_type": "SOS",
+    "object_id": 32,
+    "latitude": 10.744885,
+    "longitude": 106.790087,
     "properties": {
       "status": "ASSIGNED",
-      "icon": "resource"
+      "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424895+00:00"
+    "created_at": "2025-12-20T10:39:21.128384+00:00"
   },
   {
-    "point_id": "d259022c-04af-4d19-ae44-837f43ef5332",
-    "title": "RESOURCE point 172",
-    "description": "Auto-generated point #172 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 14,
-    "latitude": 10.887952,
-    "longitude": 106.622159,
+    "point_id": "0a67385f-0c58-443f-8d58-b08604e848ed",
+    "title": "USER point 174",
+    "description": "Auto-generated point #174 for USER",
+    "object_type": "USER",
+    "object_id": 15,
+    "latitude": 10.852353,
+    "longitude": 106.780817,
     "properties": {
-      "status": "RESOLVED",
-      "icon": "resource"
+      "status": "AVAILABLE",
+      "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424903+00:00"
+    "created_at": "2025-12-20T10:39:21.128388+00:00"
   },
   {
-    "point_id": "ee7f52a7-b8ef-4fd0-9084-41ec3d1cb49c",
-    "title": "USER point 173",
-    "description": "Auto-generated point #173 for USER",
+    "point_id": "2350a27a-4538-42ca-bed4-1b8af571b95d",
+    "title": "USER point 175",
+    "description": "Auto-generated point #175 for USER",
     "object_type": "USER",
     "object_id": 16,
-    "latitude": 10.746467,
-    "longitude": 106.737051,
+    "latitude": 10.716262,
+    "longitude": 106.685866,
     "properties": {
       "status": "PENDING",
       "icon": "user"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424911+00:00"
+    "created_at": "2025-12-20T10:39:21.128392+00:00"
   },
   {
-    "point_id": "3cec0753-e9a7-4bcd-abf1-6faaa30ffab0",
-    "title": "RESOURCE point 174",
-    "description": "Auto-generated point #174 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 10,
-    "latitude": 10.805823,
-    "longitude": 106.671162,
-    "properties": {
-      "status": "PENDING",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424919+00:00"
-  },
-  {
-    "point_id": "24834650-3f3b-4291-8964-423ecb4261df",
-    "title": "RESOURCE point 175",
-    "description": "Auto-generated point #175 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 1,
-    "latitude": 10.824811,
-    "longitude": 106.893383,
-    "properties": {
-      "status": "PENDING",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424927+00:00"
-  },
-  {
-    "point_id": "e19349f3-15dc-4caf-8809-90431f42ef0a",
-    "title": "RESOURCE point 176",
-    "description": "Auto-generated point #176 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 8,
-    "latitude": 10.843938,
-    "longitude": 106.873185,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424935+00:00"
-  },
-  {
-    "point_id": "34fa429a-d886-4159-8ba0-f170f6b28ece",
-    "title": "RESOURCE point 177",
-    "description": "Auto-generated point #177 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 5,
-    "latitude": 10.721829,
-    "longitude": 106.665701,
-    "properties": {
-      "status": "PENDING",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424946+00:00"
-  },
-  {
-    "point_id": "531b9de9-8b60-4573-bf88-2da8f30337a6",
-    "title": "RESOURCE point 178",
-    "description": "Auto-generated point #178 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 15,
-    "latitude": 10.822195,
-    "longitude": 106.871021,
-    "properties": {
-      "status": "PENDING",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424954+00:00"
-  },
-  {
-    "point_id": "334ed60d-d556-448f-aaef-8f00bf54092f",
-    "title": "SOS point 179",
-    "description": "Auto-generated point #179 for SOS",
+    "point_id": "9b40d8b3-c8cb-4ff8-9003-2f8730c06ca4",
+    "title": "SOS point 176",
+    "description": "Auto-generated point #176 for SOS",
     "object_type": "SOS",
-    "object_id": 19,
-    "latitude": 10.841119,
-    "longitude": 106.773872,
+    "object_id": 45,
+    "latitude": 10.700005,
+    "longitude": 106.717151,
     "properties": {
       "status": "RESOLVED",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424961+00:00"
+    "created_at": "2025-12-20T10:39:21.128396+00:00"
   },
   {
-    "point_id": "0d39b2b6-43c9-4c33-b14b-c3cd6f082823",
+    "point_id": "80cbb090-01cd-4e0b-a2df-2c12fce746d6",
+    "title": "TEAM point 177",
+    "description": "Auto-generated point #177 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 16,
+    "latitude": 10.79725,
+    "longitude": 106.815144,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128400+00:00"
+  },
+  {
+    "point_id": "f58e19c8-679d-4f9c-8fc4-cba1fda66318",
+    "title": "TEAM point 178",
+    "description": "Auto-generated point #178 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 14,
+    "latitude": 10.686544,
+    "longitude": 106.669676,
+    "properties": {
+      "status": "PENDING",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128403+00:00"
+  },
+  {
+    "point_id": "c2ef32ed-5721-4b5b-a429-4cc56c2ac454",
+    "title": "USER point 179",
+    "description": "Auto-generated point #179 for USER",
+    "object_type": "USER",
+    "object_id": 12,
+    "latitude": 10.849305,
+    "longitude": 106.872519,
+    "properties": {
+      "status": "PENDING",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128407+00:00"
+  },
+  {
+    "point_id": "b900c83d-0d22-4a1b-acda-ddaddc28743d",
     "title": "TEAM point 180",
     "description": "Auto-generated point #180 for TEAM",
     "object_type": "TEAM",
-    "object_id": 18,
-    "latitude": 10.718641,
-    "longitude": 106.824244,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424971+00:00"
-  },
-  {
-    "point_id": "67b3a876-b292-4a84-ab41-75b3b8c9b7d6",
-    "title": "TEAM point 181",
-    "description": "Auto-generated point #181 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 9,
-    "latitude": 10.880967,
-    "longitude": 106.759256,
+    "object_id": 15,
+    "latitude": 10.784063,
+    "longitude": 106.885006,
     "properties": {
       "status": "AVAILABLE",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424980+00:00"
+    "created_at": "2025-12-20T10:39:21.128411+00:00"
   },
   {
-    "point_id": "ce7a5c1d-9f8b-4e6e-a94b-107077c1a0a4",
-    "title": "RESOURCE point 182",
-    "description": "Auto-generated point #182 for RESOURCE",
+    "point_id": "92d3203c-454d-4e53-a83a-680a0eaf5eea",
+    "title": "SOS point 181",
+    "description": "Auto-generated point #181 for SOS",
+    "object_type": "SOS",
+    "object_id": 8,
+    "latitude": 10.824686,
+    "longitude": 106.751802,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128415+00:00"
+  },
+  {
+    "point_id": "c0ad393a-a8eb-4176-8baa-fb6f09781b48",
+    "title": "USER point 182",
+    "description": "Auto-generated point #182 for USER",
+    "object_type": "USER",
+    "object_id": 2,
+    "latitude": 10.690695,
+    "longitude": 106.894198,
+    "properties": {
+      "status": "PENDING",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128419+00:00"
+  },
+  {
+    "point_id": "2f6e2958-544b-437d-85fb-4b72219693fa",
+    "title": "TEAM point 183",
+    "description": "Auto-generated point #183 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 8,
+    "latitude": 10.777663,
+    "longitude": 106.73848,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128423+00:00"
+  },
+  {
+    "point_id": "ee9430d2-d8b1-42d1-a6d9-9dc28d08387f",
+    "title": "USER point 184",
+    "description": "Auto-generated point #184 for USER",
+    "object_type": "USER",
+    "object_id": 24,
+    "latitude": 10.748526,
+    "longitude": 106.823046,
+    "properties": {
+      "status": "PENDING",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128426+00:00"
+  },
+  {
+    "point_id": "cae4888a-c137-47db-8f73-e2978867987e",
+    "title": "TEAM point 185",
+    "description": "Auto-generated point #185 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 1,
+    "latitude": 10.828864,
+    "longitude": 106.70822,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "team"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128430+00:00"
+  },
+  {
+    "point_id": "466aa0b5-b357-423a-9673-11b785b101db",
+    "title": "RESOURCE point 186",
+    "description": "Auto-generated point #186 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 4,
-    "latitude": 10.744931,
-    "longitude": 106.890215,
+    "object_id": 5,
+    "latitude": 10.782759,
+    "longitude": 106.771796,
     "properties": {
       "status": "AVAILABLE",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424989+00:00"
+    "created_at": "2025-12-20T10:39:21.128434+00:00"
   },
   {
-    "point_id": "aaf99ddc-eabc-422d-a103-04b00aad82bc",
-    "title": "TEAM point 183",
-    "description": "Auto-generated point #183 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 13,
-    "latitude": 10.710967,
-    "longitude": 106.888868,
+    "point_id": "3c8dfee5-fbfa-430d-93d8-8d0a45eeafb0",
+    "title": "SOS point 187",
+    "description": "Auto-generated point #187 for SOS",
+    "object_type": "SOS",
+    "object_id": 4,
+    "latitude": 10.736848,
+    "longitude": 106.679181,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128438+00:00"
+  },
+  {
+    "point_id": "779daa01-63ad-4a06-a98b-b7b9eff3e27e",
+    "title": "USER point 188",
+    "description": "Auto-generated point #188 for USER",
+    "object_type": "USER",
+    "object_id": 12,
+    "latitude": 10.725054,
+    "longitude": 106.811221,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128442+00:00"
+  },
+  {
+    "point_id": "4a6cb035-50e8-4d1a-91c1-7a11b106df6e",
+    "title": "SOS point 189",
+    "description": "Auto-generated point #189 for SOS",
+    "object_type": "SOS",
+    "object_id": 18,
+    "latitude": 10.770652,
+    "longitude": 106.609931,
+    "properties": {
+      "status": "PENDING",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128446+00:00"
+  },
+  {
+    "point_id": "c523d206-52ec-47b7-9e69-0d5d4d793f25",
+    "title": "SOS point 190",
+    "description": "Auto-generated point #190 for SOS",
+    "object_type": "SOS",
+    "object_id": 12,
+    "latitude": 10.763081,
+    "longitude": 106.635496,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128450+00:00"
+  },
+  {
+    "point_id": "2fd0f5d1-c1c1-4a01-b2fb-717b2821bc7f",
+    "title": "RESOURCE point 191",
+    "description": "Auto-generated point #191 for RESOURCE",
+    "object_type": "RESOURCE",
+    "object_id": 9,
+    "latitude": 10.732947,
+    "longitude": 106.742611,
     "properties": {
       "status": "RESOLVED",
+      "icon": "resource"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128453+00:00"
+  },
+  {
+    "point_id": "1ccb24ac-4ec2-4b2a-870c-d45efc879eff",
+    "title": "USER point 192",
+    "description": "Auto-generated point #192 for USER",
+    "object_type": "USER",
+    "object_id": 18,
+    "latitude": 10.815535,
+    "longitude": 106.791918,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128457+00:00"
+  },
+  {
+    "point_id": "c41bc3ec-fe10-45f4-a0a8-ec7c1b223a04",
+    "title": "TEAM point 193",
+    "description": "Auto-generated point #193 for TEAM",
+    "object_type": "TEAM",
+    "object_id": 10,
+    "latitude": 10.875389,
+    "longitude": 106.819504,
+    "properties": {
+      "status": "PENDING",
       "icon": "team"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.424999+00:00"
+    "created_at": "2025-12-20T10:39:21.128462+00:00"
   },
   {
-    "point_id": "584c54e5-72ba-4469-aee6-6529a2b309a0",
-    "title": "RESOURCE point 184",
-    "description": "Auto-generated point #184 for RESOURCE",
+    "point_id": "a666e023-a37d-42dd-83d7-93c84efe480e",
+    "title": "USER point 194",
+    "description": "Auto-generated point #194 for USER",
+    "object_type": "USER",
+    "object_id": 6,
+    "latitude": 10.868944,
+    "longitude": 106.721692,
+    "properties": {
+      "status": "ASSIGNED",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128466+00:00"
+  },
+  {
+    "point_id": "908d4793-d70f-4757-8e53-f0b4a0aa36ec",
+    "title": "RESOURCE point 195",
+    "description": "Auto-generated point #195 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 18,
-    "latitude": 10.766806,
-    "longitude": 106.627091,
+    "object_id": 3,
+    "latitude": 10.794227,
+    "longitude": 106.634633,
     "properties": {
       "status": "PENDING",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425007+00:00"
+    "created_at": "2025-12-20T10:39:21.128469+00:00"
   },
   {
-    "point_id": "ba47a9a5-56e4-4bfb-9fcf-58e37050209f",
-    "title": "RESOURCE point 185",
-    "description": "Auto-generated point #185 for RESOURCE",
+    "point_id": "38a16197-21ca-4ba5-8cb1-a322b37c592c",
+    "title": "SOS point 196",
+    "description": "Auto-generated point #196 for SOS",
+    "object_type": "SOS",
+    "object_id": 15,
+    "latitude": 10.686906,
+    "longitude": 106.71675,
+    "properties": {
+      "status": "AVAILABLE",
+      "icon": "sos"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128473+00:00"
+  },
+  {
+    "point_id": "1250763d-da94-4aaa-99e7-00defe9d37e0",
+    "title": "USER point 197",
+    "description": "Auto-generated point #197 for USER",
+    "object_type": "USER",
+    "object_id": 13,
+    "latitude": 10.897578,
+    "longitude": 106.747643,
+    "properties": {
+      "status": "RESOLVED",
+      "icon": "user"
+    },
+    "is_public": true,
+    "source": "auto-generator",
+    "created_at": "2025-12-20T10:39:21.128569+00:00"
+  },
+  {
+    "point_id": "a930cb2f-61f4-4de8-9b05-56b8f35ce21d",
+    "title": "RESOURCE point 198",
+    "description": "Auto-generated point #198 for RESOURCE",
     "object_type": "RESOURCE",
-    "object_id": 19,
-    "latitude": 10.828022,
-    "longitude": 106.736436,
+    "object_id": 13,
+    "latitude": 10.868709,
+    "longitude": 106.638886,
     "properties": {
       "status": "AVAILABLE",
       "icon": "resource"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425015+00:00"
+    "created_at": "2025-12-20T10:39:21.128573+00:00"
   },
   {
-    "point_id": "638f36c5-9c65-469f-9a9a-91bf94e6e0e9",
-    "title": "SOS point 186",
-    "description": "Auto-generated point #186 for SOS",
+    "point_id": "b3a14806-e639-4ed9-9a39-7a3744f7c959",
+    "title": "SOS point 199",
+    "description": "Auto-generated point #199 for SOS",
     "object_type": "SOS",
-    "object_id": 44,
-    "latitude": 10.886864,
-    "longitude": 106.846725,
+    "object_id": 36,
+    "latitude": 10.741937,
+    "longitude": 106.836543,
     "properties": {
       "status": "ASSIGNED",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425023+00:00"
+    "created_at": "2025-12-20T10:39:21.128577+00:00"
   },
   {
-    "point_id": "cba25a87-f75d-4930-b4fa-57f6731c2ecb",
-    "title": "RESOURCE point 187",
-    "description": "Auto-generated point #187 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 20,
-    "latitude": 10.8163,
-    "longitude": 106.741443,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425032+00:00"
-  },
-  {
-    "point_id": "71d5bafa-5a98-463e-a52b-9729b1ee8953",
-    "title": "USER point 188",
-    "description": "Auto-generated point #188 for USER",
-    "object_type": "USER",
-    "object_id": 23,
-    "latitude": 10.819789,
-    "longitude": 106.794296,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425040+00:00"
-  },
-  {
-    "point_id": "46754385-dd05-4542-b9af-9f43898a6491",
-    "title": "SOS point 189",
-    "description": "Auto-generated point #189 for SOS",
+    "point_id": "b2392a09-0f65-46c4-a739-53f625c29399",
+    "title": "SOS point 200",
+    "description": "Auto-generated point #200 for SOS",
     "object_type": "SOS",
-    "object_id": 3,
-    "latitude": 10.705669,
-    "longitude": 106.794772,
+    "object_id": 32,
+    "latitude": 10.889089,
+    "longitude": 106.750533,
     "properties": {
-      "status": "RESOLVED",
+      "status": "PENDING",
       "icon": "sos"
     },
     "is_public": true,
     "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425048+00:00"
-  },
-  {
-    "point_id": "bff0c82d-83b8-422e-81c1-0f0c412b7d78",
-    "title": "TEAM point 190",
-    "description": "Auto-generated point #190 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 18,
-    "latitude": 10.705547,
-    "longitude": 106.898778,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425056+00:00"
-  },
-  {
-    "point_id": "b190644e-de20-4f9c-a053-b77f69504002",
-    "title": "USER point 191",
-    "description": "Auto-generated point #191 for USER",
-    "object_type": "USER",
-    "object_id": 19,
-    "latitude": 10.761623,
-    "longitude": 106.716594,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425064+00:00"
-  },
-  {
-    "point_id": "62e6aafd-8522-4c34-a2e3-8d4859933127",
-    "title": "USER point 192",
-    "description": "Auto-generated point #192 for USER",
-    "object_type": "USER",
-    "object_id": 20,
-    "latitude": 10.824083,
-    "longitude": 106.865624,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425071+00:00"
-  },
-  {
-    "point_id": "71d60e60-36c4-482e-bf48-a7c23f30a4fe",
-    "title": "RESOURCE point 193",
-    "description": "Auto-generated point #193 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 7,
-    "latitude": 10.741543,
-    "longitude": 106.881716,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425079+00:00"
-  },
-  {
-    "point_id": "d2ea0a7c-0bbc-4c5a-9b3c-dc5caab3202b",
-    "title": "RESOURCE point 194",
-    "description": "Auto-generated point #194 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 4,
-    "latitude": 10.731945,
-    "longitude": 106.733409,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425087+00:00"
-  },
-  {
-    "point_id": "dfe13ead-b408-4e7f-aafb-79ea04621187",
-    "title": "RESOURCE point 195",
-    "description": "Auto-generated point #195 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 2,
-    "latitude": 10.895125,
-    "longitude": 106.76334,
-    "properties": {
-      "status": "AVAILABLE",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425095+00:00"
-  },
-  {
-    "point_id": "9d6d65b9-e7a1-45e4-97d5-696cf42000f7",
-    "title": "USER point 196",
-    "description": "Auto-generated point #196 for USER",
-    "object_type": "USER",
-    "object_id": 3,
-    "latitude": 10.893006,
-    "longitude": 106.682764,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "user"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425103+00:00"
-  },
-  {
-    "point_id": "0b9af08b-69e1-42b1-8437-424f0946902c",
-    "title": "SOS point 197",
-    "description": "Auto-generated point #197 for SOS",
-    "object_type": "SOS",
-    "object_id": 4,
-    "latitude": 10.811372,
-    "longitude": 106.792511,
-    "properties": {
-      "status": "RESOLVED",
-      "icon": "sos"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425112+00:00"
-  },
-  {
-    "point_id": "5c4e5401-6728-446d-a8ec-0ad00b428d08",
-    "title": "TEAM point 198",
-    "description": "Auto-generated point #198 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 3,
-    "latitude": 10.707703,
-    "longitude": 106.673071,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425122+00:00"
-  },
-  {
-    "point_id": "1a96c83f-9ecd-4054-9205-8a3db621cefb",
-    "title": "TEAM point 199",
-    "description": "Auto-generated point #199 for TEAM",
-    "object_type": "TEAM",
-    "object_id": 11,
-    "latitude": 10.858872,
-    "longitude": 106.775915,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "team"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425132+00:00"
-  },
-  {
-    "point_id": "36e98f25-afda-400a-bfaf-bc3479e89a60",
-    "title": "RESOURCE point 200",
-    "description": "Auto-generated point #200 for RESOURCE",
-    "object_type": "RESOURCE",
-    "object_id": 5,
-    "latitude": 10.811116,
-    "longitude": 106.836593,
-    "properties": {
-      "status": "ASSIGNED",
-      "icon": "resource"
-    },
-    "is_public": true,
-    "source": "auto-generator",
-    "created_at": "2025-12-18T08:31:53.425140+00:00"
+    "created_at": "2025-12-20T10:39:21.128582+00:00"
   }
 ]
