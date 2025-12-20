@@ -14,10 +14,9 @@
             <div class="dashboard__header-actions">
                 <button class="dashboard__export-btn" onclick="location.reload()">🔄 Làm mới dữ liệu</button>
                 <select class="dashboard__period-select">
-                    <option>24 Giờ qua</option>
-                    <option>7 Ngày qua</option>
-                    <option>30 Ngày qua</option>
-                    <option>Tùy chọn...</option>
+                    <option value="day">Ngày</option>
+                    <option value="month" selected>Tháng</option>
+                    <option value="year">Năm</option>
                 </select>
             </div>
         </div>
@@ -36,8 +35,8 @@
                 <div class="kpi-card__icon">🆘</div>
                 <div class="kpi-card__content">
                     <span class="kpi-card__label">Đang Chờ Xử Lý</span>
-                    <span id="kpi-active" class="kpi-card__value">...</span>
-                    <span id="trend-active" class="kpi-card__trend kpi-card__trend--neutral">Đang tải...</span>
+                    <span id="kpi-pending" class="kpi-card__value">...</span>
+                    <span id="trend-pending" class="kpi-card__trend kpi-card__trend--neutral">Đang tải...</span>
                 </div>
             </div>
 

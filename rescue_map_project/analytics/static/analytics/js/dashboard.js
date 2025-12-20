@@ -1,45 +1,63 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("Dashboard loaded. Fetching Mock APIs...");
+    console.log("Dashboard loaded.");
     
-    fetchSummary();
+    const periodSelect = document.getElementById('dashboard__period-select');
+    if (periodSelect) {
+        periodSelect.addEventListener('change', function() {
+            fetchSummary(this.value);
+        });
+        
+        fetchSummary(periodSelect.value);
+    } else {
+        // Fallback if no select element found
+        fetchSummary('month');
+    }
     fetchTimeline();
     fetchDistributions();
     fetchResources();
-    fetchDistrictStats();  // Mới
-    fetchResponseTime();   // Mới
+    fetchDistrictStats();
+    fetchResponseTime();
 });
 
 const DATA_PATH = '/static/analytics/data/';
-
+const API_BASE = '/analytics/api/';
 // --- 1. API Summary (KPIs) ---
-function fetchSummary() {
-    fetch(DATA_PATH + 'api_summary.json')
+function fetchSummary(period = 'month') {
+    fetch(`${API_BASE}summary/?period=${period}`)
         .then(res => res.json())
         .then(data => {
+            // Update data
             updateKPI('kpi-total', data.total_requests);
-            updateKPI('kpi-active', data.active_requests);
+            updateKPI('kpi-pending', data.pending_requests);
             updateKPI('kpi-processing', data.processing_requests);
-            updateKPI('kpi-resolved', data.resolved_today);
+            updateKPI('kpi-resolved', data.resolved_requests);
 
-            updateTrend('trend-total', data.trends.total);
-            updateTrend('trend-active', data.trends.active);
-            updateTrend('trend-processing', data.trends.processing);
-            updateTrend('trend-resolved', data.trends.resolved);
-        });
+            // Update trends
+            updateTrend('trend-total', data.trends.total, period);
+            updateTrend('trend-pending', data.trends.pending, period);
+            updateTrend('trend-processing', data.trends.processing, period);
+            updateTrend('trend-resolved', data.trends.resolved, period);
+        })
+        .catch(err => console.error("Error fetching summary:", err));
 }
 
 function updateKPI(id, value) {
     document.getElementById(id).textContent = value.toLocaleString('vi-VN');
 }
 
-function updateTrend(elementId, value) {
+function updateTrend(elementId, value, period) {
     const el = document.getElementById(elementId);
     const icon = value > 0 ? '↑' : (value < 0 ? '↓' : '→');
     const colorClass = value > 0 ? 'kpi-card__trend--up' : (value < 0 ? 'kpi-card__trend--down' : 'kpi-card__trend--neutral');
     
+    let periodText = "kỳ trước";
+    if(period === 'day') periodText = "hôm qua";
+    if(period === 'month') periodText = "tháng trước";
+    if(period === 'year') periodText = "năm ngoái";
+    
     // Xóa class cũ và thêm class mới
     el.className = `kpi-card__trend ${colorClass}`;
-    el.textContent = `${icon} ${Math.abs(value)}% so với hôm qua`;
+    el.textContent = `${icon} ${Math.abs(value)}% so với ${periodText}`;
 }
 
 // --- 2. API Timeline ---
