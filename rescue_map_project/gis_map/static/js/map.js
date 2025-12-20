@@ -633,18 +633,22 @@
       if (timeFilterCustomInputEnd) {
         timeFilterCustomInputEnd.value = "";
       }
+
       // Clear search input
       if (searchBoxInput) {
         searchBoxInput.value = "";
       }
+
       // Uncheck all status checkboxes
       statusCheckboxes.forEach((checkbox) => {
         checkbox.checked = false;
       });
+
       // Uncheck all priority checkboxes
       priorityCheckboxes.forEach((checkbox) => {
         checkbox.checked = false;
       });
+
       // Set time range to "24 giờ"
       if (timeFilterTimeRange24) {
         timeFilterTimeRange24.checked = true;
