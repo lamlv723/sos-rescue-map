@@ -8,11 +8,13 @@ document.addEventListener('DOMContentLoaded', function() {
             fetchSummary(period);
             fetchTimeline(period);
             fetchDistributions(period);
+            fetchDispatchTime(period);
         });
         
         fetchSummary(periodSelect.value);
         fetchTimeline(periodSelect.value);
         fetchDistributions(periodSelect.value);
+        fetchDispatchTime(periodSelect.value);
     } else {
         // Fallback if no select element found
         fetchSummary('month');
@@ -20,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     fetchResources();
     fetchDistrictStats();
-    fetchResponseTime();
 });
 
 const DATA_PATH = '/static/analytics/data/';
@@ -123,8 +124,6 @@ function fetchTimeline(period) {
 let statusChartInstance = null;
 let priorityChartInstance = null;
 function fetchDistributions(period) {
-    if(!period) period = 'month'; // Default
-
     fetch(`${API_BASE}distribution/?period=${period}`)
         .then(res => {
             if (!res.ok) throw new Error("Network response was not ok");
@@ -133,6 +132,8 @@ function fetchDistributions(period) {
         .then(data => {
             updateStatusChart(data.status);
             updatePriorityChart(data.priority);
+            console.log("Status data:", data.status);
+            console.log("Priority data:", data.priority);
         })
         .catch(err => console.error("Lỗi tải distributions:", err));
 }
@@ -185,7 +186,7 @@ function updatePriorityChart(data) {
         options: {
             responsive: true,
             maintainAspectRatio: false,
-            indexAxis: 'y', // Biểu đồ ngang
+            indexAxis: 'y', // horizontal bar
             plugins: {
                 legend: { display: false }
             },
@@ -237,7 +238,7 @@ function fetchResources() {
         });
 }
 
-// --- 5. API District Stats (New) ---
+// --- API District Stats ---
 function fetchDistrictStats() {
     fetch(DATA_PATH + 'api_districts.json')
         .then(res => res.json())
@@ -264,40 +265,59 @@ function fetchDistrictStats() {
         });
 }
 
-// --- 6. API Response Time (New) ---
-function fetchResponseTime() {
-    fetch(DATA_PATH + 'api_response_time.json')
+// --- API Dispatch Time ---
+let dispatchChartInstance = null;
+function fetchDispatchTime(period) {
+    fetch(`${API_BASE}dispatch-time/?period=${period}`)
         .then(res => res.json())
         .then(data => {
-            // Hiển thị con số trung bình
-            document.getElementById('avg-response-val').textContent = data.average;
+            // update big number
+            const avgEl = document.getElementById('avg-response-val');
+            if(avgEl) avgEl.textContent = data.average;
 
+            // Draw chart
             const ctx = document.getElementById('responseTimeChart').getContext('2d');
-            new Chart(ctx, {
+            
+            if (dispatchChartInstance) {
+                dispatchChartInstance.destroy();
+            }
+
+            dispatchChartInstance = new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: data.labels,
                     datasets: [{
-                        label: 'Phút',
+                        label: 'Thời gian điều phối (Phút)',
                         data: data.values,
-                        borderColor: '#198754', // Màu xanh lá
+                        borderColor: '#198754',
                         backgroundColor: 'rgba(25, 135, 84, 0.1)',
+                        borderWidth: 2,
                         fill: true,
-                        tension: 0.4,
-                        pointRadius: 4
+                        tension: 0.4, // curve
+                        pointRadius: 3
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.parsed.y + ' phút';
+                                }
+                            }
+                        }
+                    },
                     scales: { 
                         y: { 
                             beginAtZero: true,
-                            suggestedMax: 40 
+                            title: { display: true, text: 'Phút' }
                         } 
                     }
                 }
             });
-        });
+        })
+        .catch(err => console.error("Lỗi tải response time:", err));
 }
