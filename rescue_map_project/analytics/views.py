@@ -122,3 +122,63 @@ class TimelineChartDataView(APIView):
             "values": values,
             "label_text": label_text
         }, status=status.HTTP_200_OK)
+    
+# --- API DISTRIBUTION ---
+class DistributionChartDataView(APIView):
+    """
+    API for "Trạng thái xử lý" & "Mức độ ưu tiên" chart
+    """
+    def get(self, request):
+        period = request.GET.get('period', 'month')
+        now = timezone.now()
+        data_query = SOSRequest.objects.all()
+
+        # Filter time range
+        if period == 'day':
+            start_date = now.replace(hour=0, minute=0, second=0, microsecond=0)
+            data_query = data_query.filter(created_at__gte=start_date)
+        elif period == 'year':
+            start_date = now.replace(month=1, day=1, hour=0, minute=0, second=0, microsecond=0)
+            data_query = data_query.filter(created_at__gte=start_date)
+        else: # month
+            start_date = now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
+            data_query = data_query.filter(created_at__gte=start_date)
+
+        # --- STATUS DISTRIBUTION ---
+        status_counts = data_query.values('status').annotate(count=Count('request_id'))
+        status_map = {item['status']: item['count'] for item in status_counts}
+
+        # Config for consistent ordering and colors
+        status_config = [
+            {'key': 'PENDING', 'label': 'Mới', 'color': '#ea292c'},
+            {'key': 'ASSIGNED', 'label': 'Đang xử lý', 'color': '#ff7800'},
+            {'key': 'RESOLVED', 'label': 'Hoàn thành', 'color': '#378e5b'},
+            {'key': 'CANCELLED', 'label': 'Đã hủy', 'color': '#292731'}
+        ]
+
+        status_data = {
+            "labels": [item['label'] for item in status_config],
+            "values": [status_map.get(item['key'], 0) for item in status_config],
+            "colors": [item['color'] for item in status_config]
+        }
+
+        # --- B. PRIORITY DISTRIBUTION ---
+        priority_counts = data_query.values('priority').annotate(count=Count('request_id'))
+        priority_map = {item['priority']: item['count'] for item in priority_counts}
+
+        priority_config = [
+            {'key': 'HIGH', 'label': 'Cao', 'color': '#fe1e25'},
+            {'key': 'MEDIUM', 'label': 'Trung bình', 'color': '#fead30'},
+            {'key': 'LOW', 'label': 'Thấp', 'color': '#67c75c'}
+        ]
+
+        priority_data = {
+            "labels": [item['label'] for item in priority_config],
+            "values": [priority_map.get(item['key'], 0) for item in priority_config],
+            "colors": [item['color'] for item in priority_config]
+        }
+
+        return Response({
+            "status": status_data,
+            "priority": priority_data
+        }, status=status.HTTP_200_OK)

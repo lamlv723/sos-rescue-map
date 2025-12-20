@@ -7,15 +7,17 @@ document.addEventListener('DOMContentLoaded', function() {
             const period = this.value;
             fetchSummary(period);
             fetchTimeline(period);
+            fetchDistributions(period);
         });
         
         fetchSummary(periodSelect.value);
         fetchTimeline(periodSelect.value);
+        fetchDistributions(periodSelect.value);
     } else {
         // Fallback if no select element found
         fetchSummary('month');
     }
-    fetchDistributions();
+    
     fetchResources();
     fetchDistrictStats();
     fetchResponseTime();
@@ -23,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const DATA_PATH = '/static/analytics/data/';
 const API_BASE = '/analytics/api/';
-// --- 1. API Summary (KPIs) ---
+// --- API Summary (KPIs) ---
 function fetchSummary(period = 'month') {
     fetch(`${API_BASE}summary/?period=${period}`)
         .then(res => res.json())
@@ -64,8 +66,8 @@ function updateTrend(elementId, value, period) {
     el.textContent = `${icon} ${Math.abs(value)}% so với ${periodText}`;
 }
 
+// --- TIMELINE CHARTS  ---
 let timelineChartInstance = null;
-// --- TIMELINE CHART  ---
 function fetchTimeline(period) {
     // Call api to get timeline data 
     fetch(`${API_BASE}timeline/?period=${period}`)
@@ -117,55 +119,81 @@ function fetchTimeline(period) {
         .catch(err => console.error("Lỗi tải timeline:", err));
 }
 
-// --- 3. API Distributions (Status & Priority) ---
-function fetchDistributions() {
-    fetch(DATA_PATH + 'api_distributions.json')
-        .then(res => res.json())
-        .then(data => {
-            // Status Chart
-            // Việt hóa labels nếu cần thiết ngay tại đây hoặc trong JSON
-            const statusLabelsVi = ["Mới", "Đang xử lý", "Hoàn thành"]; 
-            
-            const statusCtx = document.getElementById('statusChart').getContext('2d');
-            new Chart(statusCtx, {
-                type: 'doughnut',
-                data: {
-                    labels: statusLabelsVi, 
-                    datasets: [{
-                        data: data.status.values,
-                        backgroundColor: data.status.colors,
-                        borderWidth: 0,
-                        hoverOffset: 4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: { legend: { position: 'bottom' } }
-                }
-            });
+// --- API Distributions (Status & Priority) ---
+let statusChartInstance = null;
+let priorityChartInstance = null;
+function fetchDistributions(period) {
+    if(!period) period = 'month'; // Default
 
-            // Priority Chart
-            const priorityCtx = document.getElementById('priorityChart').getContext('2d');
-            new Chart(priorityCtx, {
-                type: 'bar',
-                data: {
-                    labels: ["Khẩn cấp", "Cao", "Trung bình", "Thường"], // Việt hóa
-                    datasets: [{
-                        label: 'Số lượng',
-                        data: data.priority.values,
-                        backgroundColor: data.priority.colors,
-                        borderRadius: 4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    indexAxis: 'y',
-                    plugins: { legend: { display: false } }
-                }
-            });
-        });
+    fetch(`${API_BASE}distribution/?period=${period}`)
+        .then(res => {
+            if (!res.ok) throw new Error("Network response was not ok");
+            return res.json();
+        })
+        .then(data => {
+            updateStatusChart(data.status);
+            updatePriorityChart(data.priority);
+        })
+        .catch(err => console.error("Lỗi tải distributions:", err));
+}
+
+function updateStatusChart(data) {
+    const ctx = document.getElementById('statusChart').getContext('2d');
+    
+    if (statusChartInstance) {
+        statusChartInstance.destroy();
+    }
+
+    statusChartInstance = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: data.labels,
+            datasets: [{
+                data: data.values,
+                backgroundColor: data.colors,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'bottom' }
+            }
+        }
+    });
+}
+
+function updatePriorityChart(data) {
+    const ctx = document.getElementById('priorityChart').getContext('2d');
+
+    if (priorityChartInstance) {
+        priorityChartInstance.destroy();
+    }
+
+    priorityChartInstance = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: data.labels,
+            datasets: [{
+                label: 'Số lượng',
+                data: data.values,
+                backgroundColor: data.colors,
+                borderRadius: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y', // Biểu đồ ngang
+            plugins: {
+                legend: { display: false }
+            },
+            scales: {
+                x: { beginAtZero: true, ticks: { precision: 0 } }
+            }
+        }
+    });
 }
 
 // --- 4. API Resources ---
