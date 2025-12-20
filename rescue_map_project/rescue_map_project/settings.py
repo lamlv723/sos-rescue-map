@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+# For macOS config
+import platform
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -82,13 +84,16 @@ WSGI_APPLICATION = 'rescue_map_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+DB_PASSWORD = '123456'
+if platform.system() == 'Darwin': # macOS
+    DB_PASSWORD = ''
 
 DATABASES = {
     "default": {
         "ENGINE": "django.contrib.gis.db.backends.postgis",
         "NAME": "sos_rescue_map",
         "USER": "postgres",
-        "PASSWORD": "123456",
+        "PASSWORD": DB_PASSWORD,
         "HOST": "localhost",
         "PORT": "5432",
     }
@@ -140,21 +145,21 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'core.User'
 
 import os
+if platform.system() == 'Windows':
+    GDAL_LIBRARY_PATH = os.path.join(
+        BASE_DIR,
+        "venv",
+        "Lib",
+        "site-packages",
+        "osgeo",
+        "gdal.dll"
+    )
 
-GDAL_LIBRARY_PATH = os.path.join(
-    BASE_DIR,
-    "venv",
-    "Lib",
-    "site-packages",
-    "osgeo",
-    "gdal.dll"
-)
-
-GEOS_LIBRARY_PATH = os.path.join(
-    BASE_DIR,
-    "venv",
-    "Lib",
-    "site-packages",
-    "osgeo",
-    "geos_c.dll"
-)
+    GEOS_LIBRARY_PATH = os.path.join(
+        BASE_DIR,
+        "venv",
+        "Lib",
+        "site-packages",
+        "osgeo",
+        "geos_c.dll"
+    )
