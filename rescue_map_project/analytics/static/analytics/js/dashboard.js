@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log("Dashboard loaded.");
     
-    const periodSelect = document.getElementById('dashboard__period-select');
+    const periodSelect = document.getElementsByClassName('dashboard__period-select')[0];
+    console.log(periodSelect);
     if (periodSelect) {
         periodSelect.addEventListener('change', function() {
             fetchSummary(this.value);
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Fallback if no select element found
         fetchSummary('month');
     }
+    console.log(periodSelect);
     fetchTimeline();
     fetchDistributions();
     fetchResources();
