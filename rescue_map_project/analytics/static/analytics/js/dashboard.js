@@ -2,19 +2,19 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log("Dashboard loaded.");
     
     const periodSelect = document.getElementsByClassName('dashboard__period-select')[0];
-    console.log(periodSelect);
     if (periodSelect) {
         periodSelect.addEventListener('change', function() {
-            fetchSummary(this.value);
+            const period = this.value;
+            fetchSummary(period);
+            fetchTimeline(period);
         });
         
         fetchSummary(periodSelect.value);
+        fetchTimeline(periodSelect.value);
     } else {
         // Fallback if no select element found
         fetchSummary('month');
     }
-    console.log(periodSelect);
-    fetchTimeline();
     fetchDistributions();
     fetchResources();
     fetchDistrictStats();
@@ -62,33 +62,56 @@ function updateTrend(elementId, value, period) {
     el.textContent = `${icon} ${Math.abs(value)}% so với ${periodText}`;
 }
 
-// --- 2. API Timeline ---
-function fetchTimeline() {
-    fetch(DATA_PATH + 'api_timeline.json')
-        .then(res => res.json())
+let timelineChartInstance = null;
+// --- TIMELINE CHART  ---
+function fetchTimeline(period) {
+    // Call api to get timeline data 
+    fetch(`${API_BASE}timeline/?period=${period}`)
+        .then(res => {
+            if (!res.ok) throw new Error("Network response was not ok");
+            return res.json();
+        })
         .then(data => {
             const ctx = document.getElementById('timelineChart').getContext('2d');
-            new Chart(ctx, {
+
+            // Destroy old chart instance if exists
+            if (timelineChartInstance) {
+                timelineChartInstance.destroy();
+            }
+
+            // draw new chart
+            timelineChartInstance = new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: data.labels,
                     datasets: [{
-                        label: 'Số yêu cầu mới',
+                        label: data.label_text,
                         data: data.values,
                         borderColor: '#0d6efd',
                         backgroundColor: 'rgba(13, 110, 253, 0.1)',
                         fill: true,
-                        tension: 0.4
+                        tension: 0.3,
+                        pointRadius: 4,
+                        pointHoverRadius: 6
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: { legend: { display: false } },
-                    scales: { y: { beginAtZero: true } }
+                    plugins: {
+                        legend: { display: false, position: 'top' },
+                        tooltip: { mode: 'index', intersect: false }
+                    },
+                    scales: {
+                        y: { 
+                            beginAtZero: true,
+                            ticks: { precision: 0 } // show integer only
+                        }
+                    }
                 }
             });
-        });
+        })
+        .catch(err => console.error("Lỗi tải timeline:", err));
 }
 
 // --- 3. API Distributions (Status & Priority) ---
