@@ -13,8 +13,9 @@
    */
   class GISDataService {
     constructor(config = {}) {
-      this.apiEndpoint = config.apiEndpoint || "/api/v1/sos-requests/";
-      this.useMockData = config.useMockData !== false; // Default to true if not specified
+      this.apiEndpoint =
+        config.apiEndpoint || "http://127.0.0.1:8000/api/v1/sos";
+      this.useMockData = config.useMockData === true; // Default to false (use API) if not specified
       this.mockData = config.mockData || this.getDefaultMockData();
     }
 
@@ -63,6 +64,25 @@
       };
     }
 
+    transformToFeatures(data) {
+      return data.map((item) => ({
+        type: "Feature",
+        geometry: {
+          type: "Point",
+          coordinates: [item.longitude, item.latitude],
+        },
+        properties: {
+          id: item.request_id,
+          address: item.address,
+          contact_name: item.contact_name,
+          phone: item.contact_phone,
+          priority: item.priority,
+          status: item.status,
+          created_at: item.created_at,
+        },
+      }));
+    }
+
     /**
      * Fetch data from API
      * @param {Object} params - Query parameters
@@ -99,7 +119,7 @@
         if (Array.isArray(data)) {
           return {
             type: "FeatureCollection",
-            features: data,
+            features: this.transformToFeatures(data),
           };
         }
 

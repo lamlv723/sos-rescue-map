@@ -51,31 +51,37 @@
       return {
         type: "unique-value",
         field: "status",
-        defaultSymbol: {
-          type: "simple-marker",
-          color: "gray",
-          size: 10,
-        },
+        title: "Tình trạng cứu hộ",
         uniqueValueInfos: [
           {
-            value: "Open",
+            value: "PENDING",
             symbol: {
               type: "simple-marker",
-              color: "#F32013",
+              color: "#e74c3c",
               size: 16,
               outline: { color: "white", width: 1 },
             },
-            label: "Cần cứu trợ (Open)",
+            label: "Chưa hỗ trợ",
           },
           {
-            value: "Closed",
+            value: "ASSIGNED",
             symbol: {
               type: "simple-marker",
-              color: "#4BB543",
+              color: "#f39c12",
               size: 16,
               outline: { color: "white", width: 1 },
             },
-            label: "Đã hỗ trợ (Closed)",
+            label: "Đang hỗ trợ",
+          },
+          {
+            value: "RESOLVED",
+            symbol: {
+              type: "simple-marker",
+              color: "#27ae60",
+              size: 16,
+              outline: { color: "white", width: 1 },
+            },
+            label: "Đã hỗ trợ",
           },
         ],
       };
@@ -178,7 +184,7 @@
      * @param {Object} Expand - Expand module
      */
     initAll(layer, TimeSlider, Legend, Expand) {
-      this.initTimeSlider(layer, TimeSlider);
+      // this.initTimeSlider(layer, TimeSlider);
       this.initLegend(Legend, Expand);
       this.view.ui.move("zoom", "bottom-right");
     }
@@ -275,7 +281,6 @@
       searchTypeRadios.forEach((radio) => {
         radio.addEventListener("change", () => {
           searchBoxInput.value = "";
-          console.log(radio.value);
           if (radio.value === "areas") {
             searchBoxInput.placeholder = "Tìm theo khu vực, phường/quận…";
             searchFiltersAreas.style.display = "block";
@@ -320,6 +325,63 @@
       timeFilterCustomInputEnd.max = maxDateTime;
     }
 
+    initSidebarFilters(data) {
+      this.data = data;
+      const groupByProperty = {
+        status: {
+          PENDING: 0,
+          ASSIGNED: 0,
+          RESOLVED: 0,
+        },
+        priority: {
+          LOW: 0,
+          MEDIUM: 0,
+          HIGH: 0,
+        },
+      };
+
+      this.data.features.forEach((feature) => {
+        groupByProperty.status[feature.properties.status]++;
+        groupByProperty.priority[feature.properties.priority]++;
+      });
+
+      const elementCountCritical = document.getElementById(
+        "filter-group__count-critical"
+      );
+      const elementCountHigh = document.getElementById(
+        "filter-group__count-high"
+      );
+      const elementCountMedium = document.getElementById(
+        "filter-group__count-medium"
+      );
+      const elementCountAssigned = document.getElementById(
+        "filter-group__count-assigned"
+      );
+      const elementCountResolved = document.getElementById(
+        "filter-group__count-resolved"
+      );
+      const elementCountPending = document.getElementById(
+        "filter-group__count-pending"
+      );
+
+      elementCountCritical.textContent = `(${
+        groupByProperty.priority.CRITICAL ?? 0
+      })`;
+      elementCountHigh.textContent = `(${groupByProperty.priority.HIGH ?? 0})`;
+      elementCountMedium.textContent = `(${
+        groupByProperty.priority.MEDIUM ?? 0
+      })`;
+      elementCountAssigned.textContent = `(${
+        groupByProperty.status.ASSIGNED ?? 0
+      })`;
+      elementCountResolved.textContent = `(${
+        groupByProperty.status.RESOLVED ?? 0
+      })`;
+      elementCountPending.textContent = `(${
+        groupByProperty.status.PENDING ?? 0
+      })`;
+    }
+
     initClearAllTimeFilter() {
       const btnClearAllTimeFilter = document.getElementById(
         "btn-clear-all-time-filter"
@@ -332,9 +394,15 @@
       }
 
       // Set up event listeners for all filter inputs to update button visibility
-      const timeRangeRadios = document.querySelectorAll('input[name="time_range"]');
-      const statusCheckboxes = document.querySelectorAll('input[name="status"]');
-      const priorityCheckboxes = document.querySelectorAll('input[name="priority"]');
+      const timeRangeRadios = document.querySelectorAll(
+        'input[name="time_range"]'
+      );
+      const statusCheckboxes = document.querySelectorAll(
+        'input[name="status"]'
+      );
+      const priorityCheckboxes = document.querySelectorAll(
+        'input[name="priority"]'
+      );
       const searchBoxInput = document.getElementById("search-box-input");
       const timeFilterCustomInputStart = document.getElementById(
         "time-filter__custom-input-start"
@@ -467,10 +535,16 @@
       const timeFilterCustomInputEnd = document.getElementById(
         "time-filter__custom-input-end"
       );
-      const timeRangeRadios = document.querySelectorAll('input[name="time_range"]');
+      const timeRangeRadios = document.querySelectorAll(
+        'input[name="time_range"]'
+      );
       const searchBoxInput = document.getElementById("search-box-input");
-      const statusCheckboxes = document.querySelectorAll('input[name="status"]');
-      const priorityCheckboxes = document.querySelectorAll('input[name="priority"]');
+      const statusCheckboxes = document.querySelectorAll(
+        'input[name="status"]'
+      );
+      const priorityCheckboxes = document.querySelectorAll(
+        'input[name="priority"]'
+      );
 
       // Check if custom time inputs have values
       if (timeFilterCustomInputStart && timeFilterCustomInputStart.value) {
@@ -541,10 +615,16 @@
       const timeFilterCustomInputEnd = document.getElementById(
         "time-filter__custom-input-end"
       );
-      const timeFilterTimeRange24 = document.querySelector('input[name="time_range"][value="24"]');
+      const timeFilterTimeRange24 = document.querySelector(
+        'input[name="time_range"][value="24"]'
+      );
       const searchBoxInput = document.getElementById("search-box-input");
-      const statusCheckboxes = document.querySelectorAll('input[name="status"]');
-      const priorityCheckboxes = document.querySelectorAll('input[name="priority"]');
+      const statusCheckboxes = document.querySelectorAll(
+        'input[name="status"]'
+      );
+      const priorityCheckboxes = document.querySelectorAll(
+        'input[name="priority"]'
+      );
 
       // Clear custom time inputs
       if (timeFilterCustomInputStart) {
@@ -553,22 +633,22 @@
       if (timeFilterCustomInputEnd) {
         timeFilterCustomInputEnd.value = "";
       }
-      
+
       // Clear search input
       if (searchBoxInput) {
         searchBoxInput.value = "";
       }
-      
+
       // Uncheck all status checkboxes
       statusCheckboxes.forEach((checkbox) => {
         checkbox.checked = false;
       });
-      
+
       // Uncheck all priority checkboxes
       priorityCheckboxes.forEach((checkbox) => {
         checkbox.checked = false;
       });
-      
+
       // Set time range to "24 giờ"
       if (timeFilterTimeRange24) {
         timeFilterTimeRange24.checked = true;
@@ -581,11 +661,12 @@
     /**
      * Initialize all controls
      */
-    initAll() {
+    initAll(data = null) {
       this.initBasemapSwitcher();
       this.initControlButtons();
       this.initSearchBox();
       this.initTimeFilter();
+      this.initSidebarFilters(data);
       this.initClearAllTimeFilter();
     }
   }
@@ -604,6 +685,7 @@
       this.widgets = null;
       this.controls = null;
       this.blobURL = null;
+      this.data = null;
     }
 
     /**
@@ -633,14 +715,15 @@
       const { Map, MapView, GeoJSONLayer } = modules;
 
       // Get data
-      const geoJsonData = await this.dataService.getData();
+      this.data = await this.dataService.getData();
 
       // Create blob URL for GeoJSONLayer
-      this.blobURL = this.dataService.createBlobURL(geoJsonData);
+      this.blobURL = this.dataService.createBlobURL(this.data);
 
       // Create layer
       this.layer = new GeoJSONLayer({
         url: this.blobURL,
+        title: "Tình trạng cứu hộ",
         copyright: "HCMC Rescue Data",
         popupTemplate: MapRenderer.getPopupTemplate(),
         renderer: MapRenderer.getRenderer(),
@@ -680,7 +763,7 @@
       // Initialize controls
       this.controls = new MapControls(this.view, this.config);
       this.controls.setMap(this.map);
-      this.controls.initAll();
+      this.controls.initAll(this.data);
 
       // Wait for view to load
       await this.view.when();
@@ -797,7 +880,10 @@
   function initializeMap() {
     const mapContainer = document.getElementById("mapView");
     if (mapContainer && window.RescueMap && window.GISDataService) {
-      const map = new RescueMap();
+      const map = new RescueMap({
+        apiEndpoint: "http://127.0.0.1:8000/api/sos",
+        useMockData: false,
+      });
       map.init().catch((error) => {
         console.error("Failed to initialize map:", error);
       });

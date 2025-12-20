@@ -63,21 +63,21 @@
                         <label class="filter-group__item filter-group__item--highlight">
                             <span class="filter-group__item-content">
                                 <span class="filter-group__badge filter-group__badge--critical">Nghiêm trọng</span>
-                                <span class="filter-group__count">(45)</span>
+                                <span class="filter-group__count" id="filter-group__count-critical">&nbsp;</span>
                             </span>
                             <input type="checkbox" class="filter-group__checkbox" name="priority" value="critical" />
                         </label>
                         <label class="filter-group__item">
                             <span class="filter-group__item-content">
                                 <span class="filter-group__badge filter-group__badge--high">Khẩn cấp</span>
-                                <span class="filter-group__count">(89)</span>
+                                <span class="filter-group__count" id="filter-group__count-high">&nbsp;</span>
                             </span>
                             <input type="checkbox" class="filter-group__checkbox" name="priority" value="high" />
                         </label>
                         <label class="filter-group__item">
                             <span class="filter-group__item-content">
                                 <span class="filter-group__badge filter-group__badge--medium">Cần hỗ trợ</span>
-                                <span class="filter-group__count">(76)</span>
+                                <span class="filter-group__count" id="filter-group__count-medium">&nbsp;</span>
                             </span>
                             <input type="checkbox" class="filter-group__checkbox" name="priority" value="medium" />
                         </label>
@@ -88,19 +88,26 @@
                 <div class="sidebar__section">
                     <h3 class="sidebar__section-title">Tình trạng</h3>
                     <div class="filter-group">
-                        <label class="filter-group__item" for="status-open">
+                        <label class="filter-group__item" for="status-pending">
                             <span class="filter-group__item-content">
-                                <span class="filter-group__badge filter-group__badge--open">Chưa hỗ trợ</span>
-                                <span class="filter-group__count">(142)</span>
+                                <span class="filter-group__badge filter-group__badge--pending">Chưa hỗ trợ</span>
+                                <span class="filter-group__count" id="filter-group__count-pending">&nbsp;</span>
                             </span>
-                            <input type="checkbox" class="filter-group__checkbox" id="status-open" name="status" value="open" />
+                            <input type="checkbox" class="filter-group__checkbox" id="status-pending" name="status" value="open" />
                         </label>
-                        <label class="filter-group__item" for="status-closed">
+                        <label class="filter-group__item" for="status-assigned">
                             <span class="filter-group__item-content">
-                                <span class="filter-group__badge filter-group__badge--closed">Đã hỗ trợ</span>
-                                <span class="filter-group__count">(234)</span>
+                                <span class="filter-group__badge filter-group__badge--assigned">Đang hỗ trợ</span>
+                                <span class="filter-group__count" id="filter-group__count-assigned">&nbsp;</span>
                             </span>
-                            <input type="checkbox" class="filter-group__checkbox" id="status-closed" name="status" value="closed" />
+                            <input type="checkbox" class="filter-group__checkbox" id="status-assigned" name="status" value="open" />
+                        </label>
+                        <label class="filter-group__item" for="status-resolved">
+                            <span class="filter-group__item-content">
+                                <span class="filter-group__badge filter-group__badge--resolved">Đã hỗ trợ</span>
+                                <span class="filter-group__count" id="filter-group__count-resolved">&nbsp;</span>
+                            </span>
+                            <input type="checkbox" class="filter-group__checkbox" id="status-resolved" name="status" value="closed" />
                         </label>
                     </div>
                 </div>

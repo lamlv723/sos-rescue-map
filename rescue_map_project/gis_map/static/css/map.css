@@ -261,15 +261,15 @@
   color: var(--color-white);
 }
 
-.filter-group__badge--open {
+.filter-group__badge--pending {
   background-color: var(--color-open);
 }
 
-.filter-group__badge--processing {
+.filter-group__badge--assigned {
   background-color: var(--color-processing);
 }
 
-.filter-group__badge--closed {
+.filter-group__badge--resolved {
   background-color: var(--color-closed);
 }
 
@@ -624,11 +624,11 @@
   color: var(--color-info);
 }
 
-.stats-bar__value--open {
+.stats-bar__value--pending {
   color: var(--color-open);
 }
 
-.stats-bar__value--processing {
+.stats-bar__value--assigned {
   color: var(--color-processing);
 }
 
@@ -644,6 +644,11 @@
 
 .esri-view-surface::after {
   display: none;
+}
+
+/* Hide legend layer child elements that show feature counts */
+.esri-legend__layer-table--size-ramp:not(:first-of-type) {
+  display: none !important;
 }
 
 /* ========================================

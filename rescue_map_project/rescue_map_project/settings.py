@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +41,9 @@ INSTALLED_APPS = [
 
     "django.contrib.gis",           # BẮT BUỘC (GIS)
 
+    # --- Third-party apps ---
+    'corsheaders',
+
     # --- My apps ---
     'core',
     'gis_map',
@@ -52,6 +56,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -83,16 +88,33 @@ WSGI_APPLICATION = 'rescue_map_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "NAME": "sos_rescue_map",
-        "USER": "postgres",
-        "PASSWORD": "123456",
-        "HOST": "localhost",
-        "PORT": "5432",
+# Use environment variables for database configuration, fallback to SQLite for Docker
+DB_ENGINE = os.environ.get("DB_ENGINE", "django.contrib.gis.db.backends.spatialite")
+DB_NAME = os.environ.get("DB_NAME", os.path.join(BASE_DIR, "db.sqlite3"))
+DB_USER = os.environ.get("DB_USER", "")
+DB_PASSWORD = os.environ.get("DB_PASSWORD", "")
+DB_HOST = os.environ.get("DB_HOST", "")
+DB_PORT = os.environ.get("DB_PORT", "")
+
+if DB_ENGINE == "django.contrib.gis.db.backends.postgis":
+    DATABASES = {
+        "default": {
+            "ENGINE": DB_ENGINE,
+            "NAME": DB_NAME,
+            "USER": DB_USER,
+            "PASSWORD": DB_PASSWORD,
+            "HOST": DB_HOST,
+            "PORT": DB_PORT,
+        }
     }
-}
+else:
+    # Use Spatialite for SQLite with GIS support
+    DATABASES = {
+        "default": {
+            "ENGINE": DB_ENGINE,
+            "NAME": DB_NAME,
+        }
+    }
 
 
 
@@ -131,6 +153,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -139,22 +162,36 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'core.User'
 
-import os
+# GDAL/GEOS library paths - only set if explicitly provided via environment
+# Django will auto-detect these on Linux systems, so we only set them if needed
+if os.environ.get("GDAL_LIBRARY_PATH"):
+    GDAL_LIBRARY_PATH = os.environ.get("GDAL_LIBRARY_PATH")
 
-GDAL_LIBRARY_PATH = os.path.join(
-    BASE_DIR,
-    "venv",
-    "Lib",
-    "site-packages",
-    "osgeo",
-    "gdal.dll"
-)
+if os.environ.get("GEOS_LIBRARY_PATH"):
+    GEOS_LIBRARY_PATH = os.environ.get("GEOS_LIBRARY_PATH")
 
-GEOS_LIBRARY_PATH = os.path.join(
-    BASE_DIR,
-    "venv",
-    "Lib",
-    "site-packages",
-    "osgeo",
-    "geos_c.dll"
-)
+# CORS settings
+CORS_ALLOWED_ORIGINS = [
+    "http://127.0.0.1:8000",
+    "http://localhost:8000",
+]
+
+# Allow all origins in development (for testing)
+# In production, use CORS_ALLOWED_ORIGINS above instead
+CORS_ALLOW_ALL_ORIGINS = DEBUG
+
+# Allow credentials (cookies, authorization headers)
+CORS_ALLOW_CREDENTIALS = True
+
+# Allowed headers
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
