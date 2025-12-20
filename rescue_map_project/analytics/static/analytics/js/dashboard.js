@@ -39,6 +39,8 @@ function fetchSummary(period = 'month') {
             updateTrend('trend-pending', data.trends.pending, period);
             updateTrend('trend-processing', data.trends.processing, period);
             updateTrend('trend-resolved', data.trends.resolved, period);
+
+            console.log('KPI data:', data);
         })
         .catch(err => console.error("Error fetching summary:", err));
 }
@@ -110,6 +112,7 @@ function fetchTimeline(period) {
                     }
                 }
             });
+            console.log("Timeline data:", data);
         })
         .catch(err => console.error("Lỗi tải timeline:", err));
 }
