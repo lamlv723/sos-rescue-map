@@ -94,23 +94,32 @@ WSGI_APPLICATION = 'rescue_map_project.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 # Use environment variables for database configuration, fallback to SQLite for Docker
-DB_ENGINE = os.environ.get("DB_ENGINE", "django.contrib.gis.db.backends.postgis")
-DB_NAME = os.environ.get("DB_NAME", "sos_rescue_map")
-DB_USER = os.environ.get("DB_USER", "postgres")
-DB_PASSWORD = os.environ.get("DB_PASSWORD", "123456")
-DB_HOST = os.environ.get("DB_HOST", "localhost")
-DB_PORT = os.environ.get("DB_PORT", "5432")
+DB_ENGINE = os.environ.get("DB_ENGINE", "django.contrib.gis.db.backends.spatialite")
+DB_NAME = os.environ.get("DB_NAME", os.path.join(BASE_DIR, "db.sqlite3"))
+DB_USER = os.environ.get("DB_USER", "")
+DB_PASSWORD = os.environ.get("DB_PASSWORD", "")
+DB_HOST = os.environ.get("DB_HOST", "")
+DB_PORT = os.environ.get("DB_PORT", "")
 
-DATABASES = {
-    "default": {
-        "ENGINE": DB_ENGINE,
-        "NAME": DB_NAME,
-        "USER": DB_USER,
-        "PASSWORD": DB_PASSWORD,
-        "HOST": DB_HOST,
-        "PORT": DB_PORT,
+if DB_ENGINE == "django.contrib.gis.db.backends.postgis":
+    DATABASES = {
+        "default": {
+            "ENGINE": DB_ENGINE,
+            "NAME": DB_NAME,
+            "USER": DB_USER,
+            "PASSWORD": DB_PASSWORD,
+            "HOST": DB_HOST,
+            "PORT": DB_PORT,
+        }
     }
-}
+else:
+    # Use Spatialite for SQLite with GIS support
+    DATABASES = {
+        "default": {
+            "ENGINE": DB_ENGINE,
+            "NAME": DB_NAME,
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -160,27 +169,9 @@ AUTH_USER_MODEL = 'core.User'
 # Django will auto-detect these on Linux systems, so we only set them if needed
 if os.environ.get("GDAL_LIBRARY_PATH"):
     GDAL_LIBRARY_PATH = os.environ.get("GDAL_LIBRARY_PATH")
-else:
-    GDAL_LIBRARY_PATH = os.path.join(
-        BASE_DIR,
-        "venv",
-        "Lib",
-        "site-packages",
-        "osgeo",
-        "gdal.dll"
-    )
 
 if os.environ.get("GEOS_LIBRARY_PATH"):
     GEOS_LIBRARY_PATH = os.environ.get("GEOS_LIBRARY_PATH")
-else:
-    GEOS_LIBRARY_PATH = os.path.join(
-        BASE_DIR,
-        "venv",
-        "Lib",
-        "site-packages",
-        "osgeo",
-        "geos_c.dll"
-    )
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = [

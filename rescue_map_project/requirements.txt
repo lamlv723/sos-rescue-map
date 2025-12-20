@@ -26,3 +26,6 @@ requests-toolbelt==1.0.0
 rich==14.2.0
 sqlparse==0.5.4
 urllib3==2.6.2
+python-dotenv==1.2.1
+psycopg2-binary==2.9.11
+pytest==9.0.2
