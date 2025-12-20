@@ -163,3 +163,6 @@ if platform.system() == 'Windows':
         "osgeo",
         "geos_c.dll"
     )
+elif platform.system() == 'Darwin':  # macOS
+    GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
+    GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
