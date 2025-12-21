@@ -12,8 +12,10 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 # For macOS config
-import platform
+from dotenv import load_dotenv
 import os
+
+load_dotenv()  # Load environment variables from .env file if present
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -90,47 +92,25 @@ WSGI_APPLICATION = 'rescue_map_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-# DB_PASSWORD = '123456'
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.contrib.gis.db.backends.postgis",
-#         "NAME": "sos_rescue_map",
-#         "USER": "postgres",
-#         "PASSWORD": DB_PASSWORD,
-#         "HOST": "localhost",
-#         "PORT": "5432",
 # Use environment variables for database configuration, fallback to SQLite for Docker
-DB_ENGINE = os.environ.get("DB_ENGINE", "django.contrib.gis.db.backends.spatialite")
-DB_NAME = os.environ.get("DB_NAME", os.path.join(BASE_DIR, "db.sqlite3"))
-DB_USER = os.environ.get("DB_USER", "")
-DB_PASSWORD = os.environ.get("DB_PASSWORD", "")
-DB_HOST = os.environ.get("DB_HOST", "")
-DB_PORT = os.environ.get("DB_PORT", "")
+DB_ENGINE = os.environ.get("DB_ENGINE", "django.contrib.gis.db.backends.postgis")
+DB_NAME = os.environ.get("DB_NAME", "sos_rescue_map")
+DB_USER = os.environ.get("DB_USER", "postgres")
+DB_PASSWORD = os.environ.get("DB_PASSWORD", "123456")
+DB_HOST = os.environ.get("DB_HOST", "localhost")
+DB_PORT = os.environ.get("DB_PORT", "5432")
 
-if platform.system() == 'Darwin': # macOS
-    DB_PASSWORD = ''
-if DB_ENGINE == "django.contrib.gis.db.backends.postgis":
-    DATABASES = {
-        "default": {
-            "ENGINE": DB_ENGINE,
-            "NAME": DB_NAME,
-            "USER": DB_USER,
-            "PASSWORD": DB_PASSWORD,
-            "HOST": DB_HOST,
-            "PORT": DB_PORT,
-        }
+DATABASES = {
+    "default": {
+        "ENGINE": DB_ENGINE,
+        "NAME": DB_NAME,
+        "USER": DB_USER,
+        "PASSWORD": DB_PASSWORD,
+        "HOST": DB_HOST,
+        "PORT": DB_PORT,
     }
-else:
-    # Use Spatialite for SQLite with GIS support
-    DATABASES = {
-        "default": {
-            "ENGINE": DB_ENGINE,
-            "NAME": DB_NAME,
-        }
-    }
-
-
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -176,35 +156,31 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'core.User'
 
-# if platform.system() == 'Windows':
-#     GDAL_LIBRARY_PATH = os.path.join(
-#         BASE_DIR,
-#         "venv",
-#         "Lib",
-#         "site-packages",
-#         "osgeo",
-#         "gdal.dll"
-#     )
-
-#     GEOS_LIBRARY_PATH = os.path.join(
-#         BASE_DIR,
-#         "venv",
-#         "Lib",
-#         "site-packages",
-#         "osgeo",
-#         "geos_c.dll"
-#     )
-# elif platform.system() == 'Darwin':  # macOS
-#     GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
-#     GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
-
 # GDAL/GEOS library paths - only set if explicitly provided via environment
 # Django will auto-detect these on Linux systems, so we only set them if needed
 if os.environ.get("GDAL_LIBRARY_PATH"):
     GDAL_LIBRARY_PATH = os.environ.get("GDAL_LIBRARY_PATH")
+else:
+    GDAL_LIBRARY_PATH = os.path.join(
+        BASE_DIR,
+        "venv",
+        "Lib",
+        "site-packages",
+        "osgeo",
+        "gdal.dll"
+    )
 
 if os.environ.get("GEOS_LIBRARY_PATH"):
     GEOS_LIBRARY_PATH = os.environ.get("GEOS_LIBRARY_PATH")
+else:
+    GEOS_LIBRARY_PATH = os.path.join(
+        BASE_DIR,
+        "venv",
+        "Lib",
+        "site-packages",
+        "osgeo",
+        "geos_c.dll"
+    )
 
 # CORS settings
 CORS_ALLOWED_ORIGINS = [
