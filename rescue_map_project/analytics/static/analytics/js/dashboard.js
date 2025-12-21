@@ -197,47 +197,6 @@ function updatePriorityChart(data) {
     });
 }
 
-// --- 4. API Resources ---
-function fetchResources() {
-    fetch(DATA_PATH + 'api_resources.json')
-        .then(res => res.json())
-        .then(data => {
-            const tbody = document.getElementById('resourceTableBody');
-            tbody.innerHTML = '';
-            
-            const typeMap = {
-                "Ambulance": "Xe Cứu Thương",
-                "Rescue Boat": "Xuồng Cứu Hộ",
-                "Helicopter": "Trực Thăng",
-                "Rescue Team": "Đội Cứu Hộ"
-            };
-
-            data.forEach(item => {
-                let badgeClass = 'bg-success';
-                if(item.utilization > 80) badgeClass = 'bg-danger';
-                else if(item.utilization > 50) badgeClass = 'bg-warning text-dark';
-
-                const row = `
-                    <tr>
-                        <td class="ps-3 fw-bold text-secondary">${typeMap[item.type] || item.type}</td>
-                        <td>${item.total}</td>
-                        <td>${item.available}</td>
-                        <td class="pe-3">
-                            <div class="d-flex align-items-center">
-                                <div class="progress flex-grow-1 me-2" style="height: 6px;">
-                                    <div class="progress-bar ${badgeClass}" role="progressbar" 
-                                         style="width: ${item.utilization}%"></div>
-                                </div>
-                                <span class="badge ${badgeClass}">${item.utilization}%</span>
-                            </div>
-                        </td>
-                    </tr>
-                `;
-                tbody.innerHTML += row;
-            });
-        });
-}
-
 // --- API District Stats ---
 function fetchDistrictStats() {
     fetch(DATA_PATH + 'api_districts.json')
@@ -323,4 +282,54 @@ function fetchResolvedTime(period) {
             });
         })
         .catch(err => console.error("Lỗi tải dispatch time:", err));
+}
+
+// --- API Resources ---
+function fetchResources() {
+    // API này thường là realtime snapshot, không cần tham số period
+    fetch(`${API_BASE}resources/`)
+        .then(res => res.json())
+        .then(data => {
+            console.log("Resources data:", data);
+            const tbody = document.getElementById('resourceTableBody');
+            if(!tbody) return;
+            
+            tbody.innerHTML = ''; // Clear loading state
+
+            // Mapping type
+            const typeMap = {
+                // "AMBULANCE": "Xe Cứu Thương",
+                // "BOAT": "Xuồng/Cano",
+                // "HELICOPTER": "Trực Thăng",
+                // "TEAM": "Đội Cứu Hộ",
+                // "SUPPLY": "Nhu Yếu Phẩm",
+                // "OTHER": "Khác"
+                "VEHICLE": "🚑 Phương tiện",
+                "MEDICINE": "💊 Y tế",
+                "FOOD": "🌾 Lương thực",
+                "OTHER": "🛠️ Khác"
+            };
+
+            data.forEach(item => {
+                const typeName = typeMap[item.type] || item.type;
+                
+                // Tính số lượng đang được triển khai (Total - Available)
+                const deployed = item.total - item.available;
+
+                // Render đúng theo cấu trúc HTML mẫu bạn gửi
+                const row = `
+                    <tr>
+                        <td>${typeName}</td>
+                        <td>${item.available}</td>
+                        <td>${deployed}</td>
+                        <td>
+                            <span class="progress-bar" style="--progress: ${item.utilization}%"></span> 
+                            ${item.utilization}%
+                        </td>
+                    </tr>
+                `;
+                tbody.insertAdjacentHTML('beforeend', row);
+            });
+        })
+        .catch(err => console.error("Lỗi tải resources:", err));
 }

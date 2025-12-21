@@ -12,6 +12,7 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from submissions.models import SOSRequest, RequestTeam
+from submissions.models import RescueResource
 from .utils import get_date_ranges
 
 def dashboard(request):
@@ -255,3 +256,37 @@ class ResolvedTimeChartDataView(APIView):
             "average": overall_hours,
             "unit": "giờ"
         }, status=status.HTTP_200_OK)
+
+class ResourceStatusView(APIView):
+    """
+    API status of resources.
+    Returns total, available, utilization per resource type.
+    """
+    def get(self, request):
+        # Group by 'type'
+        # status='AVAILABLE'
+        
+        data = RescueResource.objects.values('type').annotate(
+            total=Count('resource_id'),
+            available=Count('resource_id', filter=Q(status='AVAILABLE'))
+        ).order_by('type')
+
+        result = []
+        for item in data:
+            total = item['total']
+            available = item['available']
+            
+            # Utilization = (In used / Total) * 100
+            # In used = Total - Available
+            utilization = 0
+            if total > 0:
+                utilization = round(((total - available) / total) * 100, 1)
+
+            result.append({
+                "type": item['type'],
+                "total": total,
+                "available": available,
+                "utilization": utilization
+            })
+
+        return Response(result, status=status.HTTP_200_OK)

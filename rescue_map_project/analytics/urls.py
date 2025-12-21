@@ -9,4 +9,5 @@ urlpatterns = [
     path('api/timeline/', views.TimelineChartDataView.as_view(), name='api-timeline'),
     path('api/distribution/', views.DistributionChartDataView.as_view(), name='api-distribution'),
     path('api/resolved-time/', views.ResolvedTimeChartDataView.as_view(), name='api-resolved-time'),
+    path('api/resources/', views.ResourceStatusView.as_view(), name='api-resources'),
 ]
