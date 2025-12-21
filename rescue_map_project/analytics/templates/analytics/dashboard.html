@@ -65,7 +65,7 @@
                     <h3 class="chart-card__title">Thống kê số yêu cầu theo thời gian</h3>
                 </div>
                 <div class="chart-card__body">
-                    <div style="position: relative; height: 300px; width: 100%;">
+                    <div class="chart-container--large">
                         <canvas id="timelineChart"></canvas>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
                     <h3 class="chart-card__title">Trạng thái xử lý</h3>
                 </div>
                 <div class="chart-card__body">
-                    <div style="position: relative; height: 300px; width: 100%;">
+                    <div class="chart-container--medium">
                         <canvas id="statusChart"></canvas>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                     <span style="color: red;">🚧 Bảo trì 🚧</span>
                 </div>
                 <div class="chart-card__body">
-                    <div style="position: relative; height: 250px; width: 100%;">
+                    <div class="chart-container--medium">
                         <canvas id="districtChart"></canvas>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                     <h3 class="chart-card__title">Mức độ ưu tiên</h3>
                 </div>
                 <div class="chart-card__body">
-                    <div style="position: relative; height: 250px; width: 100%;">
+                    <div class="chart-container--medium">
                         <canvas id="priorityChart"></canvas>
                     </div>
                 </div>
@@ -110,12 +110,12 @@
                     <h3 class="chart-card__title">Yêu cầu đã xử lý</h3>
                 </div>
                 <div class="chart-card__body">
-                     <div style="text-align: center; margin-bottom: 10px;">
-                        <span style="font-size: 0.9rem; color: #666;">Trung bình: </span>
-                        <span id="avg-response-val" style="font-weight: bold; font-size: 1.5rem; color: #2C5F8D;">--</span>
-                        <span style="font-size: 0.9rem; color: #666;"> giờ/yêu cầu</span>
+                     <div class="chart-metric">
+                        <span class="chart-metric__label">Trung bình: </span>
+                        <span id="avg-response-val" class="chart-metric__value">--</span>
+                        <span class="chart-metric__unit"> giờ/yêu cầu</span>
                     </div>
-                    <div style="position: relative; height: 200px; width: 100%;">
+                    <div class="chart-container--small">
                         <canvas id="resolvedTimeChart"></canvas>
                     </div>
                 </div>
@@ -123,9 +123,9 @@
 
             <div class="chart-card chart-card--large">
                 <div class="chart-card__header">
-                    <h3 class="chart-card__title" style="display: flex; align-items: center; gap: 8px;">
+                    <h3 class="chart-card__title chart-title--with-icon">
                         Tình trạng nguồn lực
-                        <img src="{% static 'analytics/images/live_stream_icon.png' %}" alt="live-data" class="button-icon" style="height: 1.5em; width: auto;">
+                        <img src="{% static 'analytics/images/live_stream_icon.png' %}" alt="live-data" class="title-icon">
                     </h3>
                 </div>
                 <div class="chart-card__body">
