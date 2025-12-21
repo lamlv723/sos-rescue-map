@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     "django.contrib.gis",           # BẮT BUỘC (GIS)
+    'rest_framework', # Django REST framework
 
     # --- My apps ---
     'core',
