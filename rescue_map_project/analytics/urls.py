@@ -8,5 +8,5 @@ urlpatterns = [
     path('api/summary/', views.SummaryKPIView.as_view(), name='api_summary'),
     path('api/timeline/', views.TimelineChartDataView.as_view(), name='api-timeline'),
     path('api/distribution/', views.DistributionChartDataView.as_view(), name='api-distribution'),
-    path('api/dispatch-time/', views.DispatchTimeChartDataView.as_view(), name='api-dispatch-time'),
+    path('api/resolved-time/', views.ResolvedTimeChartDataView.as_view(), name='api-resolved-time'),
 ]

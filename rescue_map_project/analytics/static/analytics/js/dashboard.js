@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', function() {
             fetchSummary(period);
             fetchTimeline(period);
             fetchDistributions(period);
-            fetchDispatchTime(period);
+            fetchResolvedTime(period);
         });
         
         fetchSummary(periodSelect.value);
         fetchTimeline(periodSelect.value);
         fetchDistributions(periodSelect.value);
-        fetchDispatchTime(periodSelect.value);
+        fetchResolvedTime(periodSelect.value);
     } else {
         // Fallback if no select element found
         fetchSummary('month');
@@ -266,46 +266,48 @@ function fetchDistrictStats() {
 }
 
 // --- API Dispatch Time ---
-let dispatchChartInstance = null;
-function fetchDispatchTime(period) {
-    fetch(`${API_BASE}dispatch-time/?period=${period}`)
+let resolvedChartInstance = null;
+function fetchResolvedTime(period) {
+    if(!period) period = 'month';
+
+    fetch(`${API_BASE}resolved-time/?period=${period}`)
         .then(res => res.json())
         .then(data => {
-            // update big number
+            console.log("Resolved time data:", data);
+            // Update big number - average
             const avgEl = document.getElementById('avg-response-val');
             if(avgEl) avgEl.textContent = data.average;
 
-            // Draw chart
-            const ctx = document.getElementById('responseTimeChart').getContext('2d');
+            // Draw bar chart
+            const ctx = document.getElementById('resolvedTimeChart').getContext('2d');
             
-            if (dispatchChartInstance) {
-                dispatchChartInstance.destroy();
+            if (resolvedChartInstance) {
+                resolvedChartInstance.destroy();
             }
 
-            dispatchChartInstance = new Chart(ctx, {
-                type: 'line',
+            resolvedChartInstance = new Chart(ctx, {
+                type: 'bar',
                 data: {
                     labels: data.labels,
                     datasets: [{
-                        label: 'Thời gian điều phối (Phút)',
+                        label: 'Số lượng đã xử lý',
                         data: data.values,
-                        borderColor: '#198754',
-                        backgroundColor: 'rgba(25, 135, 84, 0.1)',
-                        borderWidth: 2,
-                        fill: true,
-                        tension: 0.4, // curve
-                        pointRadius: 3
+                        backgroundColor: 'rgba(25, 135, 84, 0.7)', // Màu xanh lá (Success)
+                        borderColor: 'rgba(25, 135, 84, 1)',
+                        borderWidth: 1,
+                        borderRadius: 4,
+                        barPercentage: 0.6
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: { display: false },
+                        legend: { display: false }, // Ẩn chú thích vì chỉ có 1 cột
                         tooltip: {
                             callbacks: {
                                 label: function(context) {
-                                    return context.parsed.y + ' phút';
+                                    return `Đã xử lý: ${context.parsed.y} ca`;
                                 }
                             }
                         }
@@ -313,11 +315,12 @@ function fetchDispatchTime(period) {
                     scales: { 
                         y: { 
                             beginAtZero: true,
-                            title: { display: true, text: 'Phút' }
+                            title: { display: true, text: 'Số lượng (Ca)' },
+                            ticks: { stepSize: 1 } // Chỉ hiện số nguyên
                         } 
                     }
                 }
             });
         })
-        .catch(err => console.error("Lỗi tải response time:", err));
+        .catch(err => console.error("Lỗi tải dispatch time:", err));
 }

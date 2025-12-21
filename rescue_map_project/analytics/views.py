@@ -183,66 +183,62 @@ class DistributionChartDataView(APIView):
             "priority": priority_data
         }, status=status.HTTP_200_OK)
 
-class DispatchTimeChartDataView(APIView):
+# --- API RESOLVED TIME ---
+class ResolvedTimeChartDataView(APIView):
     """
-    API For Average Dispatch Time
-    Formula: RequestTeam.assigned_at - SOSRequest.created_at
+    API for resolved time chart and average resolved time big number.
+    - Big Number: AVG Resolution Time
+    - Chart: Count Resolved
     """
     def get(self, request):
         period = request.GET.get('period', 'month')
         now = timezone.now()
         
+        # Only get resolved requests
+        qs = SOSRequest.objects.filter(resolved_at__isnull=False)
+        
         # Filter time range
-        data_query = SOSRequest.objects.all()
-        if period == 'day':
-            start_date = now.replace(hour=0, minute=0, second=0, microsecond=0)
-            data_query = data_query.filter(created_at__gte=start_date)
-            trunc_func = TruncHour('created_at')
-            format_str = '%H:00'
-        elif period == 'year':
+        if period == 'year':
             start_date = now.replace(month=1, day=1, hour=0, minute=0, second=0, microsecond=0)
-            data_query = data_query.filter(created_at__gte=start_date)
-            trunc_func = TruncMonth('created_at')
+            qs = qs.filter(resolved_at__gte=start_date)
+            trunc_func = TruncMonth('resolved_at') # Xem theo tháng
             format_str = 'Tháng %m'
-        else: # month
+        else: # month, day (Default)
             start_date = now.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
-            data_query = data_query.filter(created_at__gte=start_date)
-            trunc_func = TruncDay('created_at')
+            qs = qs.filter(resolved_at__gte=start_date)
+            trunc_func = TruncDay('resolved_at') # Xem theo ngày
             format_str = '%d/%m'
 
-        # Calculate duration  dispatch time
-        # Step 1: Get first assigned_at per request (avoid multiple assignments)
-        # Step 2: Calculate wait_duration = first_assigned - created_at
-        # Step 3: Group by time unit and average wait_duration
-        earliest_assignment = RequestTeam.objects.filter(
-            request=OuterRef('pk'),
-            assigned_at__isnull=False
-        ).order_by('assigned_at').values('assigned_at')[:1]
-
-        result = (data_query
-            # Gán giá trị Subquery vào field ảo 'first_assigned'
-            # Lúc này 'first_assigned' được coi là giá trị thường, không phải Aggregate
-            .annotate(first_assigned=Subquery(earliest_assignment))
-            .filter(first_assigned__isnull=False)
-            .annotate(
-                wait_duration=ExpressionWrapper(
-                    F('first_assigned') - F('created_at'),
+        # Calculate overall average resolution time
+        avg_calc = qs.aggregate(
+            overall_avg=Avg(
+                ExpressionWrapper(
+                    F('resolved_at') - F('created_at'),
                     output_field=DurationField()
                 )
             )
+        )
+        
+        overall_minutes = 0
+        if avg_calc['overall_avg']:
+            overall_minutes = round(avg_calc['overall_avg'].total_seconds() / 60, 1)
+
+        overall_hours = round (overall_minutes / 60, 2)
+
+        # For bar chart
+        chart_data = (qs
             .annotate(time_unit=trunc_func)
             .values('time_unit')
-            .annotate(avg_wait=Avg('wait_duration'))
+            .annotate(count=Count('request_id'))
             .order_by('time_unit')
         )
 
-        # Format data for response
+        # format data for response
         labels = []
         values = []
 
-        for entry in result:
+        for entry in chart_data:
             time_val = entry['time_unit']
-            avg_wait = entry['avg_wait']
             
             # Format Label
             if period == 'year':
@@ -250,20 +246,12 @@ class DispatchTimeChartDataView(APIView):
             else:
                 label = time_val.strftime(format_str)
             
-            # Convert Timedelta to Minutes (roudn to 1 decimal)
-            minutes = round(avg_wait.total_seconds() / 60, 1)
-            
             labels.append(label)
-            values.append(minutes)
-
-        # Calculate overall average (for main KPI display)
-        overall_avg = 0
-        if values:
-            overall_avg = round(sum(values) / len(values), 1)
+            values.append(entry['count'])
 
         return Response({
             "labels": labels,
             "values": values,
-            "average": overall_avg,
-            "unit": "phút"
+            "average": overall_hours,
+            "unit": "giờ"
         }, status=status.HTTP_200_OK)
