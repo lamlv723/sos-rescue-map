@@ -1,186 +1,285 @@
 {% extends 'core/base.html' %}
+
 {% load static %}
 
-{% block title %}Map View - Rescue Map{% endblock %}
+{% block title %}Bản đồ cứu hộ - UT GIS Project{% endblock %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/light/main.css" />
+    <link rel="stylesheet" href="https://js.arcgis.com/4.33/esri/themes/light/main.css" />
+    <link rel="stylesheet" href="{% static 'css/map.css' %}" />
 {% endblock %}
 
 {% block content %}
-<!-- Main Map Page -->
-<main class="map-page">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-        <div class="sidebar__header">
-            <h2 class="sidebar__title">Filter & Search</h2>
-            <button class="sidebar__close">×</button>
-        </div>
+    <!-- Main Map Page -->
+    <main class="map-page">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar__overlay" id="sidebar-overlay"></div>
 
-        <!-- Search Box -->
-        <div class="sidebar__section">
-            <div class="search-box">
-                <input type="text" class="search-box__input" placeholder="Search location, phone...">
-                <button class="search-box__btn">🔍</button>
+            <div class="sidebar__container">
+
+            <div class="sidebar__header">
+               <div class="sidebar__logo">
+                    <img
+                        src="{% static 'core/images/logo.webp' %}"
+                        alt="UT GIS Project"
+                        class="sidebar__logo-img"
+                    />
+                    <span class="sidebar__logo-text">Bản đồ Cứu hộ</span>
+               </div>
+               <button class="sidebar__close" title="Close Sidebar" type="button" id="btn-close-sidebar">
+                    <span class="sidebar__close-icon">
+                        <img src="{% static 'core/images/x.svg' %}" alt="Close Sidebar" />
+                    </span>
+               </button>
             </div>
-        </div>
 
-        <!-- Status Filter -->
-        <div class="sidebar__section">
-            <h3 class="sidebar__section-title">Status</h3>
-            <div class="filter-group">
-                <label class="filter-group__item">
-                    <input type="checkbox" checked>
-                    <span class="filter-group__badge filter-group__badge--open">Open</span>
-                    <span class="filter-group__count">(142)</span>
-                </label>
-                <label class="filter-group__item">
-                    <input type="checkbox">
-                    <span class="filter-group__badge filter-group__badge--closed">Closed</span>
-                    <span class="filter-group__count">(234)</span>
-                </label>
-            </div>
-        </div>
-
-        <!-- Priority Filter -->
-        <div class="sidebar__section">
-            <h3 class="sidebar__section-title">Priority</h3>
-            <div class="filter-group">
-                <label class="filter-group__item">
-                    <input type="checkbox" checked>
-                    <span class="filter-group__badge filter-group__badge--critical">Critical</span>
-                    <span class="filter-group__count">(45)</span>
-                </label>
-                <label class="filter-group__item">
-                    <input type="checkbox" checked>
-                    <span class="filter-group__badge filter-group__badge--high">High</span>
-                    <span class="filter-group__count">(89)</span>
-                </label>
-                <label class="filter-group__item">
-                    <input type="checkbox" checked>
-                    <span class="filter-group__badge filter-group__badge--medium">Medium</span>
-                    <span class="filter-group__count">(76)</span>
-                </label>
-            </div>
-        </div>
-
-        <!-- Time Range -->
-        <div class="sidebar__section">
-            <h3 class="sidebar__section-title">Time Range</h3>
-            <div class="time-filter">
-                <button class="time-filter__btn time-filter__btn--active">Last Hour</button>
-                <button class="time-filter__btn">Last 6h</button>
-                <button class="time-filter__btn">Last 24h</button>
-                <button class="time-filter__btn">Custom</button>
-            </div>
-        </div>
-
-        <!-- Recent Requests List -->
-        <div class="sidebar__section">
-            <h3 class="sidebar__section-title">Recent Requests</h3>
-            <div class="request-list">
-                <div class="request-card">
-                    <div class="request-card__header">
-                        <span class="request-card__id">#10423</span>
-                        <span class="request-card__badge request-card__badge--critical">Critical</span>
+            <!-- Search Box -->
+            <div class="sidebar__section">
+                <div class="search-box__container">
+                    <div>
+                        <input type="radio" name="search_type" id="search-type-areas" value="areas" checked />
+                        <label for="search-type-areas" class="search-box__label">Khu vực</label>
                     </div>
-                    <p class="request-card__message">Nước dâng cao, có 5 người bị kẹt</p>
-                    <div class="request-card__meta">
-                        <span class="request-card__time">⏱ 15 min ago</span>
-                        <span class="request-card__location">📍 District 8</span>
+                    <div>
+                        <input type="radio" name="search_type" id="search-type-phone" value="phone" />
+                        <label for="search-type-phone" class="search-box__label">Số điện thoại</label>
                     </div>
-                    <button class="request-card__action">View on Map →</button>
                 </div>
 
-                <div class="request-card">
-                    <div class="request-card__header">
-                        <span class="request-card__id">#10422</span>
-                        <span class="request-card__badge request-card__badge--high">High</span>
-                    </div>
-                    <p class="request-card__message">Cần lương thực khẩn cấp</p>
-                    <div class="request-card__meta">
-                        <span class="request-card__time">⏱ 32 min ago</span>
-                        <span class="request-card__location">📍 District 4</span>
-                    </div>
-                    <button class="request-card__action">View on Map →</button>
-                </div>
-
-                <div class="request-card">
-                    <div class="request-card__header">
-                        <span class="request-card__id">#10421</span>
-                        <span class="request-card__badge request-card__badge--medium">Medium</span>
-                    </div>
-                    <p class="request-card__message">Cần thuốc men cơ bản</p>
-                    <div class="request-card__meta">
-                        <span class="request-card__time">⏱ 1h ago</span>
-                        <span class="request-card__location">📍 District 7</span>
-                    </div>
-                    <button class="request-card__action">View on Map →</button>
+                <div class="search-box">
+                    <input type="text" id="search-box-input" class="search-box__input" placeholder="Tìm theo khu vực, phường/quận…" />
+                    <button class="search-box__btn" title="Tìm kiếm" type="button" id="btn-find">
+                        <img src="{% static 'core/images/search.svg' %}" alt="Tìm" />
+                    </button>
                 </div>
             </div>
-        </div>
-    </aside>
 
-    <!-- Map Container -->
-    <div class="map-container">
-        <div id="mapView" class="map-container__view">
-            <!-- Map will be rendered here -->
-            <!-- <div class="map-container__placeholder">
-                [ArcGIS Map View - Initialize with script.js]
+            <div id="sidebar-filters__areas" class="sidebar__filters">
+                <!-- Priority Filter -->
+                <div class="sidebar__section">
+                    <h3 class="sidebar__section-title--highlight">Mức độ khẩn cấp</h3>
+                    <div class="filter-group">
+                        <label class="filter-group__item filter-group__item--highlight">
+                            <span class="filter-group__item-content">
+                                <span class="filter-group__badge filter-group__badge--critical">Nghiêm trọng</span>
+                                <span class="filter-group__count" id="filter-group__count-critical">&nbsp;</span>
+                            </span>
+                            <input type="checkbox" class="filter-group__checkbox" name="priority" value="critical" />
+                        </label>
+                        <label class="filter-group__item">
+                            <span class="filter-group__item-content">
+                                <span class="filter-group__badge filter-group__badge--high">Khẩn cấp</span>
+                                <span class="filter-group__count" id="filter-group__count-high">&nbsp;</span>
+                            </span>
+                            <input type="checkbox" class="filter-group__checkbox" name="priority" value="high" />
+                        </label>
+                        <label class="filter-group__item">
+                            <span class="filter-group__item-content">
+                                <span class="filter-group__badge filter-group__badge--medium">Cần hỗ trợ</span>
+                                <span class="filter-group__count" id="filter-group__count-medium">&nbsp;</span>
+                            </span>
+                            <input type="checkbox" class="filter-group__checkbox" name="priority" value="medium" />
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Status Filter -->
+                <div class="sidebar__section">
+                    <h3 class="sidebar__section-title">Tình trạng</h3>
+                    <div class="filter-group">
+                        <label class="filter-group__item" for="status-pending">
+                            <span class="filter-group__item-content">
+                                <span class="filter-group__badge filter-group__badge--pending">Chưa hỗ trợ</span>
+                                <span class="filter-group__count" id="filter-group__count-pending">&nbsp;</span>
+                            </span>
+                            <input type="checkbox" class="filter-group__checkbox" id="status-pending" name="status" value="open" />
+                        </label>
+                        <label class="filter-group__item" for="status-assigned">
+                            <span class="filter-group__item-content">
+                                <span class="filter-group__badge filter-group__badge--assigned">Đang hỗ trợ</span>
+                                <span class="filter-group__count" id="filter-group__count-assigned">&nbsp;</span>
+                            </span>
+                            <input type="checkbox" class="filter-group__checkbox" id="status-assigned" name="status" value="open" />
+                        </label>
+                        <label class="filter-group__item" for="status-resolved">
+                            <span class="filter-group__item-content">
+                                <span class="filter-group__badge filter-group__badge--resolved">Đã hỗ trợ</span>
+                                <span class="filter-group__count" id="filter-group__count-resolved">&nbsp;</span>
+                            </span>
+                            <input type="checkbox" class="filter-group__checkbox" id="status-resolved" name="status" value="closed" />
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Time Range -->
+                <div class="sidebar__section">
+                    <h3 class="sidebar__section-title">Thời điểm ghi nhận gần nhất</h3>
+                    <div class="time-filter">
+                        <label class="time-filter__btn">
+                            <input type="radio" name="time_range" value="1">
+                            <span>1 giờ</span>
+                        </label>
+                        <label class="time-filter__btn">
+                            <input type="radio" name="time_range" value="6">
+                            <span>6 giờ</span>
+                        </label>
+                        <label class="time-filter__btn">
+                            <input type="radio" name="time_range" value="24" checked>
+                            <span>24 giờ</span>
+                        </label>
+                    </div>
+                    <div class="time-filter__custom-container">
+                        <label class="time-filter__btn time-filter__btn--custom">
+                            <input type="radio" name="time_range" value="custom">
+                            <img src="{% static 'core/images/calendar-range.svg' %}" class="time-filter__btn-icon" alt="Chọn khoảng thời gian" />
+                            <span>Chọn khoảng thời gian cụ thể</span>
+                        </label>
+                        <div class="time-filter__custom-inputs" id="time-filter__custom-inputs">
+                            <div>
+                                <label class="time-filter__custom-label" for="time-filter__custom-input-start">Thời gian bắt đầu</label>
+                                <input type="datetime-local" id="time-filter__custom-input-start" name="time-filter__custom-input-start" class="time-filter__custom-input"  min="1970-01-01T00:00">
+                            </div>
+                            <div>
+                                <label class="time-filter__custom-label" for="time-filter__custom-input-end">Thời gian kết thúc</label>
+                                <input type="datetime-local" id="time-filter__custom-input-end" name="time-filter__custom-input-end" class="time-filter__custom-input" min="1970-01-01T00:00">
+                            </div>
+                            <div class="time-filter__actions">
+                                <button class="time-filter__btn-clear" type="button" id="btn-clear-time-filter">Xóa</button>
+                                <button class="time-filter__btn-apply" type="button" id="btn-apply-time-filter">Áp dụng</button>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+
+                <div class="sidebar__btn-clear-all-section" id="sidebar__btn-clear-all-section">
+                    <button class="sidebar__btn-clear-all" type="button" id="btn-clear-all-time-filter">Xóa tất cả bộ lọc</button>
+                </div>
+
+                <!-- Recent Requests List -->
+                <!-- <div class="sidebar__section">
+                    <h3 class="sidebar__section-title">Recent Requests</h3>
+                    <div class="request-list">
+                        <div class="request-card">
+                            <div class="request-card__header">
+                                <span class="request-card__id">#10423</span>
+                                <span class="request-card__badge request-card__badge--critical">Critical</span>
+                            </div>
+                            <p class="request-card__message">Nước dâng cao, có 5 người bị kẹt</p>
+                            <div class="request-card__meta">
+                                <span class="request-card__time">⏱ 15 min ago</span>
+                                <span class="request-card__location">📍 District 8</span>
+                            </div>
+                            <button class="request-card__action">View on Map →</button>
+                        </div>
+
+                        <div class="request-card">
+                            <div class="request-card__header">
+                                <span class="request-card__id">#10422</span>
+                                <span class="request-card__badge request-card__badge--high">High</span>
+                            </div>
+                            <p class="request-card__message">Cần lương thực khẩn cấp</p>
+                            <div class="request-card__meta">
+                                <span class="request-card__time">⏱ 32 min ago</span>
+                                <span class="request-card__location">📍 District 4</span>
+                            </div>
+                            <button class="request-card__action">View on Map →</button>
+                        </div>
+
+                        <div class="request-card">
+                            <div class="request-card__header">
+                                <span class="request-card__id">#10421</span>
+                                <span class="request-card__badge request-card__badge--medium">Medium</span>
+                            </div>
+                            <p class="request-card__message">Cần thuốc men cơ bản</p>
+                            <div class="request-card__meta">
+                                <span class="request-card__time">⏱ 1h ago</span>
+                                <span class="request-card__location">📍 District 7</span>
+                            </div>
+                            <button class="request-card__action">View on Map →</button>
+                        </div>
+                    </div>
+                </div> -->
+                </div>
+
+                <div id="sidebar-filters__phone" class="sidebar__filters" style="display: none;">
+                    <div class="sidebar__section">
+                        <p class="sidebar__section-title">Nhập số điện thoại để xem nhanh vị trí và tình trạng yêu cầu cứu trợ.</p>
+                    </div>
+                </div>
+            </div>
+
+       
+        </aside>
+
+        <!-- Map Container -->
+        <div class="map-container" id="map-container">
+            <div id="mapView" class="map-container__view">
+                <!-- Map will be rendered here -->
+                <!-- <div class="map-container__placeholder">
+                    [ArcGIS Map View - Initialize with script.js]
+                </div> -->
+            </div>
+
+            <div id="basemapStyles" class="esri-widget">
+                <select id="selectBasemap" class="esri-select basemap-styles">
+                    <option value="gray-vector">Bản đồ Xám (Mặc định)</option>
+                    <option value="satellite">Ảnh Vệ tinh (Satellite)</option>
+                    <option value="streets-vector">Bản đồ Đường phố</option>
+                    <option value="dark-gray-vector">Bản đồ Tối (Dark Mode)</option>
+                    <option value="osm">OpenStreetMap</option>
+                    <option value="topo-vector">Địa hình (Topographic)</option>
+                </select>
+            </div>
+
+            <!-- Map Controls -->
+            <div class="map-controls">
+                <button class="esri-widget--button" title="Mở/Đóng sidebar" type="button" id="btn-toggle-sidebar">
+                    <span class="map-controls__icon">
+                        <img src="{% static 'core/images/search.svg' %}" alt="Mở/Đóng sidebar" />
+                    </span>
+                </button>
+                <button class="esri-widget--button" title="Làm mới dữ liệu" type="button" id="btn-refresh-data">
+                    <span class="map-controls__icon">
+                        <img src="{% static 'core/images/refresh-ccw.svg' %}" alt="Làm mới dữ liệu" />
+                    </span>
+                </button>
+                <button class="esri-widget--button" title="Toàn màn hình" type="button" id="btn-fullscreen">
+                    <span class="map-controls__icon">
+                        <img src="{% static 'core/images/fullscreen.svg' %}" alt="Toàn màn hình" />
+                    </span>
+                </button>
+                <button class="esri-widget--button" title="Định vị vị trí hiện tại" type="button" id="btn-my-location">
+                    <span class="map-controls__icon">
+                        <img src="{% static 'core/images/locate-fixed.svg' %}" alt="Định vị vị trí hiện tại" />
+                    </span>
+                </button>
+            </div>
+
+            <!-- Statistics Bar -->
+            <!-- <div class="stats-bar">
+                <div class="stats-bar__item">
+                    <span class="stats-bar__label">Total Requests</span>
+                    <span class="stats-bar__value stats-bar__value--total">444</span>
+                </div>
+                <div class="stats-bar__item">
+                    <span class="stats-bar__label">Open</span>
+                    <span class="stats-bar__value stats-bar__value--open">142</span>
+                </div>
+                <div class="stats-bar__item">
+                    <span class="stats-bar__label">Resolved</span>
+                    <span class="stats-bar__value stats-bar__value--resolved">234</span>
+                </div>
             </div> -->
         </div>
-
-        <div id="basemapStyles" class="esri-widget" style="display: none;">
-            <select id="selectBasemap" class="esri-select" style="width: 200px; padding: 5px;">
-                <option value="gray-vector">Bản đồ Xám (Mặc định)</option>
-                <option value="satellite" selected>Ảnh Vệ tinh (Satellite)</option>
-                <option value="streets-vector">Bản đồ Đường phố</option>
-                <option value="dark-gray-vector">Bản đồ Tối (Dark Mode)</option>
-                <option value="osm">OpenStreetMap</option>
-                <option value="topo-vector">Địa hình (Topographic)</option>
-            </select>
-        </div>
-
-        <!-- Map Controls -->
-        <div class="map-controls">
-            <button class="map-controls__btn" title="Toggle Sidebar">
-                <span class="map-controls__icon">☰</span>
-            </button>
-            <button class="map-controls__btn" title="My Location">
-                <span class="map-controls__icon">📍</span>
-            </button>
-            <button class="map-controls__btn" title="Refresh Data">
-                <span class="map-controls__icon">🔄</span>
-            </button>
-            <button class="map-controls__btn" title="Fullscreen">
-                <span class="map-controls__icon">⛶</span>
-            </button>
-        </div>
-
-        <!-- Statistics Bar -->
-        <!-- <div class="stats-bar">
-            <div class="stats-bar__item">
-                <span class="stats-bar__label">Total Requests</span>
-                <span class="stats-bar__value stats-bar__value--total">444</span>
-            </div>
-            <div class="stats-bar__item">
-                <span class="stats-bar__label">Open</span>
-                <span class="stats-bar__value stats-bar__value--open">142</span>
-            </div>
-            <div class="stats-bar__item">
-                <span class="stats-bar__label">Resolved</span>
-                <span class="stats-bar__value stats-bar__value--resolved">234</span>
-            </div>
-        </div> -->
-    </div>
-</main>
+    </main>
 {% endblock %}
+
 <!-- remove footer for this page -->
-{% block footer %}
-    {% endblock %}
+{% block footer %}{% endblock %}
 
 {% block extra_js %}
-    <script src="https://js.arcgis.com/4.29/"></script>
-    
-    <script src="{% static 'gis_map/js/map.js' %}"></script>
+    <script src="https://js.arcgis.com/4.33"></script>
+    <script src="{% static 'js/gis-data.js' %}"></script>
+    <script src="{% static 'js/map.js' %}"></script>
 {% endblock %}
