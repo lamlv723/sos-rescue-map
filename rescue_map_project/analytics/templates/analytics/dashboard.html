@@ -1,175 +1,146 @@
 {% extends 'core/base.html' %}
+{% load static %}
 
-{% block title %}Dashboard - Rescue Map{% endblock %}
+{% block title %}Dashboard - Bản Đồ Cứu Hộ{% endblock %}
 
 {% block content %}
 <main class="dashboard">
     <div class="dashboard__container">
-        <!-- Page Header -->
         <div class="dashboard__header">
             <div>
-                <h1 class="dashboard__title">Dashboard Overview</h1>
-                <p class="dashboard__subtitle">Real-time rescue operations monitoring</p>
+                <h1 class="dashboard__title">Tổng quan hoạt động</h1>
+                <p class="dashboard__subtitle">Giám sát hoạt động cứu hộ thời gian thực</p>
             </div>
             <div class="dashboard__header-actions">
-                <button class="dashboard__export-btn">📊 Export Report</button>
+                <button class="dashboard__export-btn" onclick="location.reload()">🔄 Làm mới dữ liệu</button>
                 <select class="dashboard__period-select">
-                    <option>Last 24 Hours</option>
-                    <option>Last 7 Days</option>
-                    <option>Last 30 Days</option>
-                    <option>Custom Range</option>
+                    <option value="day">Ngày</option>
+                    <option value="month" selected>Tháng</option>
+                    <option value="year">Năm</option>
                 </select>
             </div>
         </div>
 
-        <!-- KPI Cards -->
         <div class="kpi-grid">
             <div class="kpi-card kpi-card--total">
                 <div class="kpi-card__icon">📋</div>
                 <div class="kpi-card__content">
-                    <span class="kpi-card__label">Total Requests</span>
-                    <span class="kpi-card__value">1,248</span>
-                    <span class="kpi-card__trend kpi-card__trend--up">↑ 12% vs yesterday</span>
+                    <span class="kpi-card__label">Tổng Yêu Cầu</span>
+                    <span id="kpi-total" class="kpi-card__value">...</span>
+                    <span id="trend-total" class="kpi-card__trend kpi-card__trend--neutral">Đang tải...</span>
                 </div>
             </div>
 
             <div class="kpi-card kpi-card--open">
                 <div class="kpi-card__icon">🆘</div>
                 <div class="kpi-card__content">
-                    <span class="kpi-card__label">Active Requests</span>
-                    <span class="kpi-card__value">142</span>
-                    <span class="kpi-card__trend kpi-card__trend--down">↓ 8% vs yesterday</span>
+                    <span class="kpi-card__label">Đang Chờ Xử Lý</span>
+                    <span id="kpi-pending" class="kpi-card__value">...</span>
+                    <span id="trend-pending" class="kpi-card__trend kpi-card__trend--neutral">Đang tải...</span>
                 </div>
             </div>
 
             <div class="kpi-card kpi-card--processing">
                 <div class="kpi-card__icon">⚙️</div>
                 <div class="kpi-card__content">
-                    <span class="kpi-card__label">In Progress</span>
-                    <span class="kpi-card__value">68</span>
-                    <span class="kpi-card__trend kpi-card__trend--neutral">→ Same as yesterday</span>
+                    <span class="kpi-card__label">Đang Thực Hiện</span>
+                    <span id="kpi-processing" class="kpi-card__value">...</span>
+                    <span id="trend-processing" class="kpi-card__trend kpi-card__trend--neutral">Đang tải...</span>
                 </div>
             </div>
 
             <div class="kpi-card kpi-card--resolved">
                 <div class="kpi-card__icon">✅</div>
                 <div class="kpi-card__content">
-                    <span class="kpi-card__label">Resolved Today</span>
-                    <span class="kpi-card__value">234</span>
-                    <span class="kpi-card__trend kpi-card__trend--up">↑ 15% vs yesterday</span>
+                    <span class="kpi-card__label">Đã Hoàn Thành</span>
+                    <span id="kpi-resolved" class="kpi-card__value">...</span>
+                    <span id="trend-resolved" class="kpi-card__trend kpi-card__trend--neutral">Đang tải...</span>
                 </div>
             </div>
         </div>
 
-        <!-- Charts Section -->
         <div class="dashboard__grid">
-            <!-- Timeline Chart -->
             <div class="chart-card chart-card--large">
                 <div class="chart-card__header">
-                    <h3 class="chart-card__title">Requests Timeline</h3>
-                    <div class="chart-card__controls">
-                        <button class="chart-card__btn chart-card__btn--active">Hour</button>
-                        <button class="chart-card__btn">Day</button>
-                        <button class="chart-card__btn">Week</button>
-                    </div>
+                    <h3 class="chart-card__title">Thống kê số yêu cầu theo thời gian</h3>
                 </div>
                 <div class="chart-card__body">
-                    <div class="chart-placeholder">
-                        [Line Chart: Requests over time - Use Chart.js/D3.js]
+                    <div class="chart-container--large">
+                        <canvas id="timelineChart"></canvas>
                     </div>
                 </div>
             </div>
 
-            <!-- Status Distribution -->
             <div class="chart-card">
                 <div class="chart-card__header">
-                    <h3 class="chart-card__title">Status Distribution</h3>
+                    <h3 class="chart-card__title">Trạng thái xử lý</h3>
                 </div>
                 <div class="chart-card__body">
-                    <div class="chart-placeholder">
-                        [Donut Chart: Status breakdown - Use Chart.js]
+                    <div class="chart-container--medium">
+                        <canvas id="statusChart"></canvas>
                     </div>
                 </div>
             </div>
 
-            <!-- Priority Heatmap -->
             <div class="chart-card">
                 <div class="chart-card__header">
-                    <h3 class="chart-card__title">Priority Levels</h3>
+                    <h3 class="chart-card__title">Điểm nóng theo khu vực</h3>
+                    <span style="color: red;">🚧 Bảo trì 🚧</span>
                 </div>
                 <div class="chart-card__body">
-                    <div class="chart-placeholder">
-                        [Bar Chart: Priority distribution - Use Chart.js]
+                    <div class="chart-container--medium">
+                        <canvas id="districtChart"></canvas>
                     </div>
                 </div>
             </div>
 
-            <!-- Geographic Hotspots -->
             <div class="chart-card">
                 <div class="chart-card__header">
-                    <h3 class="chart-card__title">Geographic Hotspots</h3>
+                    <h3 class="chart-card__title">Mức độ ưu tiên</h3>
                 </div>
                 <div class="chart-card__body">
-                    <div class="chart-placeholder">
-                        [Heatmap: Requests by district - Use ArcGIS API]
+                    <div class="chart-container--medium">
+                        <canvas id="priorityChart"></canvas>
                     </div>
                 </div>
             </div>
 
-            <!-- Response Time Stats -->
             <div class="chart-card">
                 <div class="chart-card__header">
-                    <h3 class="chart-card__title">Avg Response Time</h3>
+                    <h3 class="chart-card__title">Yêu cầu đã xử lý</h3>
                 </div>
                 <div class="chart-card__body">
-                    <div class="chart-placeholder">
-                        [Gauge Chart: Average response time - Use Chart.js]
+                     <div class="chart-metric">
+                        <span class="chart-metric__label">Trung bình: </span>
+                        <span id="avg-response-val" class="chart-metric__value">--</span>
+                        <span class="chart-metric__unit"> giờ/yêu cầu</span>
+                    </div>
+                    <div class="chart-container--small">
+                        <canvas id="resolvedTimeChart"></canvas>
                     </div>
                 </div>
             </div>
 
-            <!-- Resource Allocation -->
             <div class="chart-card chart-card--large">
                 <div class="chart-card__header">
-                    <h3 class="chart-card__title">Resource Allocation</h3>
+                    <h3 class="chart-card__title chart-title--with-icon">
+                        Tình trạng nguồn lực
+                        <img src="{% static 'analytics/images/live_stream_icon.png' %}" alt="live-data" class="title-icon">
+                    </h3>
                 </div>
                 <div class="chart-card__body">
                     <div class="table-responsive">
                         <table class="data-table">
                             <thead>
                                 <tr>
-                                    <th>Resource Type</th>
-                                    <th>Available</th>
-                                    <th>Deployed</th>
-                                    <th>Utilization</th>
+                                    <th>Loại Nguồn Lực</th>
+                                    <th>Tổng Số</th>
+                                    <th>Sẵn Sàng</th>
+                                    <th>Hiệu Suất</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>🚑 Ambulance</td>
-                                    <td>12</td>
-                                    <td>8</td>
-                                    <td><span class="progress-bar" style="--progress: 67%"></span> 67%</td>
-                                </tr>
-                                <tr>
-                                    <td>🚤 Rescue Boats</td>
-                                    <td>25</td>
-                                    <td>18</td>
-                                    <td><span class="progress-bar" style="--progress: 72%"></span> 72%</td>
-                                </tr>
-                                <tr>
-                                    <td>🚁 Helicopters</td>
-                                    <td>5</td>
-                                    <td>2</td>
-                                    <td><span class="progress-bar" style="--progress: 40%"></span> 40%</td>
-                                </tr>
-                                <tr>
-                                    <td>👥 Rescue Teams</td>
-                                    <td>45</td>
-                                    <td>32</td>
-                                    <td><span class="progress-bar" style="--progress: 71%"></span> 71%</td>
-                                </tr>
-                            </tbody>
+                            <tbody id="resourceTableBody">
+                                </tbody>
                         </table>
                     </div>
                 </div>
@@ -177,4 +148,9 @@
         </div>
     </div>
 </main>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{% static 'analytics/js/dashboard.js' %}"></script>
 {% endblock %}

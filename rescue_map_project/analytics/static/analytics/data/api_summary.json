@@ -1,0 +1,12 @@
+{
+    "total_requests": 1234,
+    "active_requests": 142,
+    "processing_requests": 68,
+    "resolved_today": 234,
+    "trends": {
+        "total": 12,
+        "active": -8,
+        "processing": 0,
+        "resolved": 15
+    }
+}

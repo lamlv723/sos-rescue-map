@@ -1,0 +1,26 @@
+[
+    {
+        "type": "Ambulance",
+        "total": 12,
+        "available": 4,
+        "utilization": 67
+    },
+    {
+        "type": "Rescue Boat",
+        "total": 25,
+        "available": 7,
+        "utilization": 72
+    },
+    {
+        "type": "Helicopter",
+        "total": 5,
+        "available": 3,
+        "utilization": 40
+    },
+    {
+        "type": "Rescue Team",
+        "total": 45,
+        "available": 13,
+        "utilization": 71
+    }
+]

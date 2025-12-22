@@ -360,9 +360,10 @@ textarea {
 }
 
 .kpi-card__label {
-  font-size: var(--font-size-sm);
-  color: var(--color-gray);
-  margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-base);
+    color: var(--color-dark);
+    margin-bottom: var(--spacing-xs);
+    font-weight: bold;
 }
 
 .kpi-card__value {
@@ -1622,6 +1623,59 @@ textarea {
   .chart-placeholder {
     height: 300px;
   }
+
+  /* --- Dashboard Layout & Containers --- */
+.chart-container--large {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+.chart-container--medium {
+    position: relative;
+    height: 250px;
+    width: 100%;
+}
+
+.chart-container--small {
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+
+/* --- Chart Header & Titles --- */
+.chart-title--with-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.title-icon {
+    height: 2em;
+    width: auto;
+}
+
+/* --- Dispatch Time Metric --- */
+.chart-metric {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.chart-metric__label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.chart-metric__value {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #2C5F8D;
+}
+
+.chart-metric__unit {
+    font-size: 0.9rem;
+    color: #666;
+}
 
   .data-table {
     font-size: var(--font-size-base);
